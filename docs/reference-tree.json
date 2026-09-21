@@ -1,0 +1,158 @@
+{
+  "sha": "b6de54245cf7a514f59e51833dc01a87e1a3a849",
+  "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/trees/b6de54245cf7a514f59e51833dc01a87e1a3a849",
+  "tree": [
+    {
+      "path": "CODE_OPTIMIZATION_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56f654941d13b515e549d71d155629b4011585a0",
+      "size": 12506,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/56f654941d13b515e549d71d155629b4011585a0"
+    },
+    {
+      "path": "COMPARISON_EXAMPLES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6814c73941c459cd2f69fbd9aecbec7749a8a231",
+      "size": 15073,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/6814c73941c459cd2f69fbd9aecbec7749a8a231"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9af53f5f7881d9f05786c56ef7e5604ca5ee2aa5",
+      "size": 2254,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/9af53f5f7881d9f05786c56ef7e5604ca5ee2aa5"
+    },
+    {
+      "path": "__pycache__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d794cd7bfa0e2df9196385d969ba990289cafcc",
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/trees/5d794cd7bfa0e2df9196385d969ba990289cafcc"
+    },
+    {
+      "path": "__pycache__/qimenpaipan.cpython-311.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2edfbf9c880c5abc9cb7492f9d442826d02a3ac9",
+      "size": 43458,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/2edfbf9c880c5abc9cb7492f9d442826d02a3ac9"
+    },
+    {
+      "path": "__pycache__/qimenpaipan1.cpython-311.pyc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "271e024165ba9aeba6c6d9323a26c945ffc2d541",
+      "size": 35358,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/271e024165ba9aeba6c6d9323a26c945ffc2d541"
+    },
+    {
+      "path": "compare_output.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9b8a19f0a98db9d25803c73d45a73997a21e07b",
+      "size": 3389,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/d9b8a19f0a98db9d25803c73d45a73997a21e07b"
+    },
+    {
+      "path": "de421.bsp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed5b5830e54bbc09cf3ba4ade3c729a279029f06",
+      "size": 16788480,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/ed5b5830e54bbc09cf3ba4ade3c729a279029f06"
+    },
+    {
+      "path": "find_li_chun.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3adec9e3ea1175813b1cf5a2481104ef4ccb9e41",
+      "size": 830,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/3adec9e3ea1175813b1cf5a2481104ef4ccb9e41"
+    },
+    {
+      "path": "findjieqie.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d088e4250d98a6942c40292b93ad641944b4ee2",
+      "size": 1279,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/4d088e4250d98a6942c40292b93ad641944b4ee2"
+    },
+    {
+      "path": "fine_nian_gan_zhi.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1741f3fb617454b0c30b9ae10324cbf20f0266e",
+      "size": 628,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/b1741f3fb617454b0c30b9ae10324cbf20f0266e"
+    },
+    {
+      "path": "get_ganzhi.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "jieqi.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1951dbb570a61f26ce281024834b6e19e6d9fb71",
+      "size": 1238,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/1951dbb570a61f26ce281024834b6e19e6d9fb71"
+    },
+    {
+      "path": "jieqi1.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05d48865c2c40928516550ddf7e57282db400bd3",
+      "size": 744,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/05d48865c2c40928516550ddf7e57282db400bd3"
+    },
+    {
+      "path": "qimenpaipan.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5005b6a13ac2d970b4ca85cea61607866cc3b0f8",
+      "size": 49450,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/5005b6a13ac2d970b4ca85cea61607866cc3b0f8"
+    },
+    {
+      "path": "qimenpaipan1.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a5763cea83c519c72689778d0ce5c9732523816",
+      "size": 24069,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/5a5763cea83c519c72689778d0ce5c9732523816"
+    },
+    {
+      "path": "qimenpaipan2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00501955bbd8edaf0a10ed1878f28747daeaae36",
+      "size": 31757,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/00501955bbd8edaf0a10ed1878f28747daeaae36"
+    },
+    {
+      "path": "qimenpaipan_optimized.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0419c0bd0824a90e21ad145c3edc35aad99f4c08",
+      "size": 36541,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/0419c0bd0824a90e21ad145c3edc35aad99f4c08"
+    },
+    {
+      "path": "优化总结.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f9957353bf98adce2b9dc1b33d0fc12ab264355",
+      "size": 8556,
+      "url": "https://api.github.com/repos/redrockhorse/qimenpaipan/git/blobs/5f9957353bf98adce2b9dc1b33d0fc12ab264355"
+    }
+  ],
+  "truncated": false
+}

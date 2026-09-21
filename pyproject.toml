@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qimen-chai-bu"
+version = "0.1.0"
+description = "拆补法时家奇门起盘程序"
+requires-python = ">=3.10"
+dependencies = ["lunar-python>=1.4.8", "tzdata>=2025.2"]
+
+[project.scripts]
+qimen = "qimen.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
