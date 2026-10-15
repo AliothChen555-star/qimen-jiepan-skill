@@ -1,0 +1,36 @@
+{
+  "version": "0.4.0",
+  "date": "2026-10-15",
+  "executor": "同一助手手工回放；非独立盲测",
+  "method": "读取固定输入，运行派生工具，形成实际回答并按语义要求复核；无自动措辞或标题评分",
+  "full_cases": [
+    4,
+    7
+  ],
+  "focused_cases": [
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "not_replayed": [
+    1,
+    2,
+    3
+  ],
+  "record": "replays/0.4.0.md",
+  "automated_tests": {
+    "command": "python -m unittest discover -s evals -p test_*.py -v",
+    "passed": 37
+  },
+  "limits": [
+    "冻结盘由本项目排盘器产生，尚无独立人工签核",
+    "没有重放当前时钟、网络故障及完整宿主多轮环境"
+  ]
+}

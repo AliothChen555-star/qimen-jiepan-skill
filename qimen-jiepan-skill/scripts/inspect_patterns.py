@@ -5,10 +5,12 @@ import json
 from pathlib import Path
 import sys
 
+from pattern_readings import pair_reading
+
 from qimen.rules import (BRANCHES, BRANCH_PALACE, DOORS, GAN_SEQUENCE, PALACES,
                          RING, RULE_VERSION, SEXAGENARY, SPIRITS, STARS, STEMS)
 
-ANALYSIS_VERSION = "qimen_patterns_v1.0.0"
+ANALYSIS_VERSION = "qimen_patterns_v1.1.0"
 GENERATES = dict(zip("木火土金水", "火土金水木"))
 CONTROLS = dict(zip("木火土金水", "土金水木火"))
 STEM_ELEMENTS = dict(zip(STEMS, "木木火火土土金金水水"))
@@ -23,6 +25,13 @@ PUNISHMENTS = {"戊": (3, "卯", "甲子"), "己": (2, "未", "甲戌"),
                "庚": (8, "寅", "甲申"), "辛": (9, "午", "甲午"),
                "壬": (4, "辰", "甲辰"), "癸": (4, "巳", "甲寅")}
 COMBINATIONS = {frozenset(pair) for pair in ("乙庚", "丙辛", "丁壬", "戊癸")}
+BRANCH_CLASH = dict(zip(BRANCHES, BRANCHES[6:] + BRANCHES[:6]))
+ELEMENT_TOMBS = {"木": (2, "未"), "火": (6, "戌"), "土": (4, "辰"),
+                 "金": (8, "丑"), "水": (4, "辰")}
+STAR_SEASONS = {
+    "tongzong": ({"比和": "相", "A生B": "旺", "B生A": "死", "A克B": "废", "B克A": "囚"}, "统宗九星法", "TZ-1"),
+    "yanyi_prose": ({"比和": "旺", "A生B": "相", "B生A": "休", "A克B": "死", "B克A": "囚"}, "演义九星正文法", "YY-3"),
+}
 NAMED_PAIRS = {"乙辛": "青龙逃走", "辛乙": "白虎猖狂", "丁癸": "朱雀投江",
                "癸丁": "腾蛇夭矫", "庚丙": "太白入荧", "丙庚": "荧入太白",
                "庚癸": "大格", "庚己": "刑格", "庚壬": "上格/小格"}
@@ -41,13 +50,23 @@ def relation(a, b):
     return "B克A"
 
 
-def seasonal(element, month_element, *, star=False):
+def seasonal(element, month_element, *, star=False, star_season="tongzong"):
     key = relation(element, month_element)
-    table = ({"比和": "相", "A生B": "旺", "B生A": "死", "A克B": "废", "B克A": "囚"}
-             if star else
-             {"比和": "旺", "A生B": "休", "B生A": "相", "A克B": "囚", "B克A": "死"})
+    if star_season not in STAR_SEASONS:
+        raise ValueError("未知九星月令口径")
+    if star:
+        table, method, source = STAR_SEASONS[star_season]
+    else:
+        table = {"比和": "旺", "A生B": "休", "B生A": "相", "A克B": "囚", "B克A": "死"}
+        method, source = "一般五行节月法", "SK-1"
     return {"state": table[key], "element": element, "month_element": month_element,
-            "relation_A_to_month": key, "method": "统宗九星法" if star else "一般五行节月法"}
+            "relation_A_to_month": key, "method": method, "source_id": source}
+
+
+def elemental_tomb(element, number, scope):
+    palace, branch = ELEMENT_TOMBS[element]
+    return {"matches": number == palace, "palace": palace, "branch": branch,
+            "scope": scope, "source_id": "ZG-4"}
 
 
 def plate_motion(movements):
@@ -156,7 +175,7 @@ def stem_detail(stem, index, number, month, hidden, *, heaven):
     return data
 
 
-def pair_detail(h, e, hi, ei, hidden):
+def pair_detail(h, e, hi, ei, hidden, *, chief_here=None):
     names = []
     if h + e in NAMED_PAIRS:
         names.append(NAMED_PAIRS[h + e])
@@ -176,11 +195,69 @@ def pair_detail(h, e, hi, ei, hidden):
         names.append("伏宫格")
     if h == hidden and e == "庚":
         names.append("飞宫格")
+    conditions = []
+    if any(name.startswith(("青龙返首", "飞鸟跌穴")) for name in names):
+        conditions.append({"rule_id": "dragon_bird_geng_chief", "source_id": "MJ-P",
+                           "condition": "本旬遁仪为庚", "matches": hidden == "庚",
+                           "effect": "该口径限制直接作为回首或跌穴吉格取用；几何成立仍保留"})
+    if h + e in ("乙辛", "丙庚", "丁癸"):
+        conditions.append({"rule_id": "qualified_qi_gets_envoy", "source_id": "YY-2",
+                           "condition": "有不利相加格的得使须再核本旬值符星同宫",
+                           "requirement_met": chief_here})
+    relief = {"乙辛": "主", "丁癸": "主", "辛乙": "客", "癸丁": "客"}.get(h + e)
+    if relief:
+        conditions.append({"rule_id": "host_guest_relief", "source_id": "MJ-P",
+                           "role": relief, "effect": "凡例对此角色有不为害的用法；按所选主客法解释"})
     return {"heaven": h, "earth": e, "heaven_role": "主干" if hi == 0 else "寄干",
             "earth_role": "主干" if ei == 0 else "寄干", "condition": f"天{h}加地{e}",
             "relation_A_to_B": relation(STEM_ELEMENTS[h], STEM_ELEMENTS[e]),
             "five_combination": frozenset((h, e)) in COMBINATIONS,
-            "named_patterns": names}
+            "named_patterns": names, "traditional_reading": pair_reading(h, e),
+            "application_checks": conditions}
+
+
+def resolve_pillar_stem(pillar):
+    """Resolve each specific 甲 pillar independently, rather than using the hour head."""
+    if pillar not in SEXAGENARY:
+        raise ValueError("无效干支柱")
+    return GAN_SEQUENCE[SEXAGENARY.index(pillar) // 10] if pillar[0] == "甲" else pillar[0]
+
+
+def time_patterns(pair, calendar):
+    matches = []
+    h, e = pair["heaven"], pair["earth"]
+    for field, label in (("year", "岁格"), ("month", "月格"), ("day", "日格/伏干格"), ("hour", "时格")):
+        pillar = calendar[field + "_pillar"]
+        stem = resolve_pillar_stem(pillar)
+        if e == stem and h in ("庚", "丙"):
+            matches.append({"name": label if h == "庚" else "悖格", "target": field,
+                            "pillar": pillar, "resolved_stem": stem, "source_id": "ZG-4",
+                            "condition": f"天{h}加地{stem}；{field}柱{pillar}"})
+    if h == resolve_pillar_stem(calendar["day_pillar"]) and e == "庚":
+        matches.append({"name": "飞干格", "target": "day", "source_id": "TZ-1",
+                        "pillar": calendar["day_pillar"], "resolved_stem": h,
+                        "condition": f"天日干遁仪{h}加地庚"})
+    return matches
+
+
+def activation_conditions(p, heaven, earth, human):
+    """List branch triggers without selecting a role, time scale, or event result."""
+    branches = [b for b in BRANCHES if BRANCH_PALACE[b] == p["number"]]
+    void = p["void_branches"]
+    tombs = []
+    for layer, items, key in (("heaven_stem", heaven["stems"], "stem"),
+                              ("earth_stem", earth["stems"], "stem"),
+                              ("star", heaven["stars"], "star"),
+                              ("door", [human], "door")):
+        for item in items:
+            tomb = item["tomb"]
+            if tomb["matches"]:
+                tombs.append({"layer": layer, "item": item[key], "role": item.get("role"),
+                              "tomb_branch": tomb["branch"], "clash_branch": BRANCH_CLASH[tomb["branch"]]})
+    return {"palace_branches": branches,
+            "void_coverage": "全空" if len(void) == len(branches) else "一支空" if void else "不空",
+            "fill_void_branches": list(void), "clash_void_branches": [BRANCH_CLASH[b] for b in void],
+            "tomb_triggers": tombs, "scope": "支级候选；不自动解除限制或判成事", "source_id": "SK-1"}
 
 
 def compound_patterns(p):
@@ -214,7 +291,9 @@ def compound_patterns(p):
     return matches
 
 
-def inspect_chart(chart):
+def inspect_chart(chart, *, star_season="tongzong"):
+    if star_season not in STAR_SEASONS:
+        raise ValueError("未知九星月令口径")
     by_number = validate_chart(chart)
     hidden = chart["xun"]["hidden_stem"]
     month_branch = chart["calendar"]["month_pillar"][1]
@@ -229,42 +308,53 @@ def inspect_chart(chart):
         star_moves.extend({"item": s, "origin": star_origins[s], "destination": n} for s in p["stars"])
         door_moves.append({"item": p["door"], "origin": door_origins[p["door"]], "destination": n})
         stem_moves.extend({"item": s, "origin": earth_origins[s], "destination": n} for s in p["heaven_stems"])
-        pairs = [pair_detail(h, e, hi, ei, hidden)
+        pairs = [pair_detail(h, e, hi, ei, hidden, chief_here=p["zhi_fu"])
                  for hi, h in enumerate(p["heaven_stems"]) for ei, e in enumerate(p["earth_stems"])]
         for pair in pairs:
-            h, e = pair["heaven"], pair["earth"]
-            for key, label in (("year", "岁格"), ("month", "月格"), ("day", "日格/伏干格"), ("hour", "时格")):
-                raw = chart["calendar"][key + "_pillar"][0]
-                # A raw 甲 cannot be assigned to this hour's hidden stem for every pillar.
-                if raw != "甲" and h == "庚" and e == raw:
-                    pair["named_patterns"].append(label)
-            raw_day = chart["calendar"]["day_pillar"][0]
-            if raw_day != "甲" and h == raw_day and e == "庚":
-                pair["named_patterns"].append("飞干格")
+            pair["time_patterns"] = time_patterns(pair, chart["calendar"])
+            pair["named_patterns"] = list(dict.fromkeys(pair["named_patterns"] +
+                                                       [m["name"] for m in pair["time_patterns"]]))
         door_relation = relation(DOOR_ELEMENTS[p["door"]], p["element"])
+        heaven = {"stars": [{"star": s, "role": "主星" if i == 0 else "寄星",
+                              "seasonal": seasonal(STAR_ELEMENTS[s], month, star=True, star_season=star_season),
+                              "relation_A_to_palace": relation(STAR_ELEMENTS[s], p["element"]),
+                              "tomb": elemental_tomb(STAR_ELEMENTS[s], n, "天盘星入墓")}
+                             for i, s in enumerate(p["stars"])],
+                  "stems": [stem_detail(s, i, n, month, hidden, heaven=True) for i, s in enumerate(p["heaven_stems"])]}
+        earth = {"stems": [stem_detail(s, i, n, month, hidden, heaven=False) for i, s in enumerate(p["earth_stems"])],
+                 "native_stars": [STARS[n]] + (["天禽"] if n == 2 else []),
+                 "native_star_scope": "本位对应，供明确采用的天地盘主客法参考"}
+        human = {"door": p["door"], "seasonal": seasonal(DOOR_ELEMENTS[p["door"]], month),
+                 "relation_A_to_palace": door_relation, "door_pressure": door_relation == "A克B",
+                 "door_controlled": door_relation == "B克A",
+                 "tomb": elemental_tomb(DOOR_ELEMENTS[p["door"]], n, "门入墓")}
         details.append({"number": n, "name": p["name"], "element": p["element"],
             "palace_seasonal": seasonal(p["element"], month),
-            "heaven": {"stars": [{"star": s, "seasonal": seasonal(STAR_ELEMENTS[s], month, star=True),
-                                     "relation_A_to_palace": relation(STAR_ELEMENTS[s], p["element"])} for s in p["stars"]],
-                       "stems": [stem_detail(s, i, n, month, hidden, heaven=True) for i, s in enumerate(p["heaven_stems"])]},
-            "earth": {"stems": [stem_detail(s, i, n, month, hidden, heaven=False) for i, s in enumerate(p["earth_stems"])]},
-            "human": {"door": p["door"], "seasonal": seasonal(DOOR_ELEMENTS[p["door"]], month),
-                      "relation_A_to_palace": door_relation, "door_pressure": door_relation == "A克B",
-                      "door_controlled": door_relation == "B克A"},
+            "heaven": heaven, "earth": earth, "human": human,
             "spirit": {"name": p["spirit"]}, "stem_pairs": pairs,
             "compound_patterns": compound_patterns(p), "void_branches": p["void_branches"],
+            "star_to_door": [{"star": s, "door": p["door"],
+                              "relation_A_to_B": relation(STAR_ELEMENTS[s], DOOR_ELEMENTS[p["door"]])} for s in p["stars"]],
+            "activation": activation_conditions(p, heaven, earth, human),
             "horse": p["horse"], "zhi_fu": p["zhi_fu"], "zhi_shi": p["zhi_shi"]})
     day, hour = (chart["calendar"][k + "_pillar"][0] for k in ("day", "hour"))
     fu, shi = (chart["chief"][k + "_palace"] for k in ("zhi_fu", "zhi_shi"))
     return {"analysis_version": ANALYSIS_VERSION, "chart_rule_version": chart["rule_version"],
         "captured_at": chart["input"]["captured_at"],
-        "methods": {"season": "月支五行；辰戌丑未土", "star_season": "统宗：子月旺、本月相、父母月死、鬼月囚、妻月废",
+        "methods": {"season": "月支五行；辰戌丑未土", "star_season": star_season,
+                    "star_season_description": STAR_SEASONS[star_season][1],
                     "punishment": "天盘六仪逐仪扩展法，同时标旬首；地盘不套击刑",
                     "tomb": "乙癸坤、丙戊乾、丁己庚艮、辛壬巽；地盘墓位与天盘入墓分开",
+                    "star_door_tomb": "ZG-4：木未、火戌、土辰、金丑、水辰，按墓支所属宫核验",
+                    "month_pattern": "ZG-4月柱干法；YY-G月朔干法未计算",
                     "compound": "演义九遁口径；天遁采用生门丙丁", "dragon_bird": "旬首法与戊丙简法分别标记"},
         "global": {"month_branch": month_branch, "month_element": month,
             "star_plate": plate_motion(star_moves), "door_plate": plate_motion(door_moves),
             "stem_plate": plate_motion(stem_moves),
+            "motion_dependency": "星与奇仪随同一次转动；分层记录但不独立计票",
+            "pillar_stems": {k: {"pillar": chart["calendar"][k + "_pillar"],
+                                  "resolved_stem": resolve_pillar_stem(chart["calendar"][k + "_pillar"])}
+                             for k in ("year", "month", "day", "hour")},
             "five_not_meeting": {"matches": CONTROLS[STEM_ELEMENTS[hour]] == STEM_ELEMENTS[day]
                                      and STEMS.index(hour) % 2 == STEMS.index(day) % 2,
                                  "day_stem": day, "hour_stem": hour,
@@ -276,17 +366,17 @@ def inspect_chart(chart):
         "palaces": details,
         "center": {"number": 5, "hosted_at": 2, "earth_stem": by_number[5]["earth_stems"][0],
                    "note": "中宫展示天干不作为独立天盘落点；随天禽的寄天干在外宫核验"},
-        "not_computed": ["用神选择和问事结论", "应期", "未列明的其他门派格局",
-                         "含甲的岁月日时格/飞伏干格（需另核对应六甲遁仪）"]}
+        "not_computed": ["用神选择和问事结论", "应期筛选和成事日", "未列明的分项干表及其他门派格局", "月朔干法"]}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("chart", type=Path, help="Existing chart JSON")
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--star-season", choices=tuple(STAR_SEASONS), default="tongzong")
     args = parser.parse_args()
     try:
-        result = inspect_chart(json.loads(args.chart.read_text(encoding="utf-8-sig")))
+        result = inspect_chart(json.loads(args.chart.read_text(encoding="utf-8-sig")), star_season=args.star_season)
         rendered = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)
