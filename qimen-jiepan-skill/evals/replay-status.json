@@ -1,15 +1,18 @@
 {
-  "version": "0.4.0",
-  "date": "2026-10-15",
-  "executor": "同一助手手工回放；非独立盲测",
-  "method": "读取固定输入，运行派生工具，形成实际回答并按语义要求复核；无自动措辞或标题评分",
-  "full_cases": [
+  "version": "0.6.0",
+  "date": "2026-10-18",
+  "executor": "同一助手原文与结构核对；非独立盲测",
+  "method": "核读原文，修订解释文档与过时预期，回放派生工具确认结构未变；未执行独立模型解盘评估",
+  "full_cases": [],
+  "focused_cases": [],
+  "not_replayed": [
+    1,
+    2,
+    3,
     4,
-    7
-  ],
-  "focused_cases": [
     5,
     6,
+    7,
     8,
     9,
     10,
@@ -17,20 +20,62 @@
     12,
     13,
     14,
-    15
+    15,
+    16,
+    17
   ],
-  "not_replayed": [
-    1,
-    2,
-    3
+  "manual_source_checks": [
+    "MJ-2 壬辛与辛戊原文",
+    "TZ-1/TZ-2 星门神本义",
+    "ZG-9 天芮病神",
+    "原盘结构及派生关系未变"
   ],
-  "record": "replays/0.4.0.md",
   "automated_tests": {
-    "command": "python -m unittest discover -s evals -p test_*.py -v",
-    "passed": 37
+    "command": "python -m unittest discover -s evals -p test_*.py",
+    "passed": 38
   },
+  "skill_validator": "passed",
   "limits": [
-    "冻结盘由本项目排盘器产生，尚无独立人工签核",
-    "没有重放当前时钟、网络故障及完整宿主多轮环境"
+    "评估预期更新不等于已完成行为盲测",
+    "奇仪墓整表未逐项统一核到同一原典，未核项只作结构提示",
+    "不验证预测效力"
+  ],
+  "historical_replays": [
+    {
+      "version": "0.4.0",
+      "date": "2026-10-15",
+      "executor": "同一助手手工回放；非独立盲测",
+      "method": "读取固定输入，运行派生工具，形成实际回答并按语义要求复核；无自动措辞或标题评分",
+      "full_cases": [
+        4,
+        7
+      ],
+      "focused_cases": [
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "not_replayed": [
+        1,
+        2,
+        3
+      ],
+      "record": "replays/0.4.0.md",
+      "automated_tests": {
+        "command": "python -m unittest discover -s evals -p test_*.py -v",
+        "passed": 37
+      },
+      "limits": [
+        "冻结盘由本项目排盘器产生，尚无独立人工签核",
+        "没有重放当前时钟、网络故障及完整宿主多轮环境"
+      ]
+    }
   ]
 }

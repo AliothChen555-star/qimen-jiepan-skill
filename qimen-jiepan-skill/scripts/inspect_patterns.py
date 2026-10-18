@@ -10,7 +10,7 @@ from pattern_readings import pair_reading
 from qimen.rules import (BRANCHES, BRANCH_PALACE, DOORS, GAN_SEQUENCE, PALACES,
                          RING, RULE_VERSION, SEXAGENARY, SPIRITS, STARS, STEMS)
 
-ANALYSIS_VERSION = "qimen_patterns_v1.1.0"
+ANALYSIS_VERSION = "qimen_patterns_v1.1.1"
 GENERATES = dict(zip("木火土金水", "火土金水木"))
 CONTROLS = dict(zip("木火土金水", "土金水木火"))
 STEM_ELEMENTS = dict(zip(STEMS, "木木火火土土金金水水"))
@@ -347,7 +347,9 @@ def inspect_chart(chart, *, star_season="tongzong"):
                     "tomb": "乙癸坤、丙戊乾、丁己庚艮、辛壬巽；地盘墓位与天盘入墓分开",
                     "star_door_tomb": "ZG-4：木未、火戌、土辰、金丑、水辰，按墓支所属宫核验",
                     "month_pattern": "ZG-4月柱干法；YY-G月朔干法未计算",
-                    "compound": "演义九遁口径；天遁采用生门丙丁", "dragon_bird": "旬首法与戊丙简法分别标记"},
+                    "compound": "演义九遁口径；天遁采用生门丙丁", "dragon_bird": "旬首法与戊丙简法分别标记",
+                    "interpretation_scope": "关系字段只记方向，不自动构成吉凶、支持、缓冲或通关；另核星门神本义及干格原文",
+                    "tomb_source_scope": "奇仪墓沿用声明表；未核原文的项目只作结构提示，不能据此作关键吉凶判断"},
         "global": {"month_branch": month_branch, "month_element": month,
             "star_plate": plate_motion(star_moves), "door_plate": plate_motion(door_moves),
             "stem_plate": plate_motion(stem_moves),
@@ -366,7 +368,8 @@ def inspect_chart(chart, *, star_season="tongzong"):
         "palaces": details,
         "center": {"number": 5, "hosted_at": 2, "earth_stem": by_number[5]["earth_stems"][0],
                    "note": "中宫展示天干不作为独立天盘落点；随天禽的寄天干在外宫核验"},
-        "not_computed": ["用神选择和问事结论", "应期筛选和成事日", "未列明的分项干表及其他门派格局", "月朔干法"]}
+        "not_computed": ["用神选择和问事结论", "完整星门神本义与干格原文解读", "同宫跨层通关和吉凶权重",
+                         "应期筛选和成事日", "未列明的分项干表及其他门派格局", "月朔干法"]}
 
 
 def main():

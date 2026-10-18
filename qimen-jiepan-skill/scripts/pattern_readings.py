@@ -19,8 +19,10 @@ PAIR_READINGS = {
     "己辛": ("游魂入墓", ("状态",), ("不定", "内困"), (), "ZG-5"),
     "己癸": ("地刑玄武", ("交涉",), ("受限", "隐蔽牵连"), (), "ZG-5"),
     "庚丁": ("亭亭之格", ("交涉", "文书"), ("私事牵连",), ("good_door_support",), "ZG-5"),
+    "辛戊": ("困龙被伤", ("谋事", "财利"), ("破财受抑", "妄动不利"), ("keep_to_position",), "MJ-2"),
     "辛丁": ("狱神得奇", ("交易", "处境"), ("得助", "处境松动"), (), "MJ-2"),
     "辛庚": ("白虎出力", ("竞争",), ("强硬相持",), ("retreat_preferred",), "MJ-2"),
+    "壬辛": ("螣蛇相缠", ("谋事",), ("缠绕不安", "谋望受欺"), ("good_door_not_relief",), "MJ-2"),
     "壬壬": ("蛇入地罗", ("人事",), ("内外缠绕",), ("good_star_door",), "ZG-5"),
     "癸己": ("华盖地户", ("消息", "避藏"), ("消息受阻", "宜藏"), (), "MJ-2"),
 }
@@ -31,6 +33,14 @@ READING_CONDITIONS = {
     "good_door_support": "原条目以吉门扶助为缓解条件",
     "retreat_preferred": "原条目倾向退让，强进容易加剧相持",
     "good_star_door": "原条目以门星条件作缓解参照",
+    "keep_to_position": "原条目要求屈抑守分，妄动不利",
+    "good_door_not_relief": "原条目明确纵得吉门亦不能安，不能仅凭吉门缓解",
+}
+
+# Short verified excerpts; the full source and variants are indexed in 规则与出处.md.
+PAIR_SOURCE_EXCERPTS = {
+    "辛戊": "官司破财，屈抑守分，妄动祸殃。",
+    "壬辛": "纵得吉门，亦不能安，若有谋望，被人欺瞒。",
 }
 
 
@@ -39,7 +49,7 @@ def pair_reading(heaven, earth):
     if row is None:
         return None
     name, topics, images, checks, source = row
-    return {
+    result = {
         "table_name": name,
         "topics": list(topics),
         "possible_images": list(images),
@@ -47,3 +57,7 @@ def pair_reading(heaven, earth):
         "source_id": source,
         "scope": "干表克应；表名不替代实际神、墓位或全盘动静",
     }
+    excerpt = PAIR_SOURCE_EXCERPTS.get(heaven + earth)
+    if excerpt:
+        result["source_excerpt"] = excerpt
+    return result

@@ -67,6 +67,18 @@ class ExtensionChecks(unittest.TestCase):
         normal = pair_detail("戊", "丙", 0, 0, "戊")
         self.assertFalse(next(c for c in normal["application_checks"] if c["rule_id"] == check["rule_id"])["matches"])
 
+    def test_adverse_pair_readings_are_not_lost_when_earth_supports_heaven(self):
+        # MJ-2 treats both as adverse despite their B生A elemental relationship.
+        for heaven, earth, name in (("壬", "辛", "螣蛇相缠"), ("辛", "戊", "困龙被伤")):
+            pair = pair_detail(heaven, earth, 0, 0, "戊")
+            self.assertEqual(pair["relation_A_to_B"], "B生A")
+            reading = pair["traditional_reading"]
+            self.assertEqual(reading["table_name"], name)
+            self.assertEqual(reading["source_id"], "MJ-2")
+            self.assertTrue(reading["source_excerpt"])
+        ren_xin = pair_detail("壬", "辛", 0, 0, "戊")["traditional_reading"]
+        self.assertNotEqual(pair_detail("辛", "壬", 0, 0, "戊")["traditional_reading"], ren_xin)
+
     def test_conflicted_envoy_records_met_and_unknown_requirements(self):
         for flag in (True, False, None):
             pair = pair_detail("乙", "辛", 0, 0, "辛", chief_here=flag)
