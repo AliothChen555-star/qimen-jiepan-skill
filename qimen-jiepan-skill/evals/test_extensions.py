@@ -6,9 +6,13 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from inspect_patterns import (elemental_tomb, inspect_chart, pair_detail, resolve_pillar_stem,
+from inspect_patterns import (elemental_tomb, inspect_chart as inspect_full_chart, pair_detail, resolve_pillar_stem,
                               seasonal, time_patterns)
 from test_patterns import fixture, palace
+
+
+def inspect_chart(chart, **options):
+    return inspect_full_chart(chart, validation='structure', **options)
 
 
 class ExtensionChecks(unittest.TestCase):
@@ -120,7 +124,7 @@ class ExtensionChecks(unittest.TestCase):
         directory = Path(__file__).parent / "fixtures"
         for name, (number, stem, door) in cases.items():
             chart = json.loads((directory / (name + ".json")).read_text(encoding="utf-8"))
-            p = palace(inspect_chart(chart), number)
+            p = palace(inspect_full_chart(chart), number)
             self.assertIn(stem, [s["stem"] for s in p["heaven"]["stems"]])
             self.assertEqual(p["human"]["door"], door)
 

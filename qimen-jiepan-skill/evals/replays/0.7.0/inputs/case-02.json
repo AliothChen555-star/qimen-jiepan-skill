@@ -1,0 +1,8 @@
+{
+  "id": 2,
+  "prompt": "只按 2026-09-14T14:30:00+08:00 起盘，标准北京时间，不解盘。我没有截图，也不想提供出生信息。",
+  "files": [],
+  "input_kind": "environment",
+  "simulation": true,
+  "no_actual_outcome": true
+}

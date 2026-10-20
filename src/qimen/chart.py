@@ -2,7 +2,7 @@
 from datetime import datetime, timezone
 from math import isfinite
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
-from .calendar import calendar_data
+from .calendar import calendar_data, runtime_versions
 from .rules import (BRANCHES, SEXAGENARY, GAN_SEQUENCE, RING, STARS, DOORS,
                     SPIRITS, PALACES, BRANCH_PALACE, JU_TABLE, RULE_VERSION)
 
@@ -81,6 +81,8 @@ def cast_chart(dt=None, *, use_current_time=None, timezone_name='Asia/Shanghai',
                center_policy='kun2', clock=None):
     if use_current_time is not None and type(use_current_time) is not bool:
         raise ValueError('use_current_time 必须是布尔值')
+    if dt is None and use_current_time is not True:
+        raise ValueError('必须显式提供 datetime，或指定 use_current_time=true')
     if use_current_time and dt is not None:
         raise ValueError('use_current_time 与 datetime 不能同时提供')
     if use_current_time is False and dt is None:
@@ -109,7 +111,9 @@ def cast_chart(dt=None, *, use_current_time=None, timezone_name='Asia/Shanghai',
         raise ValueError('datetime 必须是日期时间字符串或 datetime 对象')
     if captured.tzinfo is None or captured.utcoffset() is None:
         raise ValueError('datetime 必须包含时区偏移，例如 +08:00；避免夏令时歧义')
-    local = captured.astimezone(tz).replace(microsecond=0)
+    # Passing a ZoneInfo-aware datetime directly can carry an imaginary local
+    # wall time through a forward jump. Normalize via the absolute UTC axis.
+    local = captured.astimezone(timezone.utc).astimezone(tz).replace(microsecond=0)
     if not 1901 <= local.year <= 2099:
         raise ValueError('当前支持年份为 1901 至 2099')
     cal, term = calendar_data(local, longitude, time_mode, day_boundary)
@@ -119,8 +123,10 @@ def cast_chart(dt=None, *, use_current_time=None, timezone_name='Asia/Shanghai',
     term.update(dun=dun, yuan=yuan, ju=ju, fu_head=head, days_after_fu_head=offset)
     result = arrange(ju, dun, cal['hour_pillar'], cal['day_pillar'], horse_basis)
     result.update(
+        chart_schema_version='qimen_chart_v1.1', runtime=runtime_versions(),
         input={'datetime': local.isoformat(), 'captured_at': local.isoformat(),
                'captured_at_utc': local.astimezone(timezone.utc).isoformat(), 'use_current_time': is_now,
+               'chart_instant_utc': local.astimezone(timezone.utc).isoformat(),
                'time_source': 'runtime_clock' if is_now else 'explicit',
                'device_timezone': str(captured.tzinfo) if is_now else None,
                'timezone': timezone_name, 'longitude': longitude, 'latitude': latitude,

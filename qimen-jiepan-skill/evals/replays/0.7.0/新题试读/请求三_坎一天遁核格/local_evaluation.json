@@ -1,0 +1,54 @@
+{
+  "rule_id": "DUN_TIAN",
+  "name": "天遁",
+  "source_id": "YY-2",
+  "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+  "geometry_match": "true",
+  "bindings": {
+    "heaven": "丙",
+    "earth": "丁"
+  },
+  "eligibility": {
+    "interpretation": "true",
+    "use_as_favorable": "false",
+    "event_judgment": "unknown",
+    "exception": "unknown"
+  },
+  "conditions": [
+    {
+      "id": "no_qi_tomb",
+      "description": "先确定原条奇墓所指奇的对象及层次，再依固定来源核未入墓；对象未绑定或原义未定时为未知，不默认全层套表",
+      "state": "unknown",
+      "critical": true,
+      "applies_to": "use_as_favorable",
+      "basis": "原法所指奇及层次未绑定；不自动全层套墓表"
+    },
+    {
+      "id": "no_door_pressure",
+      "description": "同宫实际门不克宫；宫克门另记，不偷换为同义",
+      "state": "false",
+      "critical": true,
+      "applies_to": "use_as_favorable",
+      "basis": "据实际门五行克宫核门迫"
+    },
+    {
+      "id": "domain_scope_confirmed",
+      "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+      "state": "unknown",
+      "critical": true,
+      "applies_to": "event_judgment",
+      "basis": "须有本次对象、来源及核验依据；无记录不作成立"
+    }
+  ],
+  "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+  "meaning": "正文首条上丙、中生、下丁；明确不可犯奇墓门迫。",
+  "exceptions": [],
+  "exception_checks": [],
+  "verification": {
+    "status": "verified",
+    "checked_on": "2026-10-19",
+    "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+    "notes": ""
+  },
+  "not_an_event_verdict": true
+}

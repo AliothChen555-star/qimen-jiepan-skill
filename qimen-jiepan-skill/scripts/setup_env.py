@@ -1,3 +1,5 @@
+"""Explicit installation command. The regular chart launcher never invokes it."""
+import argparse
 import hashlib
 import os
 import subprocess
@@ -7,7 +9,10 @@ from pathlib import Path
 
 
 def main() -> None:
-    quiet = "--quiet" in sys.argv[1:]
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--quiet", action="store_true")
+    args = parser.parse_args()
+    quiet = args.quiet
     skill_root = Path(__file__).resolve().parent.parent
     requirements = skill_root / "requirements.txt"
     env_dir = skill_root / ".venv"

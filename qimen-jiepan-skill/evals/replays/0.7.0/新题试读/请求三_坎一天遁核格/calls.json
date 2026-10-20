@@ -1,0 +1,16 @@
+[
+  {
+    "argv": [
+      "C:\\Users\\Euell\\.codex\\skills\\qimen-jiepan\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-c",
+      "import sys,json; sys.stdout.reconfigure(encoding='utf-8'); sys.path.insert(0,'X:\\\\Daily\\\\奇门\\\\qimen-jiepan-rewrite-20261019\\\\qimen-jiepan-skill\\\\scripts'); from rule_evaluator import rule_by_id,geometry_matches,evaluate_application; card=rule_by_id('DUN_TIAN'); p={'number':1,'door':'生门'}; pair={'heaven':'丙','earth':'丁'}; g=geometry_matches(card,p,pair=pair); print(json.dumps(evaluate_application(card,p,pair=pair,geometry=g),ensure_ascii=False,indent=2))"
+    ],
+    "cwd": "X:\\Daily\\奇门\\qimen-jiepan-rewrite-20261019\\qimen-jiepan-skill",
+    "started_at": "2026-10-20T12:43:42.036392+00:00",
+    "completed_at": "2026-10-20T12:43:42.472914+00:00",
+    "exit_code": 0,
+    "stdout_file": "local_rule_evaluation.stdout.txt",
+    "stderr_file": "local_rule_evaluation.stderr.txt"
+  }
+]

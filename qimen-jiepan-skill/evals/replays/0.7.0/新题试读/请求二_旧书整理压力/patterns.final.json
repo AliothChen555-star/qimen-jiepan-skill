@@ -1,0 +1,2088 @@
+{
+  "analysis_version": "qimen_patterns_v2.0.0",
+  "chart_rule_version": "chai_bu_v1.0.0",
+  "validation_scope": "full",
+  "chart_sha256": "b25a96a5fd562bbc276b09022093490645523e1b6501962ad5bbb9018b1711c6",
+  "registry_schema_version": "qimen_rule_cards_v1",
+  "captured_at": "2026-01-13T23:30:00+08:00",
+  "methods": {
+    "season": "月支五行；辰戌丑未土",
+    "star_season": "tongzong",
+    "star_season_description": "统宗九星法",
+    "punishment": "天盘六仪逐仪扩展法，同时标旬首；地盘不套击刑",
+    "tomb": "乙癸坤、丙戊乾、丁己庚艮、辛壬巽；地盘墓位与天盘入墓分开",
+    "star_door_tomb": "ZG-4：木未、火戌、土辰、金丑、水辰，按墓支所属宫核验",
+    "month_pattern": "ZG-4月柱干法；YY-G月朔干法未计算",
+    "compound": "演义九遁口径；天遁采用生门丙丁",
+    "dragon_bird": "旬首法与戊丙简法分别标记",
+    "interpretation_scope": "关系字段只记方向，不自动构成吉凶、支持、缓冲或通关；另核星门神本义及干格原文",
+    "tomb_source_scope": "奇仪墓沿用声明表；未核原文的项目只作结构提示，不能据此作关键吉凶判断"
+  },
+  "global": {
+    "month_branch": "丑",
+    "month_element": "土",
+    "star_plate": {
+      "state": "转动（非整体反伏吟）",
+      "evidence": [
+        {
+          "item": "天芮",
+          "origin": 2,
+          "destination": 1
+        },
+        {
+          "item": "天禽",
+          "origin": 2,
+          "destination": 1
+        },
+        {
+          "item": "天柱",
+          "origin": 7,
+          "destination": 8
+        },
+        {
+          "item": "天心",
+          "origin": 6,
+          "destination": 3
+        },
+        {
+          "item": "天蓬",
+          "origin": 1,
+          "destination": 4
+        },
+        {
+          "item": "天任",
+          "origin": 8,
+          "destination": 9
+        },
+        {
+          "item": "天冲",
+          "origin": 3,
+          "destination": 2
+        },
+        {
+          "item": "天辅",
+          "origin": 4,
+          "destination": 7
+        },
+        {
+          "item": "天英",
+          "origin": 9,
+          "destination": 6
+        }
+      ]
+    },
+    "door_plate": {
+      "state": "反吟",
+      "evidence": [
+        {
+          "item": "景门",
+          "origin": 9,
+          "destination": 1
+        },
+        {
+          "item": "死门",
+          "origin": 2,
+          "destination": 8
+        },
+        {
+          "item": "惊门",
+          "origin": 7,
+          "destination": 3
+        },
+        {
+          "item": "开门",
+          "origin": 6,
+          "destination": 4
+        },
+        {
+          "item": "休门",
+          "origin": 1,
+          "destination": 9
+        },
+        {
+          "item": "生门",
+          "origin": 8,
+          "destination": 2
+        },
+        {
+          "item": "伤门",
+          "origin": 3,
+          "destination": 7
+        },
+        {
+          "item": "杜门",
+          "origin": 4,
+          "destination": 6
+        }
+      ]
+    },
+    "stem_plate": {
+      "state": "转动（非整体反伏吟）",
+      "evidence": [
+        {
+          "item": "辛",
+          "origin": 2,
+          "destination": 1
+        },
+        {
+          "item": "丁",
+          "origin": 2,
+          "destination": 1
+        },
+        {
+          "item": "乙",
+          "origin": 7,
+          "destination": 8
+        },
+        {
+          "item": "丙",
+          "origin": 6,
+          "destination": 3
+        },
+        {
+          "item": "庚",
+          "origin": 1,
+          "destination": 4
+        },
+        {
+          "item": "戊",
+          "origin": 8,
+          "destination": 9
+        },
+        {
+          "item": "壬",
+          "origin": 3,
+          "destination": 2
+        },
+        {
+          "item": "癸",
+          "origin": 4,
+          "destination": 7
+        },
+        {
+          "item": "己",
+          "origin": 9,
+          "destination": 6
+        }
+      ]
+    },
+    "rule_matches": [
+      {
+        "rule_id": "MOTION_STAR",
+        "name": "星盘反伏吟",
+        "source_id": "ZG-4",
+        "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+        "geometry_match": "false",
+        "bindings": {},
+        "eligibility": {
+          "interpretation": "false",
+          "use_as_favorable": "false",
+          "event_judgment": "false",
+          "exception": "false"
+        },
+        "conditions": [
+          {
+            "id": "domain_scope_confirmed",
+            "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+            "state": "unknown",
+            "critical": true,
+            "applies_to": "event_judgment",
+            "basis": "须有本次对象、来源及核验依据；无记录不作成立"
+          }
+        ],
+        "scope": "传统结构与所列具体用途；未证明现实结果",
+        "meaning": "伏吟归本位、返吟到对宫。静守、重复或反覆是所选条文解释，不在所有事类等于失败。",
+        "exceptions": [],
+        "exception_checks": [],
+        "verification": {
+          "status": "verified",
+          "checked_on": "2026-10-19",
+          "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+          "notes": "单宫本位不代表整体伏吟。"
+        },
+        "not_an_event_verdict": true
+      },
+      {
+        "rule_id": "MOTION_DOOR",
+        "name": "门盘反伏吟",
+        "source_id": "ZG-4",
+        "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+        "geometry_match": "true",
+        "bindings": {},
+        "eligibility": {
+          "interpretation": "true",
+          "use_as_favorable": "unknown",
+          "event_judgment": "unknown",
+          "exception": "unknown"
+        },
+        "conditions": [
+          {
+            "id": "domain_scope_confirmed",
+            "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+            "state": "unknown",
+            "critical": true,
+            "applies_to": "event_judgment",
+            "basis": "须有本次对象、来源及核验依据；无记录不作成立"
+          }
+        ],
+        "scope": "传统结构与所列具体用途；未证明现实结果",
+        "meaning": "伏吟归本位、返吟到对宫。静守、重复或反覆是所选条文解释，不在所有事类等于失败。",
+        "exceptions": [],
+        "exception_checks": [],
+        "verification": {
+          "status": "verified",
+          "checked_on": "2026-10-19",
+          "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+          "notes": "单宫本位不代表整体伏吟。"
+        },
+        "not_an_event_verdict": true
+      },
+      {
+        "rule_id": "MOTION_STEM",
+        "name": "干盘反伏吟",
+        "source_id": "ZG-4",
+        "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+        "geometry_match": "false",
+        "bindings": {},
+        "eligibility": {
+          "interpretation": "false",
+          "use_as_favorable": "false",
+          "event_judgment": "false",
+          "exception": "false"
+        },
+        "conditions": [
+          {
+            "id": "domain_scope_confirmed",
+            "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+            "state": "unknown",
+            "critical": true,
+            "applies_to": "event_judgment",
+            "basis": "须有本次对象、来源及核验依据；无记录不作成立"
+          }
+        ],
+        "scope": "传统结构与所列具体用途；未证明现实结果",
+        "meaning": "伏吟归本位、返吟到对宫。静守、重复或反覆是所选条文解释，不在所有事类等于失败。",
+        "exceptions": [],
+        "exception_checks": [],
+        "verification": {
+          "status": "partial",
+          "checked_on": "2026-10-19",
+          "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+          "notes": "原文星符门；奇仪整体同转状态是工程分层扩展，不能伪称另有独立凶票。"
+        },
+        "not_an_event_verdict": true
+      },
+      {
+        "rule_id": "FIVE_NOT_MEET",
+        "name": "五不遇时",
+        "source_id": "YY-2",
+        "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+        "geometry_match": "false",
+        "bindings": {},
+        "eligibility": {
+          "interpretation": "false",
+          "use_as_favorable": "false",
+          "event_judgment": "false",
+          "exception": "false"
+        },
+        "conditions": [
+          {
+            "id": "domain_scope_confirmed",
+            "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+            "state": "unknown",
+            "critical": true,
+            "applies_to": "event_judgment",
+            "basis": "须有本次对象、来源及核验依据；无记录不作成立"
+          }
+        ],
+        "scope": "传统结构与所列具体用途；未证明现实结果",
+        "meaning": "原时干克原日干且阴阳同性；不先遁甲。",
+        "exceptions": [],
+        "exception_checks": [],
+        "verification": {
+          "status": "verified",
+          "checked_on": "2026-10-19",
+          "checked_scope": "YY-2卷二五不遇全文，包含十日同性阴阳例",
+          "notes": "卷二五不遇条需同性阴阳例；仅核结构，不据此越过事类。"
+        },
+        "not_an_event_verdict": true
+      }
+    ],
+    "motion_dependency": "星与奇仪随同一次转动；分层记录但不独立计票",
+    "pillar_stems": {
+      "year": {
+        "pillar": "乙巳",
+        "resolved_stem": "乙"
+      },
+      "month": {
+        "pillar": "己丑",
+        "resolved_stem": "己"
+      },
+      "day": {
+        "pillar": "丁亥",
+        "resolved_stem": "丁"
+      },
+      "hour": {
+        "pillar": "庚子",
+        "resolved_stem": "庚"
+      }
+    },
+    "five_not_meeting": {
+      "matches": false,
+      "day_stem": "丁",
+      "hour_stem": "庚",
+      "condition": "原时干克原日干且阴阳同性"
+    },
+    "chief_relation": {
+      "A_zhi_fu_palace": 1,
+      "B_zhi_shi_palace": 8,
+      "relation_A_to_B": "B克A",
+      "same_palace": false,
+      "opposite": false
+    },
+    "void_branches": [
+      "辰",
+      "巳"
+    ],
+    "horse": {
+      "basis": "hour",
+      "basis_branch": "子",
+      "branch": "寅",
+      "palace": 8
+    }
+  },
+  "palaces": [
+    {
+      "number": 1,
+      "name": "坎",
+      "element": "水",
+      "palace_seasonal": {
+        "state": "死",
+        "element": "水",
+        "month_element": "土",
+        "relation_A_to_month": "B克A",
+        "method": "一般五行节月法",
+        "source_id": "SK-1"
+      },
+      "heaven": {
+        "stars": [
+          {
+            "star": "天芮",
+            "role": "主星",
+            "seasonal": {
+              "state": "相",
+              "element": "土",
+              "month_element": "土",
+              "relation_A_to_month": "比和",
+              "method": "统宗九星法",
+              "source_id": "TZ-1"
+            },
+            "relation_A_to_palace": "A克B",
+            "tomb": {
+              "matches": false,
+              "palace": 4,
+              "branch": "辰",
+              "scope": "天盘星入墓",
+              "source_id": "ZG-4"
+            }
+          },
+          {
+            "star": "天禽",
+            "role": "寄星",
+            "seasonal": {
+              "state": "相",
+              "element": "土",
+              "month_element": "土",
+              "relation_A_to_month": "比和",
+              "method": "统宗九星法",
+              "source_id": "TZ-1"
+            },
+            "relation_A_to_palace": "A克B",
+            "tomb": {
+              "matches": false,
+              "palace": 4,
+              "branch": "辰",
+              "scope": "天盘星入墓",
+              "source_id": "ZG-4"
+            }
+          }
+        ],
+        "stems": [
+          {
+            "stem": "辛",
+            "role": "主干",
+            "seasonal": {
+              "state": "相",
+              "element": "金",
+              "month_element": "土",
+              "relation_A_to_month": "B生A",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "A生B",
+            "tomb": {
+              "matches": false,
+              "palace": 4,
+              "branch": "辰",
+              "scope": "天盘干入墓",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            },
+            "punishment": {
+              "matches": false,
+              "palace": 9,
+              "branch": "午",
+              "hidden_jia": "甲午",
+              "is_current_xun": true,
+              "method": "逐天盘六仪扩展法；严格旬首法须同时 is_current_xun"
+            }
+          },
+          {
+            "stem": "丁",
+            "role": "寄干",
+            "seasonal": {
+              "state": "休",
+              "element": "火",
+              "month_element": "土",
+              "relation_A_to_month": "A生B",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "B克A",
+            "tomb": {
+              "matches": false,
+              "palace": 8,
+              "branch": "丑",
+              "scope": "天盘干入墓",
+              "source_id": "ZG-4",
+              "verification": "verified_subset",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            },
+            "punishment": {
+              "matches": false,
+              "palace": null,
+              "branch": null,
+              "hidden_jia": null,
+              "is_current_xun": false,
+              "method": "逐天盘六仪扩展法；严格旬首法须同时 is_current_xun"
+            }
+          }
+        ]
+      },
+      "earth": {
+        "stems": [
+          {
+            "stem": "庚",
+            "role": "主干",
+            "seasonal": {
+              "state": "相",
+              "element": "金",
+              "month_element": "土",
+              "relation_A_to_month": "B生A",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "A生B",
+            "tomb": {
+              "matches": false,
+              "palace": 8,
+              "branch": "丑",
+              "scope": "地盘墓位",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            }
+          }
+        ],
+        "native_stars": [
+          "天蓬"
+        ],
+        "native_star_scope": "本位对应，供明确采用的天地盘主客法参考"
+      },
+      "human": {
+        "door": "景门",
+        "seasonal": {
+          "state": "休",
+          "element": "火",
+          "month_element": "土",
+          "relation_A_to_month": "A生B",
+          "method": "一般五行节月法",
+          "source_id": "SK-1"
+        },
+        "relation_A_to_palace": "B克A",
+        "door_pressure": false,
+        "door_controlled": true,
+        "tomb": {
+          "matches": false,
+          "palace": 6,
+          "branch": "戌",
+          "scope": "门入墓",
+          "source_id": "ZG-4"
+        }
+      },
+      "spirit": {
+        "name": "值符"
+      },
+      "stem_pairs": [
+        {
+          "heaven": "辛",
+          "earth": "庚",
+          "heaven_role": "主干",
+          "earth_role": "主干",
+          "condition": "天辛加地庚",
+          "relation_A_to_B": "比和",
+          "five_combination": false,
+          "named_patterns": [
+            "飞宫格"
+          ],
+          "traditional_reading": {
+            "table_name": "白虎出力",
+            "topics": [
+              "竞争"
+            ],
+            "possible_images": [
+              "相残",
+              "退让"
+            ],
+            "application_conditions": [],
+            "source_id": "MJ-2",
+            "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+            "rule_id": "PAIR_辛庚",
+            "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+            "meaning": "刀刃相接、主客相残；退让稍可，强进加凶。",
+            "verification": {
+              "status": "verified",
+              "checked_on": "2026-10-19",
+              "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+              "notes": ""
+            },
+            "required_conditions": [],
+            "exceptions": [
+              "退让为原条趋避建议，不把它伪装成已验证现实策略。"
+            ],
+            "interpretation_boundary": "已核干格原义与事件适用分开；未核身份、事类或必要条件不当成立。缺精确应期不抹去已核格义，也不据此制造期限结论。"
+          },
+          "application_checks": [],
+          "time_patterns": []
+        },
+        {
+          "heaven": "丁",
+          "earth": "庚",
+          "heaven_role": "寄干",
+          "earth_role": "主干",
+          "condition": "天丁加地庚",
+          "relation_A_to_B": "A克B",
+          "five_combination": false,
+          "named_patterns": [
+            "飞干格"
+          ],
+          "traditional_reading": null,
+          "application_checks": [],
+          "time_patterns": [
+            {
+              "name": "飞干格",
+              "target": "day",
+              "source_id": "TZ-1",
+              "pillar": "丁亥",
+              "resolved_stem": "丁",
+              "condition": "天日干遁仪丁加地庚"
+            }
+          ]
+        }
+      ],
+      "compound_patterns": [],
+      "rule_matches": [
+        {
+          "rule_id": "PAIR_辛庚",
+          "name": "白虎出力",
+          "source_id": "MJ-2",
+          "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+          "geometry_match": "true",
+          "bindings": {
+            "heaven": "辛",
+            "earth": "庚",
+            "heaven_role": "主干",
+            "earth_role": "主干"
+          },
+          "eligibility": {
+            "interpretation": "true",
+            "use_as_favorable": "unknown",
+            "event_judgment": "unknown",
+            "exception": "unknown"
+          },
+          "conditions": [],
+          "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+          "meaning": "刀刃相接、主客相残；退让稍可，强进加凶。",
+          "exceptions": [
+            "退让为原条趋避建议，不把它伪装成已验证现实策略。"
+          ],
+          "exception_checks": [],
+          "verification": {
+            "status": "verified",
+            "checked_on": "2026-10-19",
+            "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+            "notes": ""
+          },
+          "not_an_event_verdict": true,
+          "evidence_key": "palace:1|rule:PAIR_辛庚|heaven:0:辛|earth:0:庚"
+        },
+        {
+          "rule_id": "FLYING_PALACE",
+          "name": "飞宫格",
+          "source_id": "ZG-4",
+          "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+          "geometry_match": "true",
+          "bindings": {
+            "heaven": "辛",
+            "earth": "庚",
+            "heaven_role": "主干",
+            "earth_role": "主干"
+          },
+          "eligibility": {
+            "interpretation": "true",
+            "use_as_favorable": "unknown",
+            "event_judgment": "unknown",
+            "exception": "unknown"
+          },
+          "conditions": [
+            {
+              "id": "domain_scope_confirmed",
+              "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+              "state": "unknown",
+              "critical": true,
+              "applies_to": "event_judgment",
+              "basis": "须有本次对象、来源及核验依据；无记录不作成立"
+            }
+          ],
+          "scope": "传统结构与所列具体用途；未证明现实结果",
+          "meaning": "原条用于战、行等不利；保留主客与宜动宜静的事类限制。",
+          "exceptions": [
+            "不是干表名自动生成另一层星盘状态。"
+          ],
+          "exception_checks": [],
+          "verification": {
+            "status": "verified",
+            "checked_on": "2026-10-19",
+            "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+            "notes": ""
+          },
+          "not_an_event_verdict": true,
+          "evidence_key": "palace:1|rule:FLYING_PALACE|heaven:0:辛|earth:0:庚"
+        },
+        {
+          "rule_id": "FLYING_DAY",
+          "name": "飞干格",
+          "source_id": "TZ-1",
+          "source_url": "https://zh.wikisource.org/zh-hans/奇門遁甲統宗",
+          "geometry_match": "true",
+          "bindings": {
+            "heaven": "丁",
+            "earth": "庚",
+            "heaven_role": "寄干",
+            "earth_role": "主干"
+          },
+          "eligibility": {
+            "interpretation": "true",
+            "use_as_favorable": "unknown",
+            "event_judgment": "unknown",
+            "exception": "unknown"
+          },
+          "conditions": [
+            {
+              "id": "domain_scope_confirmed",
+              "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+              "state": "unknown",
+              "critical": true,
+              "applies_to": "event_judgment",
+              "basis": "须有本次对象、来源及核验依据；无记录不作成立"
+            }
+          ],
+          "scope": "传统结构与所列具体用途；未证明现实结果",
+          "meaning": "日干加庚；日甲按其本甲柱解析六仪。",
+          "exceptions": [],
+          "exception_checks": [],
+          "verification": {
+            "status": "verified",
+            "checked_on": "2026-10-19",
+            "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+            "notes": ""
+          },
+          "not_an_event_verdict": true,
+          "evidence_key": "palace:1|rule:FLYING_DAY|heaven:1:丁|earth:0:庚"
+        }
+      ],
+      "void_branches": [],
+      "star_to_door": [
+        {
+          "star": "天芮",
+          "door": "景门",
+          "relation_A_to_B": "B生A"
+        },
+        {
+          "star": "天禽",
+          "door": "景门",
+          "relation_A_to_B": "B生A"
+        }
+      ],
+      "activation": {
+        "palace_branches": [
+          "子"
+        ],
+        "void_coverage": "不空",
+        "fill_void_branches": [],
+        "clash_void_branches": [],
+        "tomb_triggers": [],
+        "scope": "支级候选；不自动解除限制或判成事",
+        "source_id": "SK-1"
+      },
+      "horse": false,
+      "zhi_fu": true,
+      "zhi_shi": false
+    },
+    {
+      "number": 8,
+      "name": "艮",
+      "element": "土",
+      "palace_seasonal": {
+        "state": "旺",
+        "element": "土",
+        "month_element": "土",
+        "relation_A_to_month": "比和",
+        "method": "一般五行节月法",
+        "source_id": "SK-1"
+      },
+      "heaven": {
+        "stars": [
+          {
+            "star": "天柱",
+            "role": "主星",
+            "seasonal": {
+              "state": "死",
+              "element": "金",
+              "month_element": "土",
+              "relation_A_to_month": "B生A",
+              "method": "统宗九星法",
+              "source_id": "TZ-1"
+            },
+            "relation_A_to_palace": "B生A",
+            "tomb": {
+              "matches": true,
+              "palace": 8,
+              "branch": "丑",
+              "scope": "天盘星入墓",
+              "source_id": "ZG-4"
+            }
+          }
+        ],
+        "stems": [
+          {
+            "stem": "乙",
+            "role": "主干",
+            "seasonal": {
+              "state": "囚",
+              "element": "木",
+              "month_element": "土",
+              "relation_A_to_month": "A克B",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "A克B",
+            "tomb": {
+              "matches": false,
+              "palace": 2,
+              "branch": "未",
+              "scope": "天盘干入墓",
+              "source_id": "ZG-4",
+              "verification": "verified_subset",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            },
+            "punishment": {
+              "matches": false,
+              "palace": null,
+              "branch": null,
+              "hidden_jia": null,
+              "is_current_xun": false,
+              "method": "逐天盘六仪扩展法；严格旬首法须同时 is_current_xun"
+            }
+          }
+        ]
+      },
+      "earth": {
+        "stems": [
+          {
+            "stem": "戊",
+            "role": "主干",
+            "seasonal": {
+              "state": "旺",
+              "element": "土",
+              "month_element": "土",
+              "relation_A_to_month": "比和",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "比和",
+            "tomb": {
+              "matches": false,
+              "palace": 6,
+              "branch": "戌",
+              "scope": "地盘墓位",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            }
+          }
+        ],
+        "native_stars": [
+          "天任"
+        ],
+        "native_star_scope": "本位对应，供明确采用的天地盘主客法参考"
+      },
+      "human": {
+        "door": "死门",
+        "seasonal": {
+          "state": "旺",
+          "element": "土",
+          "month_element": "土",
+          "relation_A_to_month": "比和",
+          "method": "一般五行节月法",
+          "source_id": "SK-1"
+        },
+        "relation_A_to_palace": "比和",
+        "door_pressure": false,
+        "door_controlled": false,
+        "tomb": {
+          "matches": false,
+          "palace": 4,
+          "branch": "辰",
+          "scope": "门入墓",
+          "source_id": "ZG-4"
+        }
+      },
+      "spirit": {
+        "name": "腾蛇"
+      },
+      "stem_pairs": [
+        {
+          "heaven": "乙",
+          "earth": "戊",
+          "heaven_role": "主干",
+          "earth_role": "主干",
+          "condition": "天乙加地戊",
+          "relation_A_to_B": "A克B",
+          "five_combination": false,
+          "named_patterns": [],
+          "traditional_reading": null,
+          "application_checks": [],
+          "time_patterns": []
+        }
+      ],
+      "compound_patterns": [],
+      "rule_matches": [],
+      "void_branches": [],
+      "star_to_door": [
+        {
+          "star": "天柱",
+          "door": "死门",
+          "relation_A_to_B": "B生A"
+        }
+      ],
+      "activation": {
+        "palace_branches": [
+          "丑",
+          "寅"
+        ],
+        "void_coverage": "不空",
+        "fill_void_branches": [],
+        "clash_void_branches": [],
+        "tomb_triggers": [
+          {
+            "layer": "star",
+            "item": "天柱",
+            "role": "主星",
+            "tomb_branch": "丑",
+            "clash_branch": "未"
+          }
+        ],
+        "scope": "支级候选；不自动解除限制或判成事",
+        "source_id": "SK-1"
+      },
+      "horse": true,
+      "zhi_fu": false,
+      "zhi_shi": true
+    },
+    {
+      "number": 3,
+      "name": "震",
+      "element": "木",
+      "palace_seasonal": {
+        "state": "囚",
+        "element": "木",
+        "month_element": "土",
+        "relation_A_to_month": "A克B",
+        "method": "一般五行节月法",
+        "source_id": "SK-1"
+      },
+      "heaven": {
+        "stars": [
+          {
+            "star": "天心",
+            "role": "主星",
+            "seasonal": {
+              "state": "死",
+              "element": "金",
+              "month_element": "土",
+              "relation_A_to_month": "B生A",
+              "method": "统宗九星法",
+              "source_id": "TZ-1"
+            },
+            "relation_A_to_palace": "A克B",
+            "tomb": {
+              "matches": false,
+              "palace": 8,
+              "branch": "丑",
+              "scope": "天盘星入墓",
+              "source_id": "ZG-4"
+            }
+          }
+        ],
+        "stems": [
+          {
+            "stem": "丙",
+            "role": "主干",
+            "seasonal": {
+              "state": "休",
+              "element": "火",
+              "month_element": "土",
+              "relation_A_to_month": "A生B",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "B生A",
+            "tomb": {
+              "matches": false,
+              "palace": 6,
+              "branch": "戌",
+              "scope": "天盘干入墓",
+              "source_id": "ZG-4",
+              "verification": "verified_subset",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            },
+            "punishment": {
+              "matches": false,
+              "palace": null,
+              "branch": null,
+              "hidden_jia": null,
+              "is_current_xun": false,
+              "method": "逐天盘六仪扩展法；严格旬首法须同时 is_current_xun"
+            }
+          }
+        ]
+      },
+      "earth": {
+        "stems": [
+          {
+            "stem": "壬",
+            "role": "主干",
+            "seasonal": {
+              "state": "死",
+              "element": "水",
+              "month_element": "土",
+              "relation_A_to_month": "B克A",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "A生B",
+            "tomb": {
+              "matches": false,
+              "palace": 4,
+              "branch": "辰",
+              "scope": "地盘墓位",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            }
+          }
+        ],
+        "native_stars": [
+          "天冲"
+        ],
+        "native_star_scope": "本位对应，供明确采用的天地盘主客法参考"
+      },
+      "human": {
+        "door": "惊门",
+        "seasonal": {
+          "state": "相",
+          "element": "金",
+          "month_element": "土",
+          "relation_A_to_month": "B生A",
+          "method": "一般五行节月法",
+          "source_id": "SK-1"
+        },
+        "relation_A_to_palace": "A克B",
+        "door_pressure": true,
+        "door_controlled": false,
+        "tomb": {
+          "matches": false,
+          "palace": 8,
+          "branch": "丑",
+          "scope": "门入墓",
+          "source_id": "ZG-4"
+        }
+      },
+      "spirit": {
+        "name": "太阴"
+      },
+      "stem_pairs": [
+        {
+          "heaven": "丙",
+          "earth": "壬",
+          "heaven_role": "主干",
+          "earth_role": "主干",
+          "condition": "天丙加地壬",
+          "relation_A_to_B": "B克A",
+          "five_combination": false,
+          "named_patterns": [],
+          "traditional_reading": null,
+          "application_checks": [],
+          "time_patterns": []
+        }
+      ],
+      "compound_patterns": [],
+      "rule_matches": [],
+      "void_branches": [],
+      "star_to_door": [
+        {
+          "star": "天心",
+          "door": "惊门",
+          "relation_A_to_B": "比和"
+        }
+      ],
+      "activation": {
+        "palace_branches": [
+          "卯"
+        ],
+        "void_coverage": "不空",
+        "fill_void_branches": [],
+        "clash_void_branches": [],
+        "tomb_triggers": [],
+        "scope": "支级候选；不自动解除限制或判成事",
+        "source_id": "SK-1"
+      },
+      "horse": false,
+      "zhi_fu": false,
+      "zhi_shi": false
+    },
+    {
+      "number": 4,
+      "name": "巽",
+      "element": "木",
+      "palace_seasonal": {
+        "state": "囚",
+        "element": "木",
+        "month_element": "土",
+        "relation_A_to_month": "A克B",
+        "method": "一般五行节月法",
+        "source_id": "SK-1"
+      },
+      "heaven": {
+        "stars": [
+          {
+            "star": "天蓬",
+            "role": "主星",
+            "seasonal": {
+              "state": "囚",
+              "element": "水",
+              "month_element": "土",
+              "relation_A_to_month": "B克A",
+              "method": "统宗九星法",
+              "source_id": "TZ-1"
+            },
+            "relation_A_to_palace": "A生B",
+            "tomb": {
+              "matches": true,
+              "palace": 4,
+              "branch": "辰",
+              "scope": "天盘星入墓",
+              "source_id": "ZG-4"
+            }
+          }
+        ],
+        "stems": [
+          {
+            "stem": "庚",
+            "role": "主干",
+            "seasonal": {
+              "state": "相",
+              "element": "金",
+              "month_element": "土",
+              "relation_A_to_month": "B生A",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "A克B",
+            "tomb": {
+              "matches": false,
+              "palace": 8,
+              "branch": "丑",
+              "scope": "天盘干入墓",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            },
+            "punishment": {
+              "matches": false,
+              "palace": 8,
+              "branch": "寅",
+              "hidden_jia": "甲申",
+              "is_current_xun": false,
+              "method": "逐天盘六仪扩展法；严格旬首法须同时 is_current_xun"
+            }
+          }
+        ]
+      },
+      "earth": {
+        "stems": [
+          {
+            "stem": "癸",
+            "role": "主干",
+            "seasonal": {
+              "state": "死",
+              "element": "水",
+              "month_element": "土",
+              "relation_A_to_month": "B克A",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "A生B",
+            "tomb": {
+              "matches": false,
+              "palace": 2,
+              "branch": "未",
+              "scope": "地盘墓位",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            }
+          }
+        ],
+        "native_stars": [
+          "天辅"
+        ],
+        "native_star_scope": "本位对应，供明确采用的天地盘主客法参考"
+      },
+      "human": {
+        "door": "开门",
+        "seasonal": {
+          "state": "相",
+          "element": "金",
+          "month_element": "土",
+          "relation_A_to_month": "B生A",
+          "method": "一般五行节月法",
+          "source_id": "SK-1"
+        },
+        "relation_A_to_palace": "A克B",
+        "door_pressure": true,
+        "door_controlled": false,
+        "tomb": {
+          "matches": false,
+          "palace": 8,
+          "branch": "丑",
+          "scope": "门入墓",
+          "source_id": "ZG-4"
+        }
+      },
+      "spirit": {
+        "name": "六合"
+      },
+      "stem_pairs": [
+        {
+          "heaven": "庚",
+          "earth": "癸",
+          "heaven_role": "主干",
+          "earth_role": "主干",
+          "condition": "天庚加地癸",
+          "relation_A_to_B": "A生B",
+          "five_combination": false,
+          "named_patterns": [
+            "大格"
+          ],
+          "traditional_reading": null,
+          "application_checks": [],
+          "time_patterns": []
+        }
+      ],
+      "compound_patterns": [],
+      "rule_matches": [
+        {
+          "rule_id": "GEOM_庚癸",
+          "name": "大格",
+          "source_id": "ZG-4",
+          "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+          "geometry_match": "true",
+          "bindings": {
+            "heaven": "庚",
+            "earth": "癸",
+            "heaven_role": "主干",
+            "earth_role": "主干"
+          },
+          "eligibility": {
+            "interpretation": "true",
+            "use_as_favorable": "unknown",
+            "event_judgment": "unknown",
+            "exception": "unknown"
+          },
+          "conditions": [
+            {
+              "id": "domain_scope_confirmed",
+              "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+              "state": "unknown",
+              "critical": true,
+              "applies_to": "event_judgment",
+              "basis": "须有本次对象、来源及核验依据；无记录不作成立"
+            }
+          ],
+          "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+          "meaning": "ZG-4：谋为、出行多不利，惟捕捉可立获。捕捉是原文例外，不自动转成交易捕捉机会。",
+          "exceptions": [
+            "原条惟捕捉可立获；按原捕捉事类，不作泛化逢凶转吉。"
+          ],
+          "exception_checks": [],
+          "verification": {
+            "status": "verified",
+            "checked_on": "2026-10-19",
+            "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+            "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+          },
+          "not_an_event_verdict": true,
+          "evidence_key": "palace:4|rule:GEOM_庚癸|heaven:0:庚|earth:0:癸"
+        }
+      ],
+      "void_branches": [
+        "辰",
+        "巳"
+      ],
+      "star_to_door": [
+        {
+          "star": "天蓬",
+          "door": "开门",
+          "relation_A_to_B": "B生A"
+        }
+      ],
+      "activation": {
+        "palace_branches": [
+          "辰",
+          "巳"
+        ],
+        "void_coverage": "全空",
+        "fill_void_branches": [
+          "辰",
+          "巳"
+        ],
+        "clash_void_branches": [
+          "戌",
+          "亥"
+        ],
+        "tomb_triggers": [
+          {
+            "layer": "star",
+            "item": "天蓬",
+            "role": "主星",
+            "tomb_branch": "辰",
+            "clash_branch": "戌"
+          }
+        ],
+        "scope": "支级候选；不自动解除限制或判成事",
+        "source_id": "SK-1"
+      },
+      "horse": false,
+      "zhi_fu": false,
+      "zhi_shi": false
+    },
+    {
+      "number": 9,
+      "name": "离",
+      "element": "火",
+      "palace_seasonal": {
+        "state": "休",
+        "element": "火",
+        "month_element": "土",
+        "relation_A_to_month": "A生B",
+        "method": "一般五行节月法",
+        "source_id": "SK-1"
+      },
+      "heaven": {
+        "stars": [
+          {
+            "star": "天任",
+            "role": "主星",
+            "seasonal": {
+              "state": "相",
+              "element": "土",
+              "month_element": "土",
+              "relation_A_to_month": "比和",
+              "method": "统宗九星法",
+              "source_id": "TZ-1"
+            },
+            "relation_A_to_palace": "B生A",
+            "tomb": {
+              "matches": false,
+              "palace": 4,
+              "branch": "辰",
+              "scope": "天盘星入墓",
+              "source_id": "ZG-4"
+            }
+          }
+        ],
+        "stems": [
+          {
+            "stem": "戊",
+            "role": "主干",
+            "seasonal": {
+              "state": "旺",
+              "element": "土",
+              "month_element": "土",
+              "relation_A_to_month": "比和",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "B生A",
+            "tomb": {
+              "matches": false,
+              "palace": 6,
+              "branch": "戌",
+              "scope": "天盘干入墓",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            },
+            "punishment": {
+              "matches": false,
+              "palace": 3,
+              "branch": "卯",
+              "hidden_jia": "甲子",
+              "is_current_xun": false,
+              "method": "逐天盘六仪扩展法；严格旬首法须同时 is_current_xun"
+            }
+          }
+        ]
+      },
+      "earth": {
+        "stems": [
+          {
+            "stem": "己",
+            "role": "主干",
+            "seasonal": {
+              "state": "旺",
+              "element": "土",
+              "month_element": "土",
+              "relation_A_to_month": "比和",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "B生A",
+            "tomb": {
+              "matches": false,
+              "palace": 8,
+              "branch": "丑",
+              "scope": "地盘墓位",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            }
+          }
+        ],
+        "native_stars": [
+          "天英"
+        ],
+        "native_star_scope": "本位对应，供明确采用的天地盘主客法参考"
+      },
+      "human": {
+        "door": "休门",
+        "seasonal": {
+          "state": "死",
+          "element": "水",
+          "month_element": "土",
+          "relation_A_to_month": "B克A",
+          "method": "一般五行节月法",
+          "source_id": "SK-1"
+        },
+        "relation_A_to_palace": "A克B",
+        "door_pressure": true,
+        "door_controlled": false,
+        "tomb": {
+          "matches": false,
+          "palace": 4,
+          "branch": "辰",
+          "scope": "门入墓",
+          "source_id": "ZG-4"
+        }
+      },
+      "spirit": {
+        "name": "白虎"
+      },
+      "stem_pairs": [
+        {
+          "heaven": "戊",
+          "earth": "己",
+          "heaven_role": "主干",
+          "earth_role": "主干",
+          "condition": "天戊加地己",
+          "relation_A_to_B": "比和",
+          "five_combination": false,
+          "named_patterns": [],
+          "traditional_reading": null,
+          "application_checks": [],
+          "time_patterns": []
+        }
+      ],
+      "compound_patterns": [],
+      "rule_matches": [],
+      "void_branches": [],
+      "star_to_door": [
+        {
+          "star": "天任",
+          "door": "休门",
+          "relation_A_to_B": "A克B"
+        }
+      ],
+      "activation": {
+        "palace_branches": [
+          "午"
+        ],
+        "void_coverage": "不空",
+        "fill_void_branches": [],
+        "clash_void_branches": [],
+        "tomb_triggers": [],
+        "scope": "支级候选；不自动解除限制或判成事",
+        "source_id": "SK-1"
+      },
+      "horse": false,
+      "zhi_fu": false,
+      "zhi_shi": false
+    },
+    {
+      "number": 2,
+      "name": "坤",
+      "element": "土",
+      "palace_seasonal": {
+        "state": "旺",
+        "element": "土",
+        "month_element": "土",
+        "relation_A_to_month": "比和",
+        "method": "一般五行节月法",
+        "source_id": "SK-1"
+      },
+      "heaven": {
+        "stars": [
+          {
+            "star": "天冲",
+            "role": "主星",
+            "seasonal": {
+              "state": "废",
+              "element": "木",
+              "month_element": "土",
+              "relation_A_to_month": "A克B",
+              "method": "统宗九星法",
+              "source_id": "TZ-1"
+            },
+            "relation_A_to_palace": "A克B",
+            "tomb": {
+              "matches": true,
+              "palace": 2,
+              "branch": "未",
+              "scope": "天盘星入墓",
+              "source_id": "ZG-4"
+            }
+          }
+        ],
+        "stems": [
+          {
+            "stem": "壬",
+            "role": "主干",
+            "seasonal": {
+              "state": "死",
+              "element": "水",
+              "month_element": "土",
+              "relation_A_to_month": "B克A",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "B克A",
+            "tomb": {
+              "matches": false,
+              "palace": 4,
+              "branch": "辰",
+              "scope": "天盘干入墓",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            },
+            "punishment": {
+              "matches": false,
+              "palace": 4,
+              "branch": "辰",
+              "hidden_jia": "甲辰",
+              "is_current_xun": false,
+              "method": "逐天盘六仪扩展法；严格旬首法须同时 is_current_xun"
+            }
+          }
+        ]
+      },
+      "earth": {
+        "stems": [
+          {
+            "stem": "辛",
+            "role": "主干",
+            "seasonal": {
+              "state": "相",
+              "element": "金",
+              "month_element": "土",
+              "relation_A_to_month": "B生A",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "B生A",
+            "tomb": {
+              "matches": false,
+              "palace": 4,
+              "branch": "辰",
+              "scope": "地盘墓位",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            }
+          },
+          {
+            "stem": "丁",
+            "role": "寄干",
+            "seasonal": {
+              "state": "休",
+              "element": "火",
+              "month_element": "土",
+              "relation_A_to_month": "A生B",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "A生B",
+            "tomb": {
+              "matches": false,
+              "palace": 8,
+              "branch": "丑",
+              "scope": "地盘墓位",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            }
+          }
+        ],
+        "native_stars": [
+          "天芮",
+          "天禽"
+        ],
+        "native_star_scope": "本位对应，供明确采用的天地盘主客法参考"
+      },
+      "human": {
+        "door": "生门",
+        "seasonal": {
+          "state": "旺",
+          "element": "土",
+          "month_element": "土",
+          "relation_A_to_month": "比和",
+          "method": "一般五行节月法",
+          "source_id": "SK-1"
+        },
+        "relation_A_to_palace": "比和",
+        "door_pressure": false,
+        "door_controlled": false,
+        "tomb": {
+          "matches": false,
+          "palace": 4,
+          "branch": "辰",
+          "scope": "门入墓",
+          "source_id": "ZG-4"
+        }
+      },
+      "spirit": {
+        "name": "玄武"
+      },
+      "stem_pairs": [
+        {
+          "heaven": "壬",
+          "earth": "辛",
+          "heaven_role": "主干",
+          "earth_role": "主干",
+          "condition": "天壬加地辛",
+          "relation_A_to_B": "B生A",
+          "five_combination": false,
+          "named_patterns": [],
+          "traditional_reading": {
+            "table_name": "螣蛇相缠",
+            "topics": [
+              "谋事"
+            ],
+            "possible_images": [
+              "缠绕不安",
+              "谋望受欺"
+            ],
+            "application_conditions": [],
+            "source_id": "MJ-2",
+            "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+            "rule_id": "PAIR_壬辛",
+            "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+            "meaning": "纵得吉门亦不能安，谋望有受欺瞒之义；保留不利，不用吉门径行解除。",
+            "verification": {
+              "status": "verified",
+              "checked_on": "2026-10-19",
+              "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+              "notes": ""
+            },
+            "required_conditions": [],
+            "exceptions": [
+              "FQ-3另名白虎犯格，本版不临时换表求缓解；不证明现实已有欺骗。"
+            ],
+            "interpretation_boundary": "已核干格原义与事件适用分开；未核身份、事类或必要条件不当成立。缺精确应期不抹去已核格义，也不据此制造期限结论。",
+            "source_excerpt": "纵得吉门，亦不能安，若有谋望，被人欺瞒。"
+          },
+          "application_checks": [],
+          "time_patterns": []
+        },
+        {
+          "heaven": "壬",
+          "earth": "丁",
+          "heaven_role": "主干",
+          "earth_role": "寄干",
+          "condition": "天壬加地丁",
+          "relation_A_to_B": "A克B",
+          "five_combination": true,
+          "named_patterns": [],
+          "traditional_reading": null,
+          "application_checks": [],
+          "time_patterns": []
+        }
+      ],
+      "compound_patterns": [],
+      "rule_matches": [
+        {
+          "rule_id": "PAIR_壬辛",
+          "name": "螣蛇相缠",
+          "source_id": "MJ-2",
+          "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+          "geometry_match": "true",
+          "bindings": {
+            "heaven": "壬",
+            "earth": "辛",
+            "heaven_role": "主干",
+            "earth_role": "主干"
+          },
+          "eligibility": {
+            "interpretation": "true",
+            "use_as_favorable": "unknown",
+            "event_judgment": "unknown",
+            "exception": "unknown"
+          },
+          "conditions": [],
+          "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+          "meaning": "纵得吉门亦不能安，谋望有受欺瞒之义；保留不利，不用吉门径行解除。",
+          "exceptions": [
+            "FQ-3另名白虎犯格，本版不临时换表求缓解；不证明现实已有欺骗。"
+          ],
+          "exception_checks": [],
+          "verification": {
+            "status": "verified",
+            "checked_on": "2026-10-19",
+            "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+            "notes": ""
+          },
+          "not_an_event_verdict": true,
+          "evidence_key": "palace:2|rule:PAIR_壬辛|heaven:0:壬|earth:0:辛"
+        }
+      ],
+      "void_branches": [],
+      "star_to_door": [
+        {
+          "star": "天冲",
+          "door": "生门",
+          "relation_A_to_B": "A克B"
+        }
+      ],
+      "activation": {
+        "palace_branches": [
+          "未",
+          "申"
+        ],
+        "void_coverage": "不空",
+        "fill_void_branches": [],
+        "clash_void_branches": [],
+        "tomb_triggers": [
+          {
+            "layer": "star",
+            "item": "天冲",
+            "role": "主星",
+            "tomb_branch": "未",
+            "clash_branch": "丑"
+          }
+        ],
+        "scope": "支级候选；不自动解除限制或判成事",
+        "source_id": "SK-1"
+      },
+      "horse": false,
+      "zhi_fu": false,
+      "zhi_shi": false
+    },
+    {
+      "number": 7,
+      "name": "兑",
+      "element": "金",
+      "palace_seasonal": {
+        "state": "相",
+        "element": "金",
+        "month_element": "土",
+        "relation_A_to_month": "B生A",
+        "method": "一般五行节月法",
+        "source_id": "SK-1"
+      },
+      "heaven": {
+        "stars": [
+          {
+            "star": "天辅",
+            "role": "主星",
+            "seasonal": {
+              "state": "废",
+              "element": "木",
+              "month_element": "土",
+              "relation_A_to_month": "A克B",
+              "method": "统宗九星法",
+              "source_id": "TZ-1"
+            },
+            "relation_A_to_palace": "B克A",
+            "tomb": {
+              "matches": false,
+              "palace": 2,
+              "branch": "未",
+              "scope": "天盘星入墓",
+              "source_id": "ZG-4"
+            }
+          }
+        ],
+        "stems": [
+          {
+            "stem": "癸",
+            "role": "主干",
+            "seasonal": {
+              "state": "死",
+              "element": "水",
+              "month_element": "土",
+              "relation_A_to_month": "B克A",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "B生A",
+            "tomb": {
+              "matches": false,
+              "palace": 2,
+              "branch": "未",
+              "scope": "天盘干入墓",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            },
+            "punishment": {
+              "matches": false,
+              "palace": 4,
+              "branch": "巳",
+              "hidden_jia": "甲寅",
+              "is_current_xun": false,
+              "method": "逐天盘六仪扩展法；严格旬首法须同时 is_current_xun"
+            }
+          }
+        ]
+      },
+      "earth": {
+        "stems": [
+          {
+            "stem": "乙",
+            "role": "主干",
+            "seasonal": {
+              "state": "囚",
+              "element": "木",
+              "month_element": "土",
+              "relation_A_to_month": "A克B",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "B克A",
+            "tomb": {
+              "matches": false,
+              "palace": 2,
+              "branch": "未",
+              "scope": "地盘墓位",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            }
+          }
+        ],
+        "native_stars": [
+          "天柱"
+        ],
+        "native_star_scope": "本位对应，供明确采用的天地盘主客法参考"
+      },
+      "human": {
+        "door": "伤门",
+        "seasonal": {
+          "state": "囚",
+          "element": "木",
+          "month_element": "土",
+          "relation_A_to_month": "A克B",
+          "method": "一般五行节月法",
+          "source_id": "SK-1"
+        },
+        "relation_A_to_palace": "B克A",
+        "door_pressure": false,
+        "door_controlled": true,
+        "tomb": {
+          "matches": false,
+          "palace": 2,
+          "branch": "未",
+          "scope": "门入墓",
+          "source_id": "ZG-4"
+        }
+      },
+      "spirit": {
+        "name": "九地"
+      },
+      "stem_pairs": [
+        {
+          "heaven": "癸",
+          "earth": "乙",
+          "heaven_role": "主干",
+          "earth_role": "主干",
+          "condition": "天癸加地乙",
+          "relation_A_to_B": "A生B",
+          "five_combination": false,
+          "named_patterns": [],
+          "traditional_reading": null,
+          "application_checks": [],
+          "time_patterns": []
+        }
+      ],
+      "compound_patterns": [],
+      "rule_matches": [],
+      "void_branches": [],
+      "star_to_door": [
+        {
+          "star": "天辅",
+          "door": "伤门",
+          "relation_A_to_B": "比和"
+        }
+      ],
+      "activation": {
+        "palace_branches": [
+          "酉"
+        ],
+        "void_coverage": "不空",
+        "fill_void_branches": [],
+        "clash_void_branches": [],
+        "tomb_triggers": [],
+        "scope": "支级候选；不自动解除限制或判成事",
+        "source_id": "SK-1"
+      },
+      "horse": false,
+      "zhi_fu": false,
+      "zhi_shi": false
+    },
+    {
+      "number": 6,
+      "name": "乾",
+      "element": "金",
+      "palace_seasonal": {
+        "state": "相",
+        "element": "金",
+        "month_element": "土",
+        "relation_A_to_month": "B生A",
+        "method": "一般五行节月法",
+        "source_id": "SK-1"
+      },
+      "heaven": {
+        "stars": [
+          {
+            "star": "天英",
+            "role": "主星",
+            "seasonal": {
+              "state": "旺",
+              "element": "火",
+              "month_element": "土",
+              "relation_A_to_month": "A生B",
+              "method": "统宗九星法",
+              "source_id": "TZ-1"
+            },
+            "relation_A_to_palace": "A克B",
+            "tomb": {
+              "matches": true,
+              "palace": 6,
+              "branch": "戌",
+              "scope": "天盘星入墓",
+              "source_id": "ZG-4"
+            }
+          }
+        ],
+        "stems": [
+          {
+            "stem": "己",
+            "role": "主干",
+            "seasonal": {
+              "state": "旺",
+              "element": "土",
+              "month_element": "土",
+              "relation_A_to_month": "比和",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "A生B",
+            "tomb": {
+              "matches": false,
+              "palace": 8,
+              "branch": "丑",
+              "scope": "天盘干入墓",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            },
+            "punishment": {
+              "matches": false,
+              "palace": 2,
+              "branch": "未",
+              "hidden_jia": "甲戌",
+              "is_current_xun": false,
+              "method": "逐天盘六仪扩展法；严格旬首法须同时 is_current_xun"
+            }
+          }
+        ]
+      },
+      "earth": {
+        "stems": [
+          {
+            "stem": "丙",
+            "role": "主干",
+            "seasonal": {
+              "state": "休",
+              "element": "火",
+              "month_element": "土",
+              "relation_A_to_month": "A生B",
+              "method": "一般五行节月法",
+              "source_id": "SK-1"
+            },
+            "relation_A_to_palace": "A克B",
+            "tomb": {
+              "matches": true,
+              "palace": 6,
+              "branch": "戌",
+              "scope": "地盘墓位",
+              "source_id": "LEGACY-TOMB",
+              "verification": "partial",
+              "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"
+            }
+          }
+        ],
+        "native_stars": [
+          "天心"
+        ],
+        "native_star_scope": "本位对应，供明确采用的天地盘主客法参考"
+      },
+      "human": {
+        "door": "杜门",
+        "seasonal": {
+          "state": "囚",
+          "element": "木",
+          "month_element": "土",
+          "relation_A_to_month": "A克B",
+          "method": "一般五行节月法",
+          "source_id": "SK-1"
+        },
+        "relation_A_to_palace": "B克A",
+        "door_pressure": false,
+        "door_controlled": true,
+        "tomb": {
+          "matches": false,
+          "palace": 2,
+          "branch": "未",
+          "scope": "门入墓",
+          "source_id": "ZG-4"
+        }
+      },
+      "spirit": {
+        "name": "九天"
+      },
+      "stem_pairs": [
+        {
+          "heaven": "己",
+          "earth": "丙",
+          "heaven_role": "主干",
+          "earth_role": "主干",
+          "condition": "天己加地丙",
+          "relation_A_to_B": "B生A",
+          "five_combination": false,
+          "named_patterns": [],
+          "traditional_reading": null,
+          "application_checks": [],
+          "time_patterns": []
+        }
+      ],
+      "compound_patterns": [],
+      "rule_matches": [],
+      "void_branches": [],
+      "star_to_door": [
+        {
+          "star": "天英",
+          "door": "杜门",
+          "relation_A_to_B": "B生A"
+        }
+      ],
+      "activation": {
+        "palace_branches": [
+          "戌",
+          "亥"
+        ],
+        "void_coverage": "不空",
+        "fill_void_branches": [],
+        "clash_void_branches": [],
+        "tomb_triggers": [
+          {
+            "layer": "earth_stem",
+            "item": "丙",
+            "role": "主干",
+            "tomb_branch": "戌",
+            "clash_branch": "辰"
+          },
+          {
+            "layer": "star",
+            "item": "天英",
+            "role": "主星",
+            "tomb_branch": "戌",
+            "clash_branch": "辰"
+          }
+        ],
+        "scope": "支级候选；不自动解除限制或判成事",
+        "source_id": "SK-1"
+      },
+      "horse": false,
+      "zhi_fu": false,
+      "zhi_shi": false
+    }
+  ],
+  "center": {
+    "number": 5,
+    "hosted_at": 2,
+    "earth_stem": "丁",
+    "note": "中宫展示天干不作为独立天盘落点；随天禽的寄天干在外宫核验"
+  },
+  "not_computed": [
+    "用神选择和问事结论",
+    "完整星门神本义与干格原文解读",
+    "同宫跨层通关和吉凶权重",
+    "应期筛选和成事日",
+    "未列明的分项干表及其他门派格局",
+    "月朔干法"
+  ]
+}

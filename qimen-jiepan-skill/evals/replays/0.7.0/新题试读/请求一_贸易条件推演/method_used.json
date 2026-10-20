@@ -1,0 +1,45 @@
+{
+  "id": "ZG8_TRADE",
+  "name": "贸易资本与利息",
+  "source_id": "ZG-8",
+  "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gptn8mqj",
+  "status": "enabled_textual_method",
+  "scope": "明确资本投入与经营收益的贸易问题；不是证券价格模型",
+  "roles": [
+    {
+      "object": "资本",
+      "symbol": "戊",
+      "layer": "heaven",
+      "primary": true
+    },
+    {
+      "object": "利息/经营收益",
+      "symbol": "生门",
+      "layer": "human",
+      "primary": true
+    }
+  ],
+  "comparisons": [
+    "生门宫带奇门吉格生戊宫：利于收益",
+    "两宫比和：原条中利",
+    "生门宫克戊宫且凶神凶格：折本",
+    "戊宫生生门宫：添资本仍得利",
+    "生门墓绝且凶神凶格：耗本"
+  ],
+  "required_conditions": [
+    "同条连词条件必须同时核",
+    "墓绝各自有来源；十二绝未实现不得伪装已核",
+    "收益与净利润、回本、现金流分开定义"
+  ],
+  "output_boundary": "保留原有得利/折本含义，倍利不转数字收益；存在相反分项时不能全盘凶票压掉资本生收益正证。",
+  "timing": {
+    "status": "not_supplied_by_this_entry",
+    "exact_date_rule": null
+  },
+  "verification": {
+    "status": "verified",
+    "checked_on": "2026-10-19",
+    "checked_scope": "明确资本投入与经营收益的贸易问题；不是证券价格模型",
+    "notes": "文本核读与现实预测效验分开；期限不因题目给出而自动成立。"
+  }
+}

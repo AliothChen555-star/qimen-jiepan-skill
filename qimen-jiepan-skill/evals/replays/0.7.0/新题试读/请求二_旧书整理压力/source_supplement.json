@@ -1,0 +1,30 @@
+{
+  "primary_source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+  "fixed_order": "MJ-2先查；未按吉凶改换来源",
+  "checked_pairs": [
+    {
+      "pair": "天丁加地庚",
+      "palace": 1,
+      "position": "天寄干+地主干",
+      "text": "加庚爲年月日時格，文書阻隔，行人必歸。",
+      "domain": "文书与行人分开",
+      "used": "有限现代工作文书受限对照；行人结局不移用"
+    },
+    {
+      "pair": "天庚加地癸",
+      "palace": 4,
+      "position": "天主干+地主干",
+      "text": "加癸名爲大格，行人至官司止，生産母子俱傷，大凶。",
+      "domain": "行人、官司、生产",
+      "used": "保留原义；不作工作结局或压力时间断语"
+    },
+    {
+      "pair": "天辛加地庚",
+      "palace": 1,
+      "position": "天主干+地主干",
+      "text": "加庚曰白虎出力，刀刃相接，主客相殘，遜讓退步稍可，强進，血濺衣衫。",
+      "used": "保留传统凶义，主客行为未核，不认定现实冲突"
+    }
+  ],
+  "full_primary_tool_response": "../web_calls_primary_open.json"
+}

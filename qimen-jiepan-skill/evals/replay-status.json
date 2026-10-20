@@ -1,18 +1,17 @@
 {
-  "version": "0.6.0",
-  "date": "2026-10-18",
-  "executor": "同一助手原文与结构核对；非独立盲测",
-  "method": "核读原文，修订解释文档与过时预期，回放派生工具确认结构未变；未执行独立模型解盘评估",
-  "full_cases": [],
-  "focused_cases": [],
-  "not_replayed": [
+  "version": "0.7.0",
+  "date": "2026-10-20",
+  "executor": "不同上下文代理实际执行；实施者语义审读；非多人对版本盲评",
+  "method": "17个开发输入逐题实际试读并保存原始回答与操作；3仅部分环境复现；13、14首稿保留并修订；补充3新请求和1追问",
+  "full_cases": [
     1,
-    2,
-    3,
     4,
+    7
+  ],
+  "focused_cases": [
+    2,
     5,
     6,
-    7,
     8,
     9,
     10,
@@ -24,23 +23,93 @@
     16,
     17
   ],
-  "manual_source_checks": [
-    "MJ-2 壬辛与辛戊原文",
-    "TZ-1/TZ-2 星门神本义",
-    "ZG-9 天芮病神",
-    "原盘结构及派生关系未变"
+  "partial_cases": [
+    3
   ],
+  "not_replayed": [],
+  "not_fully_replayed": [
+    3
+  ],
+  "initial_answers_requiring_revision": [
+    13,
+    14
+  ],
+  "revisions_reviewed": [
+    13,
+    14
+  ],
+  "followup_cases": [
+    1
+  ],
+  "supplemental_cases": [
+    "贸易条件推演",
+    "模拟旧书整理压力",
+    "坎一天遁核格"
+  ],
+  "supplemental_scope": "补充开发试用；执行中收到范围与按真实依据留档提醒，不称严格盲测留出成绩",
+  "record": "replays/0.7.0.md",
+  "raw_outputs_dir": "replays/0.7.0/",
   "automated_tests": {
-    "command": "python -m unittest discover -s evals -p test_*.py",
-    "passed": 38
+    "run": 130,
+    "errors": 0,
+    "passed": 130,
+    "failed": 0,
+    "command": "python -B -m unittest discover -s evals -p test_*.py -v"
   },
-  "skill_validator": "passed",
+  "skill_validator": "passed; 使用任务独立校验环境PyYAML 6.0.3，未改起盘私有依赖",
+  "independent_program_review": {
+    "explicit_timezone_transitions": 16877,
+    "retest_api_scenarios": 19,
+    "historical_timezone_records": 343,
+    "defects_reproduced": 2,
+    "retest_cli_scenarios": 10,
+    "calendar_oracle": "钟面和时支不变量；非独立天文历法签核",
+    "fixed": 2
+  },
+  "true_prediction_accuracy": null,
   "limits": [
-    "评估预期更新不等于已完成行为盲测",
-    "奇仪墓整表未逐项统一核到同一原典，未核项只作结构提示",
-    "不验证预测效力"
+    "无真实前瞻结局集，不能计算预测准确率或宣称相对旧版提升",
+    "3未注入网络故障，宿主完整环境链路未全测",
+    "13、14修订不是独立首轮通过",
+    "部分初次试读期间源文件有已记录的边界修复；最终合法派生数据重算一致，不倒签初次语言输出",
+    "69卡和22选录不等于覆盖全部古法、81干格义及所有事类",
+    "无多人盲评及独立天文历法签核"
   ],
   "historical_replays": [
+    {
+      "version": "0.6.0",
+      "date": "2026-10-18",
+      "full_cases": [],
+      "focused_cases": [],
+      "not_replayed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "automated_tests": {
+        "command": "python -m unittest discover -s evals -p test_*.py",
+        "passed": 38
+      },
+      "limits": [
+        "评估预期更新不等于已完成行为盲测",
+        "奇仪墓整表未逐项统一核到同一原典，未核项只作结构提示",
+        "不验证预测效力"
+      ]
+    },
     {
       "version": "0.4.0",
       "date": "2026-10-15",

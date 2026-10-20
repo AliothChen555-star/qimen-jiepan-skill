@@ -1,0 +1,23 @@
+{
+  "type": "partial_palace_facts",
+  "palace": {
+    "number": 1,
+    "door": "生门"
+  },
+  "pair": {
+    "heaven": "丙",
+    "earth": "丁"
+  },
+  "unknown": [
+    "时间",
+    "排法元数据",
+    "月令",
+    "星神",
+    "空亡",
+    "主客",
+    "其余宫位",
+    "天遁奇墓所指对象与层次",
+    "实际所用事项"
+  ],
+  "not_a_complete_chart": true
+}

@@ -1,0 +1,420 @@
+{
+  "schema_version": "qimen_reading_record_v1",
+  "status": "final",
+  "chart_ref": {
+    "sha256": "5d326e932006e6a8fcefd7b3c2de589e2aa9f234783d0434f42987be702d273d",
+    "instant_utc": "2026-10-19T14:23:57+00:00",
+    "rule_version": "chai_bu_v1.0.0"
+  },
+  "method_profile": {
+    "chart": {
+      "timezone": "Asia/Shanghai",
+      "longitude": 120,
+      "latitude": 30,
+      "time_mode": "standard_time",
+      "day_boundary": "midnight",
+      "horse_basis": "hour",
+      "yuan_strategy": "chai_bu_v1",
+      "center_policy": "kun2"
+    },
+    "star_season": "tongzong",
+    "method_id": "LOCAL_REPUTATION_LIMITED"
+  },
+  "question": "用奇门帮我看近期整体风评，我的年命是丁，取法你根据问题选择。按当前时间起盘。随后我追问：为什么取日干，丁年命有什么作用？",
+  "known_facts": [
+    {
+      "id": "f_sim",
+      "text": "本题为模拟试读，无实际结局；盘为输入或前次成功冻结的原盘，未取事后事实。",
+      "basis": "provided_before_reading"
+    },
+    {
+      "id": "f_year",
+      "text": "用户自述年命丁，询问近期整体风评及日干、年命的取用关系。",
+      "basis": "provided_before_reading"
+    }
+  ],
+  "external_sources": [],
+  "external_methods": [
+    {
+      "id": "LOCAL_REPUTATION_LIMITED",
+      "source_id": "SK-1",
+      "name": "风评有限现代入口",
+      "scope": "以日干自问定位、年命辅助、景门公开形象、惊门争议作有限传统象义对照。",
+      "limitations": "工程解释；无已核完整风评结果或持续时间模型；不证明现实口碑、造谣或隐私。"
+    }
+  ],
+  "external_rules": [
+    {
+      "id": "A2_PAIR_丁戊",
+      "source_id": "MJ-2",
+      "scope": "实际天丁加地戊的原义补查；不证明本次现实结果。",
+      "requirements": [
+        "天丁加地戊，主寄与方向真实",
+        "官人升迁与常人昌顺分支须辨身份"
+      ],
+      "exceptions": [
+        "身份未知不宣布升迁",
+        "不得从年命辅助倒改日干主用"
+      ]
+    },
+    {
+      "id": "A2_PAIR_壬癸",
+      "source_id": "MJ-2",
+      "scope": "壬癸原义按MJ-2先查，句末疑文仅对照ZG-5。",
+      "requirements": [
+        "实际天壬加地癸",
+        "门星转义条件须核，MJ-2句末校录有疑"
+      ],
+      "exceptions": [
+        "不作隐私或不良行为事实",
+        "ZG-5只对照，不静默替换主文本"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "self",
+      "object": "本次自问的本人",
+      "kind": "stem",
+      "value": "丙",
+      "layer": "heaven",
+      "palace": 9,
+      "position": "main",
+      "primary": true,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "year",
+      "object": "丁年命的身份辅助",
+      "kind": "stem",
+      "value": "丁",
+      "layer": "heaven",
+      "palace": 6,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "image",
+      "object": "公开形象/表达的现代类比",
+      "kind": "door",
+      "value": "景门",
+      "layer": "human",
+      "palace": 1,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "dispute",
+      "object": "争议惊扰的辅助",
+      "kind": "door",
+      "value": "惊门",
+      "layer": "human",
+      "palace": 3,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "image_main",
+      "object": "景门宫实际主干，不是另一本人",
+      "kind": "stem",
+      "value": "壬",
+      "layer": "heaven",
+      "palace": 1,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "image_hosted",
+      "object": "景门宫实际寄干，不是另一本人",
+      "kind": "stem",
+      "value": "己",
+      "layer": "heaven",
+      "palace": 1,
+      "position": "hosted",
+      "primary": false,
+      "source_id": "SK-1"
+    }
+  ],
+  "results": [
+    {
+      "id": "current",
+      "target": "本人公开表达及评价定调的一般状态",
+      "stage": "原盘当前状态的有限现代解释",
+      "success_criteria": "公开表达顺畅、评价容易稳定",
+      "horizon": {
+        "state": "current",
+        "at": "2026-10-19T14:23:57+00:00"
+      },
+      "state": "assessed"
+    },
+    {
+      "id": "near",
+      "target": "近期整体风评最终方向",
+      "stage": "未来评价结果",
+      "success_criteria": "至近期截止点评价稳定转好",
+      "horizon": {
+        "state": "unknown",
+        "reason": "近期未给截止点，且无已核完整风评期限法。"
+      },
+      "state": "undetermined",
+      "reason": "近期未给截止点，且无已核完整风评期限法。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e1",
+      "result_id": "current",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "LOCAL_REPUTATION_LIMITED",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "本人天丙在离九，休门克离为迫，腾蛇；丙月令休。",
+      "inference": "在明确现代有限解释下，接洽与表达有受限、疑虑的一面；不宣告现实行为已发生。",
+      "dedup_key": "self-limits"
+    },
+    {
+      "id": "e2",
+      "result_id": "current",
+      "role_ids": [
+        "image",
+        "image_main",
+        "image_hosted"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "DOOR_PRESSURE",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "景门在坎一，宫水克门火为受制，非门迫；此宫不空。",
+      "inference": "只在公开形象的现代类比范围内解释表达受限，不外推舆论成败。",
+      "dedup_key": "image-controlled"
+    },
+    {
+      "id": "e3",
+      "result_id": "current",
+      "role_ids": [
+        "dispute"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "DOOR_PRESSURE",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "惊门在震三，金门克木宫为迫。",
+      "inference": "争议辅助线有受迫性质；不证明造谣发生。",
+      "dedup_key": "dispute-pressure"
+    },
+    {
+      "id": "e4",
+      "result_id": "current",
+      "role_ids": [
+        "year"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "A2_PAIR_丁戊",
+      "applicability": "true",
+      "polarity": "supports",
+      "critical": false,
+      "fact": "年命天丁在乾六加地戊。",
+      "inference": "原文有官人升迁、常人昌顺的正义；此处保留正面性质，不认定官人或升职。",
+      "dedup_key": "year-dingwu-meaning"
+    },
+    {
+      "id": "e5",
+      "result_id": "current",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "LOCAL_REPUTATION_LIMITED",
+      "applicability": "true",
+      "polarity": "supports",
+      "critical": false,
+      "fact": "本人同宫天任土月按统宗为相，本义次吉，有请谒通达等用途。",
+      "inference": "保留可接洽谋事的一面，不因此宣称休门迫解除。",
+      "dedup_key": "self-tianren"
+    },
+    {
+      "id": "e6",
+      "result_id": "current",
+      "role_ids": [
+        "year"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "LOCAL_REPUTATION_LIMITED",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "年命乾六杜门受乾金克，普通月令囚；天英按统宗旺，九地。",
+      "inference": "有限解释有闭塞与隐伏性质；星旺不自动变吉，九地不证明口碑稳定。",
+      "dedup_key": "year-door"
+    },
+    {
+      "id": "e7",
+      "result_id": "current",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "PAIR_丙丁",
+      "applicability": "unknown",
+      "polarity": "supports",
+      "critical": false,
+      "fact": "本人天丙加地丁，休门而非生门。",
+      "inference": "贵人文书吉利与常人平静分支的身份、事项未给，不能直接当现实好评证据。",
+      "dedup_key": "self-bingding"
+    },
+    {
+      "id": "e8",
+      "result_id": "current",
+      "role_ids": [
+        "image_main"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "A2_PAIR_壬癸",
+      "applicability": "unknown",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "景门宫主壬加地癸，MJ-2句末有校录疑点，已对照ZG-5。",
+      "inference": "传统有不良名声等不利义，但不可直接变成用户隐私事实或期限结论。",
+      "dedup_key": "image-rengui"
+    },
+    {
+      "id": "e9",
+      "result_id": "current",
+      "role_ids": [
+        "image_hosted"
+      ],
+      "source_id": "ZG-5",
+      "rule_id": "PAIR_己癸",
+      "applicability": "unknown",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "景门宫寄己加地癸。",
+      "inference": "疾病、囚狱等原义与此风评结果的分事适用未立，不能作现实指控。",
+      "dedup_key": "image-jigui"
+    },
+    {
+      "id": "e10",
+      "result_id": "near",
+      "role_ids": [
+        "self",
+        "image"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "LOCAL_REPUTATION_LIMITED",
+      "applicability": "unknown",
+      "polarity": "neutral",
+      "critical": true,
+      "fact": "问题仅说近期；本版未登记完整风评期限和结果方法。",
+      "inference": "无法把当前有限象义外推到未知近期截止点的最终评价。",
+      "dedup_key": "near-scope"
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "c1",
+      "result_id": "current",
+      "horizon": {
+        "state": "current",
+        "at": "2026-10-19T14:23:57+00:00"
+      },
+      "judgment": "mixed",
+      "claim": "有可争取支持，但公开表达受阻、议论容易反复；仅为原盘当前有限解释。",
+      "support_ids": [
+        "e1",
+        "e2",
+        "e3",
+        "e6"
+      ],
+      "counter_ids": [
+        "e4",
+        "e5"
+      ],
+      "excluded_ids": [
+        "e7",
+        "e8",
+        "e9"
+      ],
+      "dispositions": [
+        {
+          "evidence_id": "e4",
+          "reason": "正面原义保留，但年命辅助不压过主用，也不证明已升迁。"
+        },
+        {
+          "evidence_id": "e5",
+          "reason": "天任次吉且相保留，不能据此消去休门迫。"
+        },
+        {
+          "evidence_id": "e7",
+          "reason": "具体身份与文书事类未知，未作当前好评的成立依据。"
+        },
+        {
+          "evidence_id": "e8",
+          "reason": "补查原义保留，疑文和现代事件适用未齐，不用于现实指控。"
+        },
+        {
+          "evidence_id": "e9",
+          "reason": "疾病诉讼分事不对应本问，排除事件推断。"
+        }
+      ],
+      "synthesis_reason": "对同一公开表达目标，受迫/受制直接限制并存于正面接洽和身份辅助性质；无统一权重或自动解除规则，保留两面。"
+    },
+    {
+      "id": "c2",
+      "result_id": "near",
+      "horizon": {
+        "state": "unknown",
+        "reason": "近期未给截止点，且无已核完整风评期限法。"
+      },
+      "judgment": "undetermined",
+      "claim": "近期最终风评方向与转折日期未判。",
+      "support_ids": [],
+      "counter_ids": [],
+      "excluded_ids": [
+        "e10"
+      ],
+      "dispositions": [
+        {
+          "evidence_id": "e10",
+          "reason": "关键未知保持未判。"
+        }
+      ],
+      "synthesis_reason": "近期范围和该结果的完整适用依据均不足，不以当前性质替代未来结果。",
+      "reason": "近期未给截止点，且无已核完整风评期限法。"
+    }
+  ],
+  "imagery": [
+    {
+      "role_ids": [
+        "image",
+        "dispute"
+      ],
+      "interpretation": "可能需要核查原话与转述、正式说明与实际反馈是否一致。",
+      "status": "hypothesis",
+      "verification": "核对原始文字、转述版本与具体评价；不可先认定有人造谣。"
+    }
+  ],
+  "timing": [
+    {
+      "result_id": "current",
+      "state": "not_applicable",
+      "windows": [],
+      "reason": "此分项只作原盘当前状态的有限解释。"
+    },
+    {
+      "result_id": "near",
+      "state": "undetermined",
+      "windows": [],
+      "reason": "无风评完整期限或精确应期方法，未运行日期候选。"
+    }
+  ]
+}

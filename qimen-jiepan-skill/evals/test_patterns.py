@@ -5,9 +5,14 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from inspect_patterns import (compound_patterns, inspect_chart, pair_detail,
+from inspect_patterns import (compound_patterns, inspect_chart as inspect_full_chart, pair_detail,
                               relation, seasonal)
 from qimen.chart import arrange
+
+
+def inspect_chart(chart, **options):
+    # Explicit structure-only checks for synthetic arrangements; never a production fallback.
+    return inspect_full_chart(chart, validation='structure', **options)
 
 
 def fixture(hour="甲子", day="甲子"):

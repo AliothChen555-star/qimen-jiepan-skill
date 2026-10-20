@@ -1,0 +1,31 @@
+{
+  "record_type": "partial_rule_check",
+  "question": "局部核格：生门、天丙、地丁同在坎一。我准备据此称天遁大吉、可以直接用，你核一下。其余信息未给，不要补盘。",
+  "source_id": "YY-2",
+  "rule_id": "DUN_TIAN",
+  "geometry": "true",
+  "conditions": [
+    {
+      "id": "no_door_pressure",
+      "state": "false",
+      "basis": "生门土克坎一水，门克宫为迫。"
+    },
+    {
+      "id": "no_qi_tomb",
+      "state": "unknown",
+      "basis": "原条奇墓对象与层次未绑定，不自动全层套表。"
+    },
+    {
+      "id": "domain_scope_confirmed",
+      "state": "unknown",
+      "basis": "未给具体用事对象与阶段。"
+    }
+  ],
+  "conclusions": {
+    "textual_geometry": "成立",
+    "use_as_favorable": "不成立，已有门迫反证",
+    "specific_event": "未判，未给事类与完整盘面"
+  },
+  "no_cast": true,
+  "no_complete_chart_claim": true
+}

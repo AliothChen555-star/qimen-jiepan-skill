@@ -1,11 +1,27 @@
 """历法以北京时间读取天文交节，日时干支按选定地方钟面计算。"""
 from datetime import datetime, timedelta, timezone
 from functools import lru_cache
+from importlib.metadata import PackageNotFoundError, version
 from math import sin, cos, pi
+import platform
+from zoneinfo import TZPATH
 from lunar_python import Solar
 from .rules import SEXAGENARY, STEMS, BRANCHES
 
 BEIJING = timezone(timedelta(hours=8))
+
+
+def runtime_versions():
+    """Actual environment information; TZPATH may take precedence over tzdata."""
+    def installed(name):
+        try:
+            return version(name)
+        except PackageNotFoundError:
+            return None
+    return {"python": platform.python_version(),
+            "lunar_python": installed("lunar-python"), "tzdata": installed("tzdata"),
+            "zoneinfo_tzpath": list(TZPATH),
+            "timezone_database_policy": "zoneinfo TZPATH first, installed tzdata fallback"}
 
 @lru_cache(maxsize=4096)
 def _lunar(year, month, day, hour, minute, second):
@@ -38,7 +54,7 @@ def calendar_data(instant, longitude, time_mode, day_boundary):
     hour = STEMS[(STEMS.index(day[0])*2 + hour_index) % 10] + BRANCHES[hour_index]
     return {
         'solar_datetime': instant.isoformat(), 'effective_wall_time': wall.isoformat(timespec='seconds'),
-        'effective_time_kind': '地方视太阳钟面' if time_mode == 'true_solar_time' else '所选时区标准钟面',
+        'effective_time_kind': '地方视太阳钟面' if time_mode == 'true_solar_time' else '所选时区民用钟面（含适用的夏令偏移）',
         'lunar_date': astronomical.toString(), 'lunar_date_basis': '北京时间民用日期',
         'year_pillar': astronomical.getYearInGanZhiExact(), 'month_pillar': astronomical.getMonthInGanZhiExact(),
         'day_pillar': day, 'hour_pillar': hour, 'day_cycle_index': SEXAGENARY.index(day),
@@ -46,5 +62,5 @@ def calendar_data(instant, longitude, time_mode, day_boundary):
     }, {
         'name': term.getName(), 'transition_time': term_time.astimezone(instant.tzinfo).isoformat(),
         'next_name': upcoming.getName(), 'next_transition_time': next_time.astimezone(instant.tzinfo).isoformat(),
-        'provider': 'lunar-python 1.4.8',
+        'provider': f'lunar-python {runtime_versions()["lunar_python"]}',
     }

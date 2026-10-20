@@ -1,0 +1,83 @@
+{
+  "validation": {
+    "invalid_time_fields_accepted": [],
+    "synthetic_structure_accepted": true
+  },
+  "typed_geometry": [
+    {
+      "input": null,
+      "geometry_match": "unknown",
+      "eligibility": {
+        "interpretation": "unknown",
+        "use_as_favorable": "unknown",
+        "event_judgment": "unknown",
+        "exception": "unknown"
+      }
+    },
+    {
+      "input": false,
+      "geometry_match": "false",
+      "eligibility": {
+        "interpretation": "false",
+        "use_as_favorable": "false",
+        "event_judgment": "false",
+        "exception": "false"
+      }
+    },
+    {
+      "input": true,
+      "geometry_match": "true",
+      "eligibility": {
+        "interpretation": "true",
+        "use_as_favorable": "unknown",
+        "event_judgment": "unknown",
+        "exception": "unknown"
+      }
+    },
+    {
+      "input": "false",
+      "geometry_match": "unknown",
+      "eligibility": {
+        "interpretation": "true",
+        "use_as_favorable": "unknown",
+        "event_judgment": "unknown",
+        "exception": "unknown"
+      }
+    },
+    {
+      "input": "unknown",
+      "geometry_match": "unknown",
+      "eligibility": {
+        "interpretation": "true",
+        "use_as_favorable": "unknown",
+        "event_judgment": "unknown",
+        "exception": "unknown"
+      }
+    },
+    {
+      "input": 0,
+      "geometry_match": "unknown",
+      "eligibility": {
+        "interpretation": "true",
+        "use_as_favorable": "unknown",
+        "event_judgment": "unknown",
+        "exception": "unknown"
+      }
+    },
+    {
+      "input": 1,
+      "geometry_match": "unknown",
+      "eligibility": {
+        "interpretation": "true",
+        "use_as_favorable": "unknown",
+        "event_judgment": "unknown",
+        "exception": "unknown"
+      }
+    }
+  ],
+  "historical_segments": {
+    "transition_count": 16877,
+    "failures": [],
+    "unique_histories": 343
+  }
+}

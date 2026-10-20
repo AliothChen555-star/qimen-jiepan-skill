@@ -1,0 +1,2813 @@
+{
+  "schema_version": "qimen_rule_cards_v1",
+  "sources": [
+    {
+      "id": "YY-3",
+      "title": "遁甲演义",
+      "edition": "维基文库四库全书本校录，卷三",
+      "url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷3",
+      "location": "九星所属开篇正文九星休旺段",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "可选正文旺衰：同类旺、我生相、生我休、官鬼囚、妻财死",
+        "notes": "紧随正文的五行表及九星表有异文，本版可选项只取正文，不混表；未启用全卷诸时克应。"
+      }
+    },
+    {
+      "id": "TZ-1",
+      "title": "奇门遁甲统宗",
+      "edition": "维基文库校录页，未据影印本逐字校勘",
+      "url": "https://zh.wikisource.org/zh-hans/奇門遁甲統宗",
+      "location": "凡例、奇门四十格、九星旺相、迫；卷二八门所主、九星所主、九星类神、八神类神",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "凡例、奇门四十格、九星旺相、迫；卷二八门所主、九星所主、九星类神、八神类神",
+        "notes": "仅这些段落；未据影印本独立考定刊刻年代。所主与类神段内有季节及用途差异，不能抽成一条全年通断；旧TZ-2索引并入本项，不表示通读全书。"
+      }
+    },
+    {
+      "id": "YY-2",
+      "title": "遁甲演义",
+      "edition": "维基文库四库全书本校录，卷二",
+      "url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "location": "九遁、回首跌穴、守门得使、三诈五假及相关凶格",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "九遁、回首跌穴、守门得使、三诈五假及相关凶格",
+        "notes": "正文内并列异说；仅采用每条卡所写版本。未核符咒效验。"
+      }
+    },
+    {
+      "id": "MJ-P",
+      "title": "奇门遁甲秘笈大全",
+      "edition": "识典古籍平台正文；题署刘伯温辑不作作者归属考证",
+      "url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g0jm43spn",
+      "location": "凡例",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "凡例",
+        "notes": "格局主客例外、庚值符限制；未把该页与统宗同文当独立印证。"
+      }
+    },
+    {
+      "id": "MJ-2",
+      "title": "奇门遁甲秘笈大全",
+      "edition": "识典古籍校录正文；卷二十干克应诀",
+      "url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "location": "所选18个有向干对及相关回首、跌穴简法",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "所选18个有向干对及相关回首、跌穴简法",
+        "notes": "己段段首误作六乙，壬壬缓解句疑字；本表4个相关项固定采用ZG-5避免静默校字。仅核22选录范围，不声明81全核。"
+      }
+    },
+    {
+      "id": "MJ-7",
+      "title": "奇门遁甲秘笈大全",
+      "edition": "识典古籍校录正文；卷七奇门主客占验论",
+      "url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1z6nblei",
+      "location": "往访、来访的天地盘星角色段",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "往访、来访的天地盘星角色段",
+        "notes": "另列阳日阴日法有歧义，不合并启用；未采用神初星中门末为通用阶段算法。"
+      }
+    },
+    {
+      "id": "ZG-4",
+      "title": "奇门旨归",
+      "edition": "识典古籍校录正文，卷四",
+      "url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "location": "凶格释义、三奇入墓、星门入墓、门宫迫制、反伏吟",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "凶格释义、三奇入墓、星门入墓、门宫迫制、反伏吟",
+        "notes": "本书含飞布体系，分类条文移用于内置转盘属于明确的方法兼容选择，未据此切换排盘。六仪墓整表未核。"
+      }
+    },
+    {
+      "id": "ZG-5",
+      "title": "奇门旨归",
+      "edition": "识典古籍校录正文，卷五",
+      "url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gmimdctq",
+      "location": "己丁、己辛、己癸、壬壬四项选录；庚丁为异文参照",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "己丁、己辛、己癸、壬壬四项选录；庚丁为异文参照",
+        "notes": "己巳等疑字未径改。壬壬本页为星门俱吉，故固定用于该项；不按吉凶挑选版本。"
+      }
+    },
+    {
+      "id": "ZG-8",
+      "title": "奇门旨归",
+      "edition": "识典古籍校录正文，卷八",
+      "url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gptn8mqj",
+      "location": "占贸易、占合伙求财、占开店肆；交易买货借贷为边界参照",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "占贸易、占合伙求财、占开店肆；交易买货借贷为边界参照",
+        "notes": "首批方法核读范围完整至条目结束；对倍利、百不失一只记原书用语，不承诺现实效验或收益倍数。"
+      }
+    },
+    {
+      "id": "LEGACY-TOMB",
+      "title": "上游奇仪墓表",
+      "edition": "原版0.6.0工程表",
+      "url": null,
+      "location": "乙癸2、丙戊6、丁己庚8、辛壬4",
+      "verification": {
+        "status": "partial",
+        "checked_on": "2026-10-19",
+        "checked_scope": "乙癸2、丙戊6、丁己庚8、辛壬4",
+        "notes": "仅乙丙丁本轮另有ZG-4直接正文支持；不把整表一并认证。"
+      }
+    },
+    {
+      "id": "SK-1",
+      "title": "工程协议与现代有限解释",
+      "edition": "本候选版设计，不是古籍",
+      "url": null,
+      "location": "方法兼容、三态、记录、现代工作压力入口",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "方法兼容、三态、记录、现代工作压力入口",
+        "notes": "设计已知出处；没有古代预测效验含义。"
+      }
+    }
+  ],
+  "methods": [
+    {
+      "id": "ZG8_PARTNERSHIP",
+      "name": "合伙求财",
+      "source_id": "ZG-8",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gptn8mqj",
+      "status": "enabled_textual_method",
+      "scope": "合伙双方助益、公平及求财关系；不独立断现代合同签署期限",
+      "roles": [
+        {
+          "object": "我",
+          "symbol": "日干",
+          "layer": "heaven",
+          "primary": true
+        },
+        {
+          "object": "伙伴",
+          "symbol": "时干",
+          "layer": "heaven",
+          "primary": true
+        },
+        {
+          "object": "利益关系复核",
+          "symbol": "生门",
+          "layer": "human",
+          "primary": false
+        }
+      ],
+      "comparisons": [
+        "时干宫→日干宫：奇门吉格且生我，伙伴益我",
+        "日干宫→时干宫：奇门吉格且我生彼，益彼",
+        "两宫比和：公平无猜忌的原法含义",
+        "时宫凶神凶格并克日宫：不利",
+        "生门是否生我另核"
+      ],
+      "required_conditions": [
+        "逐一核奇门吉格完整适用，不以五行生替代全部条件",
+        "无年命可依该法角色，不编造年命",
+        "同干同宫保留分辨限制",
+        "句中百不失一不作现实准确率承诺"
+      ],
+      "output_boundary": "可分合作助益和风险；没有精确期限规则时不以一般状态宣布某月必签。",
+      "timing": {
+        "status": "not_supplied_by_this_entry",
+        "exact_date_rule": null
+      },
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "合伙双方助益、公平及求财关系；不独立断现代合同签署期限",
+        "notes": "文本核读与现实预测效验分开；期限不因题目给出而自动成立。"
+      }
+    },
+    {
+      "id": "ZG8_TRADE",
+      "name": "贸易资本与利息",
+      "source_id": "ZG-8",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gptn8mqj",
+      "status": "enabled_textual_method",
+      "scope": "明确资本投入与经营收益的贸易问题；不是证券价格模型",
+      "roles": [
+        {
+          "object": "资本",
+          "symbol": "戊",
+          "layer": "heaven",
+          "primary": true
+        },
+        {
+          "object": "利息/经营收益",
+          "symbol": "生门",
+          "layer": "human",
+          "primary": true
+        }
+      ],
+      "comparisons": [
+        "生门宫带奇门吉格生戊宫：利于收益",
+        "两宫比和：原条中利",
+        "生门宫克戊宫且凶神凶格：折本",
+        "戊宫生生门宫：添资本仍得利",
+        "生门墓绝且凶神凶格：耗本"
+      ],
+      "required_conditions": [
+        "同条连词条件必须同时核",
+        "墓绝各自有来源；十二绝未实现不得伪装已核",
+        "收益与净利润、回本、现金流分开定义"
+      ],
+      "output_boundary": "保留原有得利/折本含义，倍利不转数字收益；存在相反分项时不能全盘凶票压掉资本生收益正证。",
+      "timing": {
+        "status": "not_supplied_by_this_entry",
+        "exact_date_rule": null
+      },
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "明确资本投入与经营收益的贸易问题；不是证券价格模型",
+        "notes": "文本核读与现实预测效验分开；期限不因题目给出而自动成立。"
+      }
+    },
+    {
+      "id": "ZG8_SHOP",
+      "name": "开店肆",
+      "source_id": "ZG-8",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gptn8mqj",
+      "status": "enabled_textual_method",
+      "scope": "开店经营条件及店铺与问事人关系；开业、签租约、盈利须另分结果",
+      "roles": [
+        {
+          "object": "店铺经营",
+          "symbol": "开门",
+          "layer": "human",
+          "primary": true
+        },
+        {
+          "object": "我",
+          "symbol": "日干",
+          "layer": "heaven",
+          "primary": true
+        }
+      ],
+      "comparisons": [
+        "开门旺相、奇门吉格并生我：原条大吉",
+        "比和不克制：次吉",
+        "开门入墓或返吟或空亡：不利",
+        "开门宫凶神凶格并冲克日宫：更不利"
+      ],
+      "required_conditions": [
+        "开门旺相按固定所用月令法，不因名称吉就跳过",
+        "开门墓按星门墓而非阴干墓",
+        "空亡按已声明支位/整宫规则",
+        "本版将同段旺相、奇门吉格视作正面分支的前置检查，比和次吉也不免检；若另释须显式登记版本",
+        "奇门吉格不可由单一吉名代替；启用格须各自条件核齐，未齐为未知"
+      ],
+      "output_boundary": "书店文教取象不是盈利证据；开店吉不自动等于半年净利正。",
+      "timing": {
+        "status": "not_supplied_by_this_entry",
+        "exact_date_rule": null
+      },
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "开店经营条件及店铺与问事人关系；开业、签租约、盈利须另分结果",
+        "notes": "文本核读与现实预测效验分开；期限不因题目给出而自动成立。"
+      }
+    },
+    {
+      "id": "MJ7_VISIT",
+      "name": "往访/来访（有限关系法）",
+      "source_id": "MJ-7",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1z6nblei",
+      "status": "limited",
+      "scope": "已知方向及访客身份的天地盘星关系；不代表完整寻人、能否见到或应期法",
+      "roles": [
+        {
+          "object": "访客",
+          "symbol": "所往/来方天盘星",
+          "layer": "heaven",
+          "primary": true
+        },
+        {
+          "object": "主人",
+          "symbol": "该星所临本位地盘星",
+          "layer": "earth_base_star",
+          "primary": true
+        }
+      ],
+      "comparisons": [
+        "他生我益我；我生他益他",
+        "他克我损我；我克他损他",
+        "比和无损益"
+      ],
+      "required_conditions": [
+        "先明确往访或来访，天地角色相应互换",
+        "落点方向明确，否则不能随选有利宫",
+        "另列阳日阴日分法不混入本法"
+      ],
+      "output_boundary": "只支持原文所列彼此益损；不能推导见面日期或必见。",
+      "timing": {
+        "status": "not_supplied_by_this_entry",
+        "exact_date_rule": null
+      },
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "已知方向及访客身份的天地盘星关系；不代表完整寻人、能否见到或应期法",
+        "notes": "文本核读与现实预测效验分开；期限不因题目给出而自动成立。"
+      }
+    },
+    {
+      "id": "MODERN_WORKLOAD",
+      "name": "现代工作压力有限入口",
+      "source_id": "SK-1",
+      "source_url": null,
+      "status": "limited_modern_interpretation",
+      "scope": "已知工作压力的传统象义对照和待核事实；不含已核压力持续天数模型",
+      "roles": [
+        {
+          "object": "本人",
+          "symbol": "日干",
+          "layer": "heaven",
+          "primary": true
+        },
+        {
+          "object": "任务/工作事项",
+          "symbol": "时干",
+          "layer": "heaven",
+          "primary": false
+        }
+      ],
+      "comparisons": [
+        "无独立完整古法，不能引用合伙/行人/病占应期替代",
+        "可按已绑定本人及明确事项核现状性质，后续事实单独追加"
+      ],
+      "required_conditions": [
+        "主动明示为现代有限取法",
+        "时干只给一个主要对象",
+        "不把心理压力套成疾病诊断",
+        "持续时长无已核事类规则时保持未判"
+      ],
+      "output_boundary": "可以说明哪些传统结构像受限、重复、急迫；不能从宫数、冲墓或马星造几天后结束。",
+      "timing": {
+        "status": "unsupported",
+        "exact_date_rule": null
+      },
+      "verification": {
+        "status": "unknown",
+        "checked_on": "2026-10-19",
+        "checked_scope": "已知工作压力的传统象义对照和待核事实；不含已核压力持续天数模型",
+        "notes": "文本核读与现实预测效验分开；期限不因题目给出而自动成立。"
+      }
+    }
+  ],
+  "rules": [
+    {
+      "id": "PAIR_乙丁",
+      "name": "奇仪相佐",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "乙",
+        "earth": "丁"
+      },
+      "required_conditions": [],
+      "exceptions": [],
+      "meaning": "文书事吉；原文另有百事可为。这里仅作已核干格原义，不扩为所有结果必成。",
+      "source_excerpt": "文书事吉，百事可为。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "乙丁"
+    },
+    {
+      "id": "PAIR_乙庚",
+      "name": "日奇被刑",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "乙",
+        "earth": "庚"
+      },
+      "required_conditions": [],
+      "exceptions": [],
+      "meaning": "争讼财产、夫妻怀私等不利原义；不据此证明现实私情或诉讼。",
+      "source_excerpt": "争讼财产，夫妻怀私。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "乙庚"
+    },
+    {
+      "id": "PAIR_丙丙",
+      "name": "月奇孛师",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "丙",
+        "earth": "丙"
+      },
+      "required_conditions": [],
+      "exceptions": [],
+      "meaning": "文书逼迫、破耗遗失；同干并不代表整盘伏吟。",
+      "source_excerpt": "文书逼迫，破耗遗失。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "丙丙"
+    },
+    {
+      "id": "PAIR_丙丁",
+      "name": "星奇朱雀",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "丙",
+        "earth": "丁"
+      },
+      "required_conditions": [
+        {
+          "id": "person_status_bound",
+          "description": "已辨原条所谓贵人/常人及文书事类",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "得三吉门为天道是原文另一分支，不等同本版生门丙丁天遁。"
+      ],
+      "meaning": "贵人文书吉利，常人平静。必须区分身份和所问文书。",
+      "source_excerpt": "贵人文书吉利，常人平静。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "丙丁"
+    },
+    {
+      "id": "PAIR_丁丁",
+      "name": "奇入太阴",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "丁",
+        "earth": "丁"
+      },
+      "required_conditions": [],
+      "exceptions": [],
+      "meaning": "文书即至、喜事遂心的干表原义；太阴是表名，不证明神盘太阴。",
+      "source_excerpt": "文书即至，喜事遂心。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "丁丁"
+    },
+    {
+      "id": "PAIR_丁辛",
+      "name": "朱雀入狱",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "丁",
+        "earth": "辛"
+      },
+      "required_conditions": [
+        {
+          "id": "person_status_bound",
+          "description": "释囚与失位必须落实原条身份，身份未知不得择吉",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "罪人释囚、官人失位，身份不同断义相反。",
+      "source_excerpt": "罪人释囚，官人失位。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "丁辛"
+    },
+    {
+      "id": "PAIR_丁壬",
+      "name": "五神互合",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "丁",
+        "earth": "壬"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "贵人恩诏、讼狱公平；不是一切关系自动和合。",
+      "source_excerpt": "贵人恩诏，讼狱公平。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "丁壬"
+    },
+    {
+      "id": "PAIR_戊乙",
+      "name": "青龙合灵",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "戊",
+        "earth": "乙"
+      },
+      "required_conditions": [
+        {
+          "id": "actual_door_scope",
+          "description": "已按实际门及本事用途分别核吉凶",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "interpretation"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "门吉事吉、门凶事凶；先定所问适用门义，不能只取吉格名称。",
+      "source_excerpt": "门吉事吉，门凶事凶。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "戊乙"
+    },
+    {
+      "id": "PAIR_戊丁",
+      "name": "青龙耀明",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "戊",
+        "earth": "丁"
+      },
+      "required_conditions": [
+        {
+          "id": "no_qi_tomb",
+          "description": "先确定原条奇墓所指奇的对象及层次，再依固定来源核未入墓；对象未绑定或原义未定时为未知，不默认全层套表",
+          "evaluator": "no_qi_tomb",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable",
+          "requires_object_binding": true
+        },
+        {
+          "id": "no_door_pressure",
+          "description": "同宫实际门不克宫；宫克门另记，不偷换为同义",
+          "evaluator": "no_door_pressure",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        },
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "墓迫是正文直接限制；未知时保留吉义与限制并列，不宣布吉格已可用。"
+      ],
+      "meaning": "谒贵求名吉利；墓迫时改为招是招非。",
+      "source_excerpt": "若值墓迫，招是招非。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "戊丁"
+    },
+    {
+      "id": "PAIR_戊辛",
+      "name": "青龙折足",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "戊",
+        "earth": "辛"
+      },
+      "required_conditions": [
+        {
+          "id": "good_door_support",
+          "description": "实际门按本事为吉且有原条所谓生助，不仅见吉门名称",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        }
+      ],
+      "exceptions": [
+        "有足疾是传统类象，不据此诊断实际疾病。"
+      ],
+      "meaning": "吉门生助尚可谋为；逢凶门有失财等不利原义。",
+      "source_excerpt": "吉门生助，尚可谋为。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "戊辛"
+    },
+    {
+      "id": "PAIR_戊壬",
+      "name": "龙入天牢",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "戊",
+        "earth": "壬"
+      },
+      "required_conditions": [],
+      "exceptions": [],
+      "meaning": "原条凡阴阳皆不利；仅用于相关对象，不推成所有分项都失败。",
+      "source_excerpt": "凡阴阳皆不利。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "戊壬"
+    },
+    {
+      "id": "PAIR_戊癸",
+      "name": "青龙华盖",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "戊",
+        "earth": "癸"
+      },
+      "required_conditions": [
+        {
+          "id": "actual_door_scope",
+          "description": "实际门与本事用途已核",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "interpretation"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "门吉招福，门凶多乖；不能只凭吉格表名下结论。",
+      "source_excerpt": "门吉招福，门凶多乖。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "戊癸"
+    },
+    {
+      "id": "PAIR_己丁",
+      "name": "朱雀入墓",
+      "source_id": "ZG-5",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gmimdctq",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "己",
+        "earth": "丁"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "文状词讼先曲后直；仅有干表名不证明实际落墓。",
+      "source_excerpt": "文状词讼，先曲后直。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "己丁"
+    },
+    {
+      "id": "PAIR_己辛",
+      "name": "游魂入墓",
+      "source_id": "ZG-5",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gmimdctq",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "己",
+        "earth": "辛"
+      },
+      "required_conditions": [],
+      "exceptions": [],
+      "meaning": "传统有不宁、凶扰等断义；不宣称鬼神事实，不证明实际墓宫。",
+      "source_excerpt": "名曰游魂入墓。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "己辛"
+    },
+    {
+      "id": "PAIR_己癸",
+      "name": "地刑玄武",
+      "source_id": "ZG-5",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gmimdctq",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "己",
+        "earth": "癸"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "原条涉及男女疾病、词讼囚狱的不利含义；不证明疾病、犯罪或神盘玄武。",
+      "source_excerpt": "词讼有囚狱之凶。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "己癸"
+    },
+    {
+      "id": "PAIR_庚丁",
+      "name": "亭亭之格",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "庚",
+        "earth": "丁"
+      },
+      "required_conditions": [
+        {
+          "id": "good_door_support",
+          "description": "实际门于该问适用且为吉；缓解幅度不能擅定",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        }
+      ],
+      "exceptions": [
+        "不自动推出现实私情和诉讼；不是月将法亭亭白奸。"
+      ],
+      "meaning": "因私昵起官司，门吉有救；吉门缓解为该条限定。",
+      "source_excerpt": "因私昵起官司，门吉有救。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "庚丁"
+    },
+    {
+      "id": "PAIR_辛戊",
+      "name": "困龙被伤",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "辛",
+        "earth": "戊"
+      },
+      "required_conditions": [],
+      "exceptions": [
+        "不证明实际已有官司，也不单独证明某资产下跌。"
+      ],
+      "meaning": "官司破财，屈抑守分，妄动祸殃；不得省去不利性质或守分限制。",
+      "source_excerpt": "官司破财，屈抑守分，妄动祸殃。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "辛戊"
+    },
+    {
+      "id": "PAIR_辛丁",
+      "name": "狱神得奇",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "辛",
+        "earth": "丁"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "经商获倍利、囚人逢赦宥的原文分事含义；不转为现实收益倍数。",
+      "source_excerpt": "经商获倍利，囚人逢赦宥。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "辛丁"
+    },
+    {
+      "id": "PAIR_辛庚",
+      "name": "白虎出力",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "辛",
+        "earth": "庚"
+      },
+      "required_conditions": [],
+      "exceptions": [
+        "退让为原条趋避建议，不把它伪装成已验证现实策略。"
+      ],
+      "meaning": "刀刃相接、主客相残；退让稍可，强进加凶。",
+      "source_excerpt": "逊让退步稍可。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "辛庚"
+    },
+    {
+      "id": "PAIR_壬辛",
+      "name": "螣蛇相缠",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "壬",
+        "earth": "辛"
+      },
+      "required_conditions": [],
+      "exceptions": [
+        "FQ-3另名白虎犯格，本版不临时换表求缓解；不证明现实已有欺骗。"
+      ],
+      "meaning": "纵得吉门亦不能安，谋望有受欺瞒之义；保留不利，不用吉门径行解除。",
+      "source_excerpt": "纵得吉门，亦不能安。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "壬辛"
+    },
+    {
+      "id": "PAIR_壬壬",
+      "name": "蛇入地罗",
+      "source_id": "ZG-5",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gmimdctq",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "壬",
+        "earth": "壬"
+      },
+      "required_conditions": [
+        {
+          "id": "good_star_and_door",
+          "description": "星与门俱吉且于本事适用，才引用缓解分支",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        }
+      ],
+      "exceptions": [
+        "固定选ZG-5，本条MJ-2相应句有疑字；不是全盘伏吟或地罗时格自动成立。"
+      ],
+      "meaning": "外人缠绕、内事索索；星门俱吉庶免蹉跎。",
+      "source_excerpt": "星门俱吉，庶免蹉跎。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "壬壬"
+    },
+    {
+      "id": "PAIR_癸己",
+      "name": "华盖地户",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "有向天干加地干克应选录；具体吉凶仅限所述事类和身份",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "癸",
+        "earth": "己"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "男女占音信皆阻，躲灾避难反为吉；须分所问行为。",
+      "source_excerpt": "音信皆阻，躲灾避难为吉。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      },
+      "selected_pair": "癸己"
+    },
+    {
+      "id": "DUN_TIAN",
+      "name": "天遁",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+      "geometry": {
+        "type": "compound",
+        "heaven": "丙",
+        "door": "生门",
+        "earth": "丁"
+      },
+      "required_conditions": [
+        {
+          "id": "no_qi_tomb",
+          "description": "先确定原条奇墓所指奇的对象及层次，再依固定来源核未入墓；对象未绑定或原义未定时为未知，不默认全层套表",
+          "evaluator": "no_qi_tomb",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable",
+          "requires_object_binding": true
+        },
+        {
+          "id": "no_door_pressure",
+          "description": "同宫实际门不克宫；宫克门另记，不偷换为同义",
+          "evaluator": "no_door_pressure",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        },
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "正文首条上丙、中生、下丁；明确不可犯奇墓门迫。",
+      "source_excerpt": "亦不可犯奇墓门迫。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DUN_DI",
+      "name": "地遁",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+      "geometry": {
+        "type": "compound",
+        "heaven": "乙",
+        "door": "开门",
+        "earth": "己"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "正文首条开门乙奇下临地己；其用途含藏兵营建等。",
+      "source_excerpt": "开门六乙合六己。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DUN_REN",
+      "name": "人遁",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+      "geometry": {
+        "type": "compound",
+        "heaven": "丁",
+        "door": "休门",
+        "spirit": "太阴"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "正文首条休门丁奇与太阴同宫；用途有说敌和仇、婚姻交易等。",
+      "source_excerpt": "休门六丁共太阴。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DUN_SHEN",
+      "name": "神遁",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+      "geometry": {
+        "type": "compound",
+        "heaven": "丙",
+        "door": "生门",
+        "spirit": "九天"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "不同书同名神遁条件不同，本卡只取YY-2。"
+      ],
+      "meaning": "卷二生门丙奇九天；不混入统宗休乙九天异文。",
+      "source_excerpt": "天上六丙合九天，再合生门。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DUN_GUI",
+      "name": "鬼遁",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+      "geometry": {
+        "type": "compound",
+        "heaven": "乙",
+        "door": "杜门",
+        "spirit": "九地"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "正文与歌诀直接列出多说，不能称已统一为唯一古法。"
+      ],
+      "meaning": "只选该条歌诀乙奇杜门九地，不选紧随的丁休九地或乙开九地异说。",
+      "source_excerpt": "天上六乙合九地，临于杜门。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DUN_FENG",
+      "name": "风遁",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+      "geometry": {
+        "type": "compound",
+        "heaven": "乙",
+        "door": [
+          "开门",
+          "休门",
+          "生门"
+        ],
+        "palace": 4
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "丙开巽不犯墓迫是同条另一说；不把其条件偷接到乙奇歌诀，再冒称唯一原文。"
+      ],
+      "meaning": "选歌诀乙奇三吉门临巽。",
+      "source_excerpt": "天上六乙合三门，下临巽宫。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DUN_YUN",
+      "name": "云遁",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+      "geometry": {
+        "type": "compound",
+        "heaven": "乙",
+        "door": [
+          "开门",
+          "休门",
+          "生门"
+        ],
+        "earth": "辛"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "乙开坤不犯墓迫、乙开辛是正文另说；得使与逃走另核，不以云遁名字掩盖乙辛不利。"
+      ],
+      "meaning": "选歌诀乙奇加辛临三吉门。",
+      "source_excerpt": "天上六乙合六辛，临三吉门。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DUN_LONG",
+      "name": "龙遁",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+      "geometry": {
+        "type": "compound",
+        "heaven": "乙",
+        "door": "休门",
+        "palace": 1
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "伏吟乙休临癸或坎为另一说，未与本卡叠用。"
+      ],
+      "meaning": "选歌诀乙奇休门坎宫。",
+      "source_excerpt": "日奇合休于坎宫。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DUN_HU",
+      "name": "虎遁",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "九遁所选文本组合及原条列举用途；择方、用事性质，不是任何现代结果必成的通用判决",
+      "geometry": {
+        "type": "compound",
+        "heaven": "乙",
+        "door": "休门",
+        "earth": "辛",
+        "palace": 8
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "乙生辛、辛生艮为其他说；不把虎遁直接等于乙辛凶格解除。"
+      ],
+      "meaning": "选歌诀乙辛休门到艮。",
+      "source_excerpt": "天上六乙合六辛，临休到艮。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "QI_ENVOY",
+      "name": "三奇得使",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "stem_pairs",
+        "pairs": [
+          "乙己",
+          "乙辛",
+          "丙戊",
+          "丙庚",
+          "丁壬",
+          "丁癸"
+        ]
+      },
+      "required_conditions": [
+        {
+          "id": "chief_star_same_palace",
+          "description": "乙辛、丙庚、丁癸的附加条件：本旬值符星同宫",
+          "evaluator": "chief_star_same_palace",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable",
+          "when_pairs": [
+            "乙辛",
+            "丙庚",
+            "丁癸"
+          ]
+        },
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "不得以神盘值符冒充本旬值符星；不以得使名称自动洗去原不利相加。"
+      ],
+      "meaning": "三奇加相应六甲的所选六组；乙辛、丙庚、丁癸兼凶者，须本旬值符星同临方可按得使取用。",
+      "source_excerpt": "如遇本旬直符同临其上，方可用之而吉也。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "JADE_DOOR",
+      "name": "玉女守门",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "compound",
+        "earth": "丁",
+        "zhi_shi": true
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "主寄各按实际地丁角色记录，不因格式省略寄干。"
+      ],
+      "meaning": "值使门临地丁；原条用于阴私和合等，不把天丁同宫误当条件。",
+      "source_excerpt": "丁为玉女而会天乙直使之门。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DECEPTION_TRUE",
+      "name": "真诈",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "compound",
+        "heaven": [
+          "乙",
+          "丙",
+          "丁"
+        ],
+        "door": [
+          "开门",
+          "休门",
+          "生门"
+        ],
+        "spirit": "太阴"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "只启用奇、吉门、阴神齐备组合；原文七分、十分不转为概率或自造权重。"
+      ],
+      "meaning": "原条宜施恩隐遁求仙。",
+      "source_excerpt": "下临太阴宫名曰真诈。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DECEPTION_REST",
+      "name": "休诈",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "compound",
+        "heaven": [
+          "乙",
+          "丙",
+          "丁"
+        ],
+        "door": [
+          "开门",
+          "休门",
+          "生门"
+        ],
+        "spirit": "六合"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "只启用奇、吉门、阴神齐备组合；原文七分、十分不转为概率或自造权重。"
+      ],
+      "meaning": "原条宜合药治邪祈禳。",
+      "source_excerpt": "下临六合宫名曰休诈。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DECEPTION_HEAVY",
+      "name": "重诈",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "compound",
+        "heaven": [
+          "乙",
+          "丙",
+          "丁"
+        ],
+        "door": [
+          "开门",
+          "休门",
+          "生门"
+        ],
+        "spirit": "九地"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "只启用奇、吉门、阴神齐备组合；原文七分、十分不转为概率或自造权重。"
+      ],
+      "meaning": "原条宜进人口、取财、拜官授爵。",
+      "source_excerpt": "下临九地宫名曰重诈。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "DRAGON_CHIEF",
+      "name": "青龙返首（旬首法）",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "dynamic_pair",
+        "heaven": "$current_hidden_jia",
+        "earth": "丙"
+      },
+      "required_conditions": [
+        {
+          "id": "chief_hidden_not_geng",
+          "description": "本旬六甲遁仪不是庚；庚为值符不按吉回首跌穴取用",
+          "evaluator": "chief_hidden_not_geng",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        },
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "MJ-P凡例：逢庚为值符则作刑格、悖格，又不可用。"
+      ],
+      "meaning": "卷二本时六甲值符与丙相加；不是所有甲一概戊。",
+      "source_excerpt": "甲加丙兮龙回首。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "凡例的庚为值符在本结构表达为本旬遁仪庚；值符星与值符神分层。"
+      },
+      "secondary_sources": [
+        "MJ-P"
+      ]
+    },
+    {
+      "id": "BIRD_CHIEF",
+      "name": "飞鸟跌穴（旬首法）",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "dynamic_pair",
+        "heaven": "丙",
+        "earth": "$current_hidden_jia"
+      },
+      "required_conditions": [
+        {
+          "id": "chief_hidden_not_geng",
+          "description": "本旬六甲遁仪不是庚；庚为值符不按吉回首跌穴取用",
+          "evaluator": "chief_hidden_not_geng",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        },
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "MJ-P凡例：逢庚为值符则作刑格、悖格，又不可用。"
+      ],
+      "meaning": "卷二本时六甲值符与丙相加；不是所有甲一概戊。",
+      "source_excerpt": "天盘丙奇加地盘本时甲旬头也。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "凡例的庚为值符在本结构表达为本旬遁仪庚；值符星与值符神分层。"
+      },
+      "secondary_sources": [
+        "MJ-P"
+      ]
+    },
+    {
+      "id": "DRAGON_WU",
+      "name": "青龙返首（戊丙简法）",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "戊",
+        "earth": "丙"
+      },
+      "required_conditions": [
+        {
+          "id": "chief_hidden_not_geng",
+          "description": "本旬六甲遁仪不是庚；庚为值符不按吉回首跌穴取用",
+          "evaluator": "chief_hidden_not_geng",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        },
+        {
+          "id": "no_door_pressure",
+          "description": "同宫实际门不克宫；宫克门另记，不偷换为同义",
+          "evaluator": "no_door_pressure",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        },
+        {
+          "id": "no_pair_tomb",
+          "description": "不犯原条墓限制；天戊墓及对象范围须有核实来源",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        },
+        {
+          "id": "no_sixyi_punishment",
+          "description": "未犯所用六仪击刑法",
+          "evaluator": "no_sixyi_punishment",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        },
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "MJ-P凡例：逢庚为值符则作刑格、悖格，又不可用。",
+        "MJ-2戊丙明言迫墓击刑限制；不得省去。"
+      ],
+      "meaning": "卷二十干表戊丙/丙戊条所定简法；与本旬甲法分开。",
+      "source_excerpt": "若逢迫墓击刑，吉事成凶。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "凡例的庚为值符在本结构表达为本旬遁仪庚；值符星与值符神分层。"
+      },
+      "secondary_sources": [
+        "MJ-P"
+      ]
+    },
+    {
+      "id": "BIRD_WU",
+      "name": "飞鸟跌穴（丙戊简法）",
+      "source_id": "MJ-2",
+      "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "丙",
+        "earth": "戊"
+      },
+      "required_conditions": [
+        {
+          "id": "chief_hidden_not_geng",
+          "description": "本旬六甲遁仪不是庚；庚为值符不按吉回首跌穴取用",
+          "evaluator": "chief_hidden_not_geng",
+          "expected": true,
+          "critical": true,
+          "applies_to": "use_as_favorable"
+        },
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "MJ-P凡例：逢庚为值符则作刑格、悖格，又不可用。"
+      ],
+      "meaning": "卷二十干表戊丙/丙戊条所定简法；与本旬甲法分开。",
+      "source_excerpt": "六丙加六戊，名飞鸟跌穴。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "凡例的庚为值符在本结构表达为本旬遁仪庚；值符星与值符神分层。"
+      },
+      "secondary_sources": [
+        "MJ-P"
+      ]
+    },
+    {
+      "id": "GEOM_乙辛",
+      "name": "青龙逃走",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "乙",
+        "earth": "辛"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "host_guest_relief",
+          "description": "MJ-P凡例对主有不害之用；须先按该事方法绑定主客，不害不等于获胜。 本项为MJ-P另法，未明确选用其例外口径时不覆盖ZG-4本条。",
+          "condition": {
+            "id": "host_guest_role_bound",
+            "description": "主客定义、现实身份和本事适用均已固定",
+            "evaluator": "manual",
+            "expected": true,
+            "critical": true,
+            "applies_to": "exception"
+          },
+          "relieved_role": "主",
+          "source_id": "MJ-P",
+          "variant_selection_required": true
+        }
+      ],
+      "meaning": "ZG-4：不宜举兵，有逃窜、谋为不利之义。主客不害属MJ-P另法，未选不得径作解除。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+        "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+      },
+      "secondary_sources": [
+        "MJ-P"
+      ]
+    },
+    {
+      "id": "GEOM_辛乙",
+      "name": "白虎猖狂",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "辛",
+        "earth": "乙"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "host_guest_relief",
+          "description": "MJ-P凡例对客有不害之用；须先按该事方法绑定主客，不害不等于获胜。 本项为MJ-P另法，未明确选用其例外口径时不覆盖ZG-4本条。",
+          "condition": {
+            "id": "host_guest_role_bound",
+            "description": "主客定义、现实身份和本事适用均已固定",
+            "evaluator": "manual",
+            "expected": true,
+            "critical": true,
+            "applies_to": "exception"
+          },
+          "relieved_role": "客",
+          "source_id": "MJ-P",
+          "variant_selection_required": true
+        }
+      ],
+      "meaning": "ZG-4：不宜行兵，主客皆伤，婚姻修造尤忌。MJ-P客不害是另法条件，不与本句无条件拼接。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+        "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+      },
+      "secondary_sources": [
+        "MJ-P"
+      ]
+    },
+    {
+      "id": "GEOM_丁癸",
+      "name": "朱雀投江",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "丁",
+        "earth": "癸"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "host_guest_relief",
+          "description": "MJ-P凡例对主有不害之用；须先按该事方法绑定主客，不害不等于获胜。 本项为MJ-P另法，未明确选用其例外口径时不覆盖ZG-4本条。",
+          "condition": {
+            "id": "host_guest_role_bound",
+            "description": "主客定义、现实身份和本事适用均已固定",
+            "evaluator": "manual",
+            "expected": true,
+            "critical": true,
+            "applies_to": "exception"
+          },
+          "relieved_role": "主",
+          "source_id": "MJ-P",
+          "variant_selection_required": true
+        }
+      ],
+      "meaning": "ZG-4：文书泄漏等不利原义。不能确认现实已有泄密或火灾。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+        "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+      },
+      "secondary_sources": [
+        "MJ-P"
+      ]
+    },
+    {
+      "id": "GEOM_癸丁",
+      "name": "腾蛇夭矫",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "癸",
+        "earth": "丁"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "host_guest_relief",
+          "description": "MJ-P凡例对客有不害之用；须先按该事方法绑定主客，不害不等于获胜。 本项为MJ-P另法，未明确选用其例外口径时不覆盖ZG-4本条。",
+          "condition": {
+            "id": "host_guest_role_bound",
+            "description": "主客定义、现实身份和本事适用均已固定",
+            "evaluator": "manual",
+            "expected": true,
+            "critical": true,
+            "applies_to": "exception"
+          },
+          "relieved_role": "客",
+          "source_id": "MJ-P",
+          "variant_selection_required": true
+        }
+      ],
+      "meaning": "ZG-4：动作虚惊，兵家防火攻；不是神盘腾蛇已出现，也不证明现实灾害。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+        "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+      },
+      "secondary_sources": [
+        "MJ-P"
+      ]
+    },
+    {
+      "id": "GEOM_庚丙",
+      "name": "太白入荧",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "庚",
+        "earth": "丙"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "同名格在其他书可能有不同主客、宜动宜静，未选版本不拼接。"
+      ],
+      "meaning": "ZG-4：太白入荧，有防来贼劫营、于丙宫设伏的兵事用途；不移为商业主客必胜公式。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+        "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+      },
+      "secondary_sources": []
+    },
+    {
+      "id": "GEOM_丙庚",
+      "name": "荧入太白",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "丙",
+        "earth": "庚"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "ZG-4此格兵事有宜尾追的特定用途；与别本退避断法存在异说，固定所选文本。"
+      ],
+      "meaning": "ZG-4：荧入太白，行兵有贼去、宜尾追、不战而敌败的原义；不可一律抽成任何事项都失败。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+        "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+      },
+      "secondary_sources": []
+    },
+    {
+      "id": "GEOM_庚癸",
+      "name": "大格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "庚",
+        "earth": "癸"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "原条惟捕捉可立获；按原捕捉事类，不作泛化逢凶转吉。"
+      ],
+      "meaning": "ZG-4：谋为、出行多不利，惟捕捉可立获。捕捉是原文例外，不自动转成交易捕捉机会。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+        "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+      },
+      "secondary_sources": []
+    },
+    {
+      "id": "GEOM_庚己",
+      "name": "刑格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "庚",
+        "earth": "己"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "同名格在其他书可能有不同主客、宜动宜静，未选版本不拼接。"
+      ],
+      "meaning": "ZG-4：行兵、出行道路阻隔等不利；刑格不能证明现实刑案。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+        "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+      },
+      "secondary_sources": []
+    },
+    {
+      "id": "GEOM_庚壬",
+      "name": "上格/小格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "ZG-4同章命名格、相应原条用途；MJ-P主客法作为显式另选条件，不混作必胜",
+      "geometry": {
+        "type": "stem_pair",
+        "heaven": "庚",
+        "earth": "壬"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "同名格在其他书可能有不同主客、宜动宜静，未选版本不拼接。"
+      ],
+      "meaning": "ZG-4：小格又称天罗，谋为、行兵出行不利；名称异同保留，不代替另一层地罗计算。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "ZG-4卷四该格全文；MJ-P主客例外另标来源",
+        "notes": "名称几何也见TZ-1四十格，本卡分事断义固定ZG-4。"
+      },
+      "secondary_sources": []
+    },
+    {
+      "id": "HIDDEN_PALACE",
+      "name": "伏宫格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "dynamic_pair",
+        "heaven": "庚",
+        "earth": "$current_hidden_jia"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "不是干表名自动生成另一层星盘状态。"
+      ],
+      "meaning": "原条用于战、行等不利；保留主客与宜动宜静的事类限制。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "FLYING_PALACE",
+      "name": "飞宫格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "dynamic_pair",
+        "heaven": "$current_hidden_jia",
+        "earth": "庚"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "不是干表名自动生成另一层星盘状态。"
+      ],
+      "meaning": "原条用于战、行等不利；保留主客与宜动宜静的事类限制。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "FLYING_DAY",
+      "name": "飞干格",
+      "source_id": "TZ-1",
+      "source_url": "https://zh.wikisource.org/zh-hans/奇門遁甲統宗",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "dynamic_pair",
+        "heaven": "$resolved_day_stem",
+        "earth": "庚"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "日干加庚；日甲按其本甲柱解析六仪。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "TIME_GENG_YEAR",
+      "name": "岁格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "time_pattern",
+        "heaven": "庚",
+        "earth": "$resolved_year_stem",
+        "pillar": "year"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "庚加本年、月、日、时柱干；正文有捕捉、行人等例外，不得只截百事不利。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "甲柱逐柱解析；重复日格与伏干名只算同一结构。"
+      }
+    },
+    {
+      "id": "TIME_GENG_MONTH",
+      "name": "月格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "time_pattern",
+        "heaven": "庚",
+        "earth": "$resolved_month_stem",
+        "pillar": "month"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "固定ZG-4月柱干法；YY-2月朔干法未计算，不能混称。"
+      ],
+      "meaning": "庚加本年、月、日、时柱干；正文有捕捉、行人等例外，不得只截百事不利。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "甲柱逐柱解析；重复日格与伏干名只算同一结构。"
+      }
+    },
+    {
+      "id": "TIME_GENG_DAY",
+      "name": "日格/伏干格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "time_pattern",
+        "heaven": "庚",
+        "earth": "$resolved_day_stem",
+        "pillar": "day"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "庚加本年、月、日、时柱干；正文有捕捉、行人等例外，不得只截百事不利。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "甲柱逐柱解析；重复日格与伏干名只算同一结构。"
+      }
+    },
+    {
+      "id": "TIME_GENG_HOUR",
+      "name": "时格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "time_pattern",
+        "heaven": "庚",
+        "earth": "$resolved_hour_stem",
+        "pillar": "hour"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "庚加本年、月、日、时柱干；正文有捕捉、行人等例外，不得只截百事不利。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "甲柱逐柱解析；重复日格与伏干名只算同一结构。"
+      }
+    },
+    {
+      "id": "TIME_BING_YEAR",
+      "name": "悖格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "time_pattern",
+        "heaven": "丙",
+        "earth": "$resolved_year_stem",
+        "pillar": "year"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "丙加相应柱干；原条利主不利客、宜固守，不任意扩大到市场涨跌。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "甲柱逐柱解析；重复日格与伏干名只算同一结构。"
+      }
+    },
+    {
+      "id": "TIME_BING_MONTH",
+      "name": "悖格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "time_pattern",
+        "heaven": "丙",
+        "earth": "$resolved_month_stem",
+        "pillar": "month"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "固定ZG-4月柱干法；YY-2月朔干法未计算，不能混称。"
+      ],
+      "meaning": "丙加相应柱干；原条利主不利客、宜固守，不任意扩大到市场涨跌。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "甲柱逐柱解析；重复日格与伏干名只算同一结构。"
+      }
+    },
+    {
+      "id": "TIME_BING_DAY",
+      "name": "悖格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "time_pattern",
+        "heaven": "丙",
+        "earth": "$resolved_day_stem",
+        "pillar": "day"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "丙加相应柱干；原条利主不利客、宜固守，不任意扩大到市场涨跌。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "甲柱逐柱解析；重复日格与伏干名只算同一结构。"
+      }
+    },
+    {
+      "id": "TIME_BING_HOUR",
+      "name": "悖格",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "time_pattern",
+        "heaven": "丙",
+        "earth": "$resolved_hour_stem",
+        "pillar": "hour"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "丙加相应柱干；原条利主不利客、宜固守，不任意扩大到市场涨跌。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "甲柱逐柱解析；重复日格与伏干名只算同一结构。"
+      }
+    },
+    {
+      "id": "MOTION_STAR",
+      "name": "星盘反伏吟",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "motion",
+        "layer": "star"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "伏吟归本位、返吟到对宫。静守、重复或反覆是所选条文解释，不在所有事类等于失败。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "单宫本位不代表整体伏吟。"
+      }
+    },
+    {
+      "id": "MOTION_DOOR",
+      "name": "门盘反伏吟",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "motion",
+        "layer": "door"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "伏吟归本位、返吟到对宫。静守、重复或反覆是所选条文解释，不在所有事类等于失败。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "单宫本位不代表整体伏吟。"
+      }
+    },
+    {
+      "id": "MOTION_STEM",
+      "name": "干盘反伏吟",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "motion",
+        "layer": "stem"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "伏吟归本位、返吟到对宫。静守、重复或反覆是所选条文解释，不在所有事类等于失败。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "partial",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": "原文星符门；奇仪整体同转状态是工程分层扩展，不能伪称另有独立凶票。"
+      }
+    },
+    {
+      "id": "FIVE_NOT_MEET",
+      "name": "五不遇时",
+      "source_id": "YY-2",
+      "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "five_not_meet",
+        "relation": "hour_stem_controls_day_stem",
+        "same_yin_yang": true
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [],
+      "meaning": "原时干克原日干且阴阳同性；不先遁甲。",
+      "source_excerpt": "阳克阳干阴克阴干。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "YY-2卷二五不遇全文，包含十日同性阴阳例",
+        "notes": "卷二五不遇条需同性阴阳例；仅核结构，不据此越过事类。"
+      }
+    },
+    {
+      "id": "DOOR_PRESSURE",
+      "name": "门迫/受制",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "door_palace_relation",
+        "pressure": "door_controls_palace",
+        "controlled": "palace_controls_door"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "不能用宫生门代替解除已独立成立的墓。"
+      ],
+      "meaning": "门克宫为迫、宫克门为制，吉凶门与用途分别核。",
+      "source_excerpt": "八门克宫为迫，宫克八门为制。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "SIX_YI_PUNISHMENT",
+      "name": "六仪击刑",
+      "source_id": "TZ-1",
+      "source_url": "https://zh.wikisource.org/zh-hans/奇門遁甲統宗",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "punishment",
+        "map": {
+          "戊": 3,
+          "己": 2,
+          "庚": 8,
+          "辛": 9,
+          "壬": 4,
+          "癸": 4
+        },
+        "strict_requires_current_xun": true
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "逐天盘六仪扩展只作结构，不与严格旬首成立混同。"
+      ],
+      "meaning": "四十格明列六甲值符落宫；严格旬首法只启用本旬遁仪。",
+      "source_excerpt": "甲子值符三，甲申值符八。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "STEM_TOMB_QI_ZG4",
+      "name": "三奇入墓（旨归）",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "stem_tomb",
+        "map": {
+          "乙": 2,
+          "丙": 6,
+          "丁": 8
+        },
+        "layer": "heaven"
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "仅本条三项核实；不支持自动冲墓转吉。"
+      ],
+      "meaning": "乙坤、丙乾、丁艮；正文行军及无功范围，不能扩展为所有阴阳干整表。",
+      "source_excerpt": "乙奇临坤，丙奇临乾，丁奇临艮。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "STEM_TOMB_LEGACY",
+      "name": "奇仪墓位（沿用表）",
+      "source_id": "LEGACY-TOMB",
+      "source_url": null,
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "stem_tomb",
+        "map": {
+          "乙": 2,
+          "癸": 2,
+          "丙": 6,
+          "戊": 6,
+          "丁": 8,
+          "己": 8,
+          "庚": 8,
+          "辛": 4,
+          "壬": 4
+        }
+      },
+      "required_conditions": [
+        {
+          "id": "tomb_rule_source_verified",
+          "description": "关键干及层次的墓位、用途已核到选定原文",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "interpretation"
+        }
+      ],
+      "exceptions": [
+        "乙丙丁另卡核实；其余不因同表而转verified。"
+      ],
+      "meaning": "保留旧版结构值，不作为整表已核实原断。",
+      "source_excerpt": "",
+      "verification": {
+        "status": "partial",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    },
+    {
+      "id": "ELEMENT_TOMB",
+      "name": "星门入墓",
+      "source_id": "ZG-4",
+      "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
+      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "geometry": {
+        "type": "element_tomb",
+        "map": {
+          "木": 2,
+          "火": 6,
+          "土": 4,
+          "金": 8,
+          "水": 4
+        }
+      },
+      "required_conditions": [
+        {
+          "id": "domain_scope_confirmed",
+          "description": "所引具体分事含义与已绑定对象、结果阶段一致；格义不直接等于本事结局",
+          "evaluator": "manual",
+          "expected": true,
+          "critical": true,
+          "applies_to": "event_judgment"
+        }
+      ],
+      "exceptions": [
+        "门星不套阴干墓表；天禽寄宫角色照实记录。"
+      ],
+      "meaning": "星门五行墓：木未、火戌、土水辰、金丑。",
+      "source_excerpt": "休、蓬入辰，惊开、心柱入丑。",
+      "verification": {
+        "status": "verified",
+        "checked_on": "2026-10-19",
+        "checked_scope": "卡中指定几何、断义及限制；不含未列规则",
+        "notes": ""
+      }
+    }
+  ]
+}

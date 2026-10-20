@@ -1,0 +1,84 @@
+{
+  "same_path_overwrites": [
+    {
+      "script": "inspect_patterns",
+      "input_output_same_path": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\cli-overwrite-inspect_patterns-source.json",
+      "sha256_before": "cdbfce98ccdde0999218030170c48033f71028570d3eb7490bfcb81b41064534",
+      "sha256_after": "372c928b92ac2eed5bcea9e0b375b1d219a8b2cd5a2f1e4e0a02b1fdf2786489",
+      "changed": true,
+      "contains_frozen_calendar_after": false,
+      "keys_after": [
+        "analysis_version",
+        "captured_at",
+        "center",
+        "chart_rule_version",
+        "chart_sha256",
+        "global",
+        "methods",
+        "not_computed",
+        "palaces",
+        "registry_schema_version",
+        "validation_scope"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "script": "timing_candidates",
+      "input_output_same_path": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\cli-overwrite-timing_candidates-source.json",
+      "sha256_before": "cdbfce98ccdde0999218030170c48033f71028570d3eb7490bfcb81b41064534",
+      "sha256_after": "c03a6712da7c4ddba9ee2eb1fbc84d735a70139296dfcdcd4dce72ef9f08cee4",
+      "changed": true,
+      "contains_frozen_calendar_after": false,
+      "keys_after": [
+        "candidates",
+        "not_computed",
+        "palaces",
+        "scope",
+        "source_captured_at",
+        "source_chart_instant_utc",
+        "statistics",
+        "version",
+        "window"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "launcher_checks": [
+    {
+      "case": "explicit",
+      "private_env_existed_before": false,
+      "private_env_exists_after": false,
+      "returncode": 0,
+      "stderr": "",
+      "frozen_instant": "2026-10-14T05:27:13+00:00"
+    },
+    {
+      "case": "missing_time",
+      "private_env_existed_before": false,
+      "private_env_exists_after": false,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: qimen chart [-h] (--datetime DATETIME | --now) [--format {text,json}]\n                   [--timezone TIMEZONE] [--longitude LONGITUDE]\n                   [--latitude LATITUDE]\n                   [--time-mode {standard_time,true_solar_time}]\n                   [--day-boundary {midnight,zi_start}]\n                   [--horse-basis {hour,day}]\nqimen chart: error: one of the arguments --datetime --now is required\n"
+    },
+    {
+      "case": "both_times",
+      "private_env_existed_before": false,
+      "private_env_exists_after": false,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: qimen chart [-h] (--datetime DATETIME | --now) [--format {text,json}]\n                   [--timezone TIMEZONE] [--longitude LONGITUDE]\n                   [--latitude LATITUDE]\n                   [--time-mode {standard_time,true_solar_time}]\n                   [--day-boundary {midnight,zi_start}]\n                   [--horse-basis {hour,day}]\nqimen chart: error: argument --datetime: not allowed with argument --now\n"
+    },
+    {
+      "case": "no_dependency",
+      "private_env_existed_before": false,
+      "private_env_exists_after": false,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "缺少 lunar-python。请先显式运行 scripts/setup_env.py；日常起盘不会安装依赖。\n"
+    }
+  ]
+}

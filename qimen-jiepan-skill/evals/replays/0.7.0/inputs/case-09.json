@@ -1,0 +1,10 @@
+{
+  "id": 9,
+  "prompt": "读取 evals/fixtures/support.json。分别讨论求职被接纳与辞职获准两种目标，只比较取用和相生的含义，不用重复整盘长篇解读。",
+  "files": [
+    "fixtures/support.json"
+  ],
+  "input_kind": "frozen_chart",
+  "simulation": true,
+  "no_actual_outcome": true
+}

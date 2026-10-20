@@ -1,0 +1,34 @@
+{
+  "schema_version": "qimen_reading_record_v1",
+  "status": "draft",
+  "chart_ref": {
+    "sha256": "b25a96a5fd562bbc276b09022093490645523e1b6501962ad5bbb9018b1711c6",
+    "instant_utc": "2026-01-13T15:30:00+00:00",
+    "rule_version": "chai_bu_v1.0.0"
+  },
+  "method_profile": {
+    "chart": {
+      "timezone": "Asia/Shanghai",
+      "longitude": 120.0,
+      "latitude": 30.0,
+      "time_mode": "standard_time",
+      "day_boundary": "midnight",
+      "horse_basis": "hour",
+      "yuan_strategy": "chai_bu_v1",
+      "center_policy": "kun2"
+    },
+    "star_season": "tongzong",
+    "method_id": null
+  },
+  "question": "我最近在赶一项整理旧书的工作，总觉得任务堆着、睡前还惦记。用给定 evals/fixtures/hosted.json 看这份工作压力是什么状态、还有多久能轻些。没有实际交付日期、年命未知。此题是模拟，没有真实工作或结局。",
+  "known_facts": [],
+  "external_sources": [],
+  "external_methods": [],
+  "external_rules": [],
+  "roles": [],
+  "results": [],
+  "evidence": [],
+  "conclusions": [],
+  "imagery": [],
+  "timing": []
+}

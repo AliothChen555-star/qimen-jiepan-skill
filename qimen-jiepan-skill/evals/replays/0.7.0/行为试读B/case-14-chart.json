@@ -1,0 +1,330 @@
+{
+  "xun": {
+    "head": "甲午",
+    "hidden_stem": "辛",
+    "elapsed_hours": 1,
+    "void_branches": [
+      "辰",
+      "巳"
+    ]
+  },
+  "chief": {
+    "zhi_fu": "天英",
+    "zhi_shi": "景门",
+    "origin_palace": 9,
+    "zhi_fu_palace": 4,
+    "zhi_fu_raw_palace": 4,
+    "zhi_shi_palace": 8,
+    "zhi_shi_raw_palace": 8
+  },
+  "horse": {
+    "basis": "hour",
+    "basis_branch": "未",
+    "branch": "巳",
+    "palace": 4
+  },
+  "palaces": [
+    {
+      "number": 1,
+      "name": "坎",
+      "direction": "北",
+      "element": "水",
+      "earth_stems": [
+        "庚"
+      ],
+      "earth_stem": "庚",
+      "heaven_stems": [
+        "壬"
+      ],
+      "heaven_stem": "壬",
+      "stars": [
+        "天任"
+      ],
+      "star": "天任",
+      "door": "杜门",
+      "spirit": "六合",
+      "zhi_fu": false,
+      "zhi_shi": false,
+      "void": false,
+      "void_branches": [],
+      "horse": false,
+      "hosting": {},
+      "heaven_center_host": false
+    },
+    {
+      "number": 2,
+      "name": "坤",
+      "direction": "西南",
+      "element": "土",
+      "earth_stems": [
+        "己",
+        "丙"
+      ],
+      "earth_stem": "己/丙",
+      "heaven_stems": [
+        "癸"
+      ],
+      "heaven_stem": "癸",
+      "stars": [
+        "天柱"
+      ],
+      "star": "天柱",
+      "door": "休门",
+      "spirit": "九地",
+      "zhi_fu": false,
+      "zhi_shi": false,
+      "void": false,
+      "void_branches": [],
+      "horse": false,
+      "hosting": {
+        "earth_center_stem": "丙"
+      },
+      "heaven_center_host": false
+    },
+    {
+      "number": 3,
+      "name": "震",
+      "direction": "东",
+      "element": "木",
+      "earth_stems": [
+        "戊"
+      ],
+      "earth_stem": "戊",
+      "heaven_stems": [
+        "乙"
+      ],
+      "heaven_stem": "乙",
+      "stars": [
+        "天辅"
+      ],
+      "star": "天辅",
+      "door": "死门",
+      "spirit": "腾蛇",
+      "zhi_fu": false,
+      "zhi_shi": false,
+      "void": false,
+      "void_branches": [],
+      "horse": false,
+      "hosting": {},
+      "heaven_center_host": false
+    },
+    {
+      "number": 4,
+      "name": "巽",
+      "direction": "东南",
+      "element": "木",
+      "earth_stems": [
+        "乙"
+      ],
+      "earth_stem": "乙",
+      "heaven_stems": [
+        "辛"
+      ],
+      "heaven_stem": "辛",
+      "stars": [
+        "天英"
+      ],
+      "star": "天英",
+      "door": "惊门",
+      "spirit": "值符",
+      "zhi_fu": true,
+      "zhi_shi": false,
+      "void": true,
+      "void_branches": [
+        "辰",
+        "巳"
+      ],
+      "horse": true,
+      "hosting": {},
+      "heaven_center_host": false
+    },
+    {
+      "number": 5,
+      "name": "中",
+      "direction": "中央",
+      "element": "土",
+      "earth_stems": [
+        "丙"
+      ],
+      "earth_stem": "丙",
+      "heaven_stems": [
+        "丙"
+      ],
+      "heaven_stem": "丙",
+      "stars": [],
+      "star": "",
+      "door": "",
+      "spirit": "",
+      "zhi_fu": false,
+      "zhi_shi": false,
+      "void": false,
+      "void_branches": [],
+      "horse": false,
+      "hosting": {
+        "hosted_at": 2
+      },
+      "heaven_center_host": false
+    },
+    {
+      "number": 6,
+      "name": "乾",
+      "direction": "西北",
+      "element": "金",
+      "earth_stems": [
+        "丁"
+      ],
+      "earth_stem": "丁",
+      "heaven_stems": [
+        "庚"
+      ],
+      "heaven_stem": "庚",
+      "stars": [
+        "天蓬"
+      ],
+      "star": "天蓬",
+      "door": "伤门",
+      "spirit": "白虎",
+      "zhi_fu": false,
+      "zhi_shi": false,
+      "void": false,
+      "void_branches": [],
+      "horse": false,
+      "hosting": {},
+      "heaven_center_host": false
+    },
+    {
+      "number": 7,
+      "name": "兑",
+      "direction": "西",
+      "element": "金",
+      "earth_stems": [
+        "癸"
+      ],
+      "earth_stem": "癸",
+      "heaven_stems": [
+        "丁"
+      ],
+      "heaven_stem": "丁",
+      "stars": [
+        "天心"
+      ],
+      "star": "天心",
+      "door": "生门",
+      "spirit": "玄武",
+      "zhi_fu": false,
+      "zhi_shi": false,
+      "void": false,
+      "void_branches": [],
+      "horse": false,
+      "hosting": {},
+      "heaven_center_host": false
+    },
+    {
+      "number": 8,
+      "name": "艮",
+      "direction": "东北",
+      "element": "土",
+      "earth_stems": [
+        "壬"
+      ],
+      "earth_stem": "壬",
+      "heaven_stems": [
+        "戊"
+      ],
+      "heaven_stem": "戊",
+      "stars": [
+        "天冲"
+      ],
+      "star": "天冲",
+      "door": "景门",
+      "spirit": "太阴",
+      "zhi_fu": false,
+      "zhi_shi": true,
+      "void": false,
+      "void_branches": [],
+      "horse": false,
+      "hosting": {},
+      "heaven_center_host": false
+    },
+    {
+      "number": 9,
+      "name": "离",
+      "direction": "南",
+      "element": "火",
+      "earth_stems": [
+        "辛"
+      ],
+      "earth_stem": "辛",
+      "heaven_stems": [
+        "己",
+        "丙"
+      ],
+      "heaven_stem": "己/丙",
+      "stars": [
+        "天芮",
+        "天禽"
+      ],
+      "star": "天芮/天禽",
+      "door": "开门",
+      "spirit": "九天",
+      "zhi_fu": false,
+      "zhi_shi": false,
+      "void": false,
+      "void_branches": [],
+      "horse": false,
+      "hosting": {},
+      "heaven_center_host": true
+    }
+  ],
+  "input": {
+    "datetime": "2026-10-14T13:27:13+08:00",
+    "captured_at": "2026-10-14T13:27:13+08:00",
+    "captured_at_utc": "2026-10-14T05:27:13+00:00",
+    "use_current_time": true,
+    "time_source": "runtime_clock",
+    "device_timezone": "中国标准时间",
+    "timezone": "Asia/Shanghai",
+    "longitude": 120,
+    "latitude": 30,
+    "time_mode": "standard_time",
+    "day_boundary": "midnight",
+    "horse_basis": "hour",
+    "yuan_strategy": "chai_bu_v1",
+    "center_policy": "kun2"
+  },
+  "calendar": {
+    "solar_datetime": "2026-10-14T13:27:13+08:00",
+    "effective_wall_time": "2026-10-14T13:27:13",
+    "effective_time_kind": "所选时区标准钟面",
+    "lunar_date": "二〇二六年九月初五",
+    "lunar_date_basis": "北京时间民用日期",
+    "year_pillar": "丙午",
+    "month_pillar": "戊戌",
+    "day_pillar": "辛酉",
+    "hour_pillar": "乙未",
+    "day_cycle_index": 57,
+    "correction_minutes": 0,
+    "equation_of_time_minutes": 0
+  },
+  "solar_term": {
+    "name": "寒露",
+    "transition_time": "2026-10-08T14:29:17+08:00",
+    "next_name": "霜降",
+    "next_transition_time": "2026-10-23T17:37:57+08:00",
+    "provider": "lunar-python 1.4.8",
+    "dun": "yin",
+    "yuan": "lower",
+    "ju": 3,
+    "fu_head": "己未",
+    "days_after_fu_head": 2
+  },
+  "rule_version": "chai_bu_v1.0.0",
+  "trace": [
+    "交节以绝对时刻为准：寒露 2026-10-08T14:29:17+08:00",
+    "日柱 辛酉 → 符头 己未 → lower → yin遁3局",
+    "地盘按宫号 1…9 阳顺阴逆；星门沿外八宫整体旋转；八神阳顺阴逆",
+    "旬首 甲午 遁 辛，本宫 9",
+    "值符随时干至 4 宫，值使计 1 步至 8 宫",
+    "中五一律寄坤二，天禽随天芮；真太阳时采用经度与 NOAA 均时差近似"
+  ]
+}

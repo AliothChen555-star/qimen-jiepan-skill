@@ -1,0 +1,49 @@
+{
+  "record_type": "textual_conditional_reading",
+  "question": "做个《奇门旨归》卷八贸易法的条件推演，不是真实测事，也不需起盘。若生门宫带奇门吉格并生戊宫，相关必要条件都核齐，应怎样读这条？若改为戊宫生生门宫，又怎样读？别给现实收益倍数。",
+  "chart": null,
+  "method_id": "ZG8_TRADE",
+  "source_id": "ZG-8",
+  "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gptn8mqj",
+  "scope": "仅贸易条文条件推演，非真实测事",
+  "roles": {
+    "天盘甲子戊": "资本",
+    "生门": "利息/经营收益"
+  },
+  "branches": [
+    {
+      "id": "b1",
+      "conditions": {
+        "生门宫带奇门吉格": "true",
+        "生门宫生戊宫": "true",
+        "相关必要条件齐备": "true"
+      },
+      "conclusion": "文本支持获利",
+      "unjudged": [
+        "现实收益倍数",
+        "收益率",
+        "净利润",
+        "发生日期"
+      ]
+    },
+    {
+      "id": "b2",
+      "conditions": {
+        "戊宫生生门宫": "true"
+      },
+      "conclusion": "添加资本，仍得利息或经营收益",
+      "does_not_mean": [
+        "无利",
+        "折本"
+      ],
+      "unjudged": [
+        "现实所需资本",
+        "现实利润",
+        "收益倍数",
+        "发生日期"
+      ]
+    }
+  ],
+  "no_cast": true,
+  "no_real_outcome": true
+}

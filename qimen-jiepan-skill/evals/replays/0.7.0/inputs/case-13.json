@@ -1,0 +1,10 @@
+{
+  "id": 13,
+  "prompt": "读取 evals/fixtures/base.json，只讨论巽四空墓：若这宫代表助力，若代表阻力，空亡影响分别是什么？列支级触发，不指定成事日。",
+  "files": [
+    "fixtures/base.json"
+  ],
+  "input_kind": "frozen_chart",
+  "simulation": true,
+  "no_actual_outcome": true
+}

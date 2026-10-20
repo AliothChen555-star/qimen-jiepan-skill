@@ -1,0 +1,10 @@
+{
+  "id": 12,
+  "prompt": "读取 evals/fixtures/geng.json。开门在艮八，宫生门是不是就说明通道很好？只核验门的状态。",
+  "files": [
+    "fixtures/geng.json"
+  ],
+  "input_kind": "frozen_chart",
+  "simulation": true,
+  "no_actual_outcome": true
+}

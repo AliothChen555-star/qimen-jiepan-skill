@@ -1,0 +1,10 @@
+{
+  "id": 7,
+  "prompt": "读取 evals/fixtures/hosted.json，沿用原盘解读近期整体风评。我年命丁，请交代日干、年命与景门的关系，保留整体、宫内、回归整体的实际分析，最后才细化取象。",
+  "files": [
+    "fixtures/hosted.json"
+  ],
+  "input_kind": "frozen_chart",
+  "simulation": true,
+  "no_actual_outcome": true
+}

@@ -1,0 +1,324 @@
+{
+  "scope": "仅复验两个已确认程序缺陷，不重复广时区遍历",
+  "tested_at_utc": "2026-10-20T12:41:27.703619+00:00",
+  "artifacts": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c",
+  "cli_cases": [
+    {
+      "script": "inspect_patterns.py",
+      "case": "same_path",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\frozen-chart.json",
+      "returncode": 1,
+      "stderr": "格局核验失败：输出路径不得覆盖原盘；请指定不同的派生结果文件\n",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": null,
+      "passed": true
+    },
+    {
+      "script": "inspect_patterns.py",
+      "case": "normalized_path_alias",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\nested\\..\\frozen-chart.json",
+      "returncode": 1,
+      "stderr": "格局核验失败：输出路径不得覆盖原盘；请指定不同的派生结果文件\n",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": null,
+      "passed": true
+    },
+    {
+      "script": "inspect_patterns.py",
+      "case": "hardlink_alias",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\hardlink-alias.json",
+      "returncode": 1,
+      "stderr": "格局核验失败：输出与原盘指向同一文件；请勿通过硬链接覆盖原盘\n",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": null,
+      "passed": true
+    },
+    {
+      "script": "inspect_patterns.py",
+      "case": "new_distinct_output",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\derived.json",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": true,
+      "passed": true
+    },
+    {
+      "script": "inspect_patterns.py",
+      "case": "existing_distinct_output",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\inspect_patterns\\existing-derived.json",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": true,
+      "passed": true
+    },
+    {
+      "script": "timing_candidates.py",
+      "case": "same_path",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\frozen-chart.json",
+      "returncode": 1,
+      "stderr": "应期候选生成失败：输出路径不得覆盖原盘；请指定不同的派生结果文件\n",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": null,
+      "passed": true
+    },
+    {
+      "script": "timing_candidates.py",
+      "case": "normalized_path_alias",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\nested\\..\\frozen-chart.json",
+      "returncode": 1,
+      "stderr": "应期候选生成失败：输出路径不得覆盖原盘；请指定不同的派生结果文件\n",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": null,
+      "passed": true
+    },
+    {
+      "script": "timing_candidates.py",
+      "case": "hardlink_alias",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\hardlink-alias.json",
+      "returncode": 1,
+      "stderr": "应期候选生成失败：输出与原盘指向同一文件；请勿通过硬链接覆盖原盘\n",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": null,
+      "passed": true
+    },
+    {
+      "script": "timing_candidates.py",
+      "case": "new_distinct_output",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\derived.json",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": true,
+      "passed": true
+    },
+    {
+      "script": "timing_candidates.py",
+      "case": "existing_distinct_output",
+      "source": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\frozen-chart.json",
+      "output": "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\独立程序复核\\retest-two-fixes-3bqbiu8c\\timing_candidates\\existing-derived.json",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "",
+      "source_sha256_before": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_sha256_after": "09749c585c5d4c7c5c0671b171e19762732b2713a7b974d12bb4334ba2c79ff0",
+      "source_bytes_unchanged": true,
+      "hardlink_bytes_unchanged": true,
+      "distinct_output_valid": true,
+      "passed": true
+    }
+  ],
+  "api_cases": [
+    {
+      "case": "invalid_geometry",
+      "input": "false",
+      "error": "geometry 必须为 true、false 或 null 三态",
+      "passed": true
+    },
+    {
+      "case": "invalid_geometry",
+      "input": "true",
+      "error": "geometry 必须为 true、false 或 null 三态",
+      "passed": true
+    },
+    {
+      "case": "invalid_geometry",
+      "input": "unknown",
+      "error": "geometry 必须为 true、false 或 null 三态",
+      "passed": true
+    },
+    {
+      "case": "invalid_geometry",
+      "input": 0,
+      "error": "geometry 必须为 true、false 或 null 三态",
+      "passed": true
+    },
+    {
+      "case": "invalid_geometry",
+      "input": 1,
+      "error": "geometry 必须为 true、false 或 null 三态",
+      "passed": true
+    },
+    {
+      "case": "invalid_geometry",
+      "input": [],
+      "error": "geometry 必须为 true、false 或 null 三态",
+      "passed": true
+    },
+    {
+      "case": "invalid_geometry",
+      "input": {},
+      "error": "geometry 必须为 true、false 或 null 三态",
+      "passed": true
+    },
+    {
+      "case": "invalid_context",
+      "input": false,
+      "error": "context 必须为对象或 null",
+      "passed": true
+    },
+    {
+      "case": "invalid_context",
+      "input": "",
+      "error": "context 必须为对象或 null",
+      "passed": true
+    },
+    {
+      "case": "invalid_context",
+      "input": [],
+      "error": "context 必须为对象或 null",
+      "passed": true
+    },
+    {
+      "case": "invalid_context",
+      "input": "confirmed",
+      "error": "context 必须为对象或 null",
+      "passed": true
+    },
+    {
+      "case": "invalid_context",
+      "input": 0,
+      "error": "context 必须为对象或 null",
+      "passed": true
+    },
+    {
+      "case": "invalid_context",
+      "input": 1,
+      "error": "context 必须为对象或 null",
+      "passed": true
+    },
+    {
+      "case": "valid_geometry",
+      "rule_id": "PAIR_乙丁",
+      "input": null,
+      "geometry_match": "unknown",
+      "eligibility": {
+        "interpretation": "unknown",
+        "use_as_favorable": "unknown",
+        "event_judgment": "unknown",
+        "exception": "unknown"
+      },
+      "passed": true
+    },
+    {
+      "case": "valid_geometry",
+      "rule_id": "PAIR_乙丁",
+      "input": false,
+      "geometry_match": "false",
+      "eligibility": {
+        "interpretation": "false",
+        "use_as_favorable": "false",
+        "event_judgment": "false",
+        "exception": "false"
+      },
+      "passed": true
+    },
+    {
+      "case": "valid_geometry",
+      "rule_id": "PAIR_乙丁",
+      "input": true,
+      "geometry_match": "true",
+      "eligibility": {
+        "interpretation": "true",
+        "use_as_favorable": "unknown",
+        "event_judgment": "unknown",
+        "exception": "unknown"
+      },
+      "passed": true
+    },
+    {
+      "case": "valid_geometry",
+      "rule_id": "GEOM_乙辛",
+      "input": null,
+      "geometry_match": "unknown",
+      "eligibility": {
+        "interpretation": "unknown",
+        "use_as_favorable": "unknown",
+        "event_judgment": "unknown",
+        "exception": "unknown"
+      },
+      "passed": true
+    },
+    {
+      "case": "valid_geometry",
+      "rule_id": "GEOM_乙辛",
+      "input": false,
+      "geometry_match": "false",
+      "eligibility": {
+        "interpretation": "false",
+        "use_as_favorable": "false",
+        "event_judgment": "false",
+        "exception": "false"
+      },
+      "passed": true
+    },
+    {
+      "case": "valid_geometry",
+      "rule_id": "GEOM_乙辛",
+      "input": true,
+      "geometry_match": "true",
+      "eligibility": {
+        "interpretation": "true",
+        "use_as_favorable": "unknown",
+        "event_judgment": "true",
+        "exception": "true"
+      },
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "scripts\\file_outputs.py": "2393845d756d3a9aca213c74c70165a1395b69dbe49197fbf43e38e2ae9c4aa0",
+    "scripts\\rule_evaluator.py": "e3772f974241ceffbdfc120ecaa86e15397a1a6a848d097e17e66d656005cc1e",
+    "scripts\\inspect_patterns.py": "77e3ae2271cdee5e94a166ace5d681418cc4ac3450d8a34f63e6bdf662eea47a",
+    "scripts\\timing_candidates.py": "e005b0bb0726e3ea2cfdaae5d90539fc6414407f7a6b605fda93f5de696355cc",
+    "evals\\test_output_preservation.py": "7ac36813611e1deeb546bc6b099571ab1fd376f6e8363bb66232ed707c749c9f",
+    "evals\\test_rule_evaluator.py": "90277b6c579861ff475766694b3c91b54ac45abe347d24a7f4bac0ad945a396b"
+  },
+  "all_passed": true
+}

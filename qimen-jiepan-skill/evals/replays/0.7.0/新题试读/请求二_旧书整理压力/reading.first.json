@@ -1,0 +1,379 @@
+{
+  "schema_version": "qimen_reading_record_v1",
+  "status": "final",
+  "chart_ref": {
+    "sha256": "b25a96a5fd562bbc276b09022093490645523e1b6501962ad5bbb9018b1711c6",
+    "instant_utc": "2026-01-13T15:30:00+00:00",
+    "rule_version": "chai_bu_v1.0.0"
+  },
+  "method_profile": {
+    "chart": {
+      "timezone": "Asia/Shanghai",
+      "longitude": 120.0,
+      "latitude": 30.0,
+      "time_mode": "standard_time",
+      "day_boundary": "midnight",
+      "horse_basis": "hour",
+      "yuan_strategy": "chai_bu_v1",
+      "center_policy": "kun2"
+    },
+    "star_season": "tongzong",
+    "method_id": "MODERN_WORKLOAD"
+  },
+  "question": "我最近在赶一项整理旧书的工作，总觉得任务堆着、睡前还惦记。用给定 evals/fixtures/hosted.json 看这份工作压力是什么状态、还有多久能轻些。没有实际交付日期、年命未知。此题是模拟，没有真实工作或结局。",
+  "known_facts": [
+    {
+      "id": "f1",
+      "text": "全题是模拟，没有真实工作或结局。",
+      "basis": "provided_before_reading"
+    },
+    {
+      "id": "f2",
+      "text": "模拟背景为赶整理旧书的工作，任务堆着、睡前仍惦记。",
+      "basis": "provided_before_reading"
+    },
+    {
+      "id": "f3",
+      "text": "没有实际交付日期，年命未知。",
+      "basis": "provided_before_reading"
+    }
+  ],
+  "external_sources": [],
+  "external_methods": [],
+  "external_rules": [
+    {
+      "id": "EXT_TZ1_NATURE",
+      "source_id": "TZ-1",
+      "scope": "本次仅核相关宫已录星门神本义；经MODERN_WORKLOAD作有限现代类比，非压力预测古法。",
+      "requirements": [
+        "只读取本人、事项真实落宫",
+        "区分九星本性、八门用途、八神性质及月令法",
+        "有利性质不自动解除同宫限制"
+      ],
+      "exceptions": [
+        "天芮病神原义不等于工作压力疾病诊断",
+        "天禽随芮时两星各读",
+        "值符、六合不保证本事成功"
+      ]
+    },
+    {
+      "id": "EXT_MJ2_丁庚",
+      "source_id": "MJ-2",
+      "scope": "天丁加地庚的补查原义；当前问题只取文书阻隔为有限工作类比，不移植行人结局。",
+      "requirements": [
+        "实际天丁加地庚",
+        "区分文书与行人两个用途",
+        "现代工作类比须明示，不能作交付或期限公式"
+      ],
+      "exceptions": [
+        "行人必归只属行人事类，不能据此断工作交付"
+      ]
+    },
+    {
+      "id": "EXT_MJ2_庚癸",
+      "source_id": "MJ-2",
+      "scope": "天庚加地癸的十干克应补查；原文分事断语不直接迁移工作结局。",
+      "requirements": [
+        "实际天庚加地癸",
+        "保留行人、官司、生产用途和凶性",
+        "需要另有适用方法才可推工作结果"
+      ],
+      "exceptions": [
+        "未查到压力结束或交付日期法，不能借分事凶义断工作失败"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "self",
+      "object": "模拟问事者本人",
+      "kind": "stem",
+      "value": "丁",
+      "layer": "heaven",
+      "palace": 1,
+      "position": "hosted",
+      "primary": true,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "task",
+      "object": "本项整理旧书的工作事项",
+      "kind": "stem",
+      "value": "庚",
+      "layer": "heaven",
+      "palace": 4,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    }
+  ],
+  "results": [
+    {
+      "id": "state",
+      "target": "本项整理旧书工作压力的模拟现状",
+      "stage": "给定原盘时点的有限传统性质解释",
+      "success_criteria": "任务能否顺畅推进、收束，主观牵挂是否有受限反复的解释线索",
+      "horizon": {
+        "state": "current",
+        "at": "2026-01-13T15:30:00+00:00"
+      },
+      "state": "assessed"
+    },
+    {
+      "id": "duration",
+      "target": "本项工作任务堆积和睡前牵挂何时减轻",
+      "stage": "从原盘时点至压力减轻",
+      "success_criteria": "任务量或主观牵挂明显减轻；不以一次消息或日历触发冒充减轻",
+      "horizon": {
+        "state": "unknown",
+        "reason": "题目未给交付节点，所用现代工作压力入口没有已核持续时间或结束应期法。"
+      },
+      "state": "undetermined",
+      "reason": "题目未给交付节点，所用现代工作压力入口没有已核持续时间或结束应期法。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "s1",
+      "result_id": "state",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "MODERN_WORKLOAD",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "日干丁为坎一实际天盘寄干；丑月丁休，景门火休，坎水克景火为门受制，不是门迫。",
+      "inference": "在现代有限入口下，存在本人一侧耗力、文书难以舒展的类比线索；不据此认定现实成因或病情。",
+      "dedup_key": "self-control"
+    },
+    {
+      "id": "s2",
+      "result_id": "state",
+      "role_ids": [
+        "task"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "MODERN_WORKLOAD",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "时干庚为巽四天盘主干；开门金克巽木为门迫，天蓬水囚且星墓辰在巽；门盘整体反吟，星盘与干盘非整体反伏吟。",
+      "inference": "工作一侧可有限读为推进受限、反复难收束；墓与反吟不直接给持续天数。",
+      "dedup_key": "task-restriction"
+    },
+    {
+      "id": "s3",
+      "result_id": "state",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "EXT_MJ2_丁庚",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "坎一寄天丁加地庚；补查十干克应全文为年月日時格，文書阻隔，行人必歸。",
+      "inference": "只把文书阻隔作为整理工作受限的传统性质对照；行人必归不用于本题。",
+      "dedup_key": "self-directed-pair"
+    },
+    {
+      "id": "s4",
+      "result_id": "state",
+      "role_ids": [
+        "self",
+        "task"
+      ],
+      "source_id": "TZ-1",
+      "rule_id": "EXT_TZ1_NATURE",
+      "applicability": "true",
+      "polarity": "supports",
+      "critical": false,
+      "fact": "本人宫芮禽同宫，芮原有凶病性、禽原有上吉性，两星按统宗法同土月相；神值符有吉助。事项庚金、开门金得丑土相，六合有和合性质，开门原为吉门。",
+      "inference": "仍有有利性质和协调余地，不能读成全盘纯凶；天禽和值符也没有原文授权消除已核门制、门迫。",
+      "dedup_key": "positive-properties"
+    },
+    {
+      "id": "s5",
+      "result_id": "state",
+      "role_ids": [
+        "task"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "MODERN_WORKLOAD",
+      "applicability": "unknown",
+      "polarity": "neutral",
+      "critical": false,
+      "fact": "巽四同时含原时旬辰巳两空支，两个宫支均空；本人坎一不空。",
+      "inference": "空支事实已核；本事类空亡作用未核，不能由此断工作尚未落实、没有压力或空了就好。",
+      "dedup_key": "task-void-scope"
+    },
+    {
+      "id": "s6",
+      "result_id": "state",
+      "role_ids": [
+        "task"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "GEOM_庚癸",
+      "applicability": "unknown",
+      "polarity": "neutral",
+      "critical": false,
+      "fact": "巽四天庚地癸大格几何成立；ZG-4有谋为出行不利、捕捉例外。",
+      "inference": "传统不利义保留为背景；捕捉例外不等于整理书籍利好，工作结局适用未知，不据此断失败。",
+      "dedup_key": "task-dage"
+    },
+    {
+      "id": "s7",
+      "result_id": "state",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "PAIR_辛庚",
+      "applicability": "unknown",
+      "polarity": "neutral",
+      "critical": false,
+      "fact": "坎一主天辛加地庚为白虎出力；辛是本宫主干，丁是寄干，不互相遮盖。",
+      "inference": "原条相残与强进凶义仍保留；本题未定真实主客或人际行为，不据此认定有人针对、冲突或伤害。",
+      "dedup_key": "self-palace-main-pair"
+    },
+    {
+      "id": "s8",
+      "result_id": "state",
+      "role_ids": [
+        "task"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "EXT_MJ2_庚癸",
+      "applicability": "unknown",
+      "polarity": "neutral",
+      "critical": false,
+      "fact": "已按固定MJ-2补读庚加癸，见行人至、官司止及生产大凶的分事断语。",
+      "inference": "原义非无凶；没有工作压力或交付的直接对应，不能用生产、行人条断本工作。",
+      "dedup_key": "task-pair-special-domains"
+    },
+    {
+      "id": "t1",
+      "result_id": "duration",
+      "role_ids": [
+        "self",
+        "task"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "MODERN_WORKLOAD",
+      "applicability": "unknown",
+      "polarity": "neutral",
+      "critical": true,
+      "fact": "MODERN_WORKLOAD timing.status=unsupported、exact_date_rule=null；用户无交付日期。",
+      "inference": "无法从当前状态推出还有多久轻些；不用宫数、出空、冲墓、马星拼造日期。",
+      "dedup_key": "duration-no-method"
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "c-state",
+      "result_id": "state",
+      "horizon": {
+        "state": "current",
+        "at": "2026-01-13T15:30:00+00:00"
+      },
+      "judgment": "adverse",
+      "claim": "在给定模拟原盘与现代有限入口内，当前工作有明显受限、反复难收束的性质，仍保留吉助和协调的一面。",
+      "support_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "counter_ids": [
+        "s4"
+      ],
+      "excluded_ids": [
+        "s5",
+        "s6",
+        "s7",
+        "s8"
+      ],
+      "dispositions": [
+        {
+          "evidence_id": "s4",
+          "reason": "保留有利星神及旺相；它们不直接解除已核门制门迫，也不保证交付。"
+        },
+        {
+          "evidence_id": "s5",
+          "reason": "只有空支结构，本事作用未核，不参与确定方向。"
+        },
+        {
+          "evidence_id": "s6",
+          "reason": "大格文本有凶义但工作结局适用未知；不以此新增一票。"
+        },
+        {
+          "evidence_id": "s7",
+          "reason": "主干格保留，未以丁寄干覆盖；主客与行为未核，不作现实冲突断语。"
+        },
+        {
+          "evidence_id": "s8",
+          "reason": "补查完成但专门事类不符；与大格也不得重复计数。"
+        }
+      ],
+      "synthesis_reason": "主判是有限状态解释，依据本人及事项真实核心宫的制迫、相关文书原义和门盘反复背景；保留正面性质，不采用未知空亡作用及不相符分事格义判现实结局。"
+    },
+    {
+      "id": "c-duration",
+      "result_id": "duration",
+      "horizon": {
+        "state": "unknown",
+        "reason": "题目未给交付节点，所用现代工作压力入口没有已核持续时间或结束应期法。"
+      },
+      "judgment": "undetermined",
+      "claim": "多久减轻未判，不给天数、月份或日期窗口。",
+      "reason": "题目未给交付节点，所用现代工作压力入口没有已核持续时间或结束应期法。",
+      "support_ids": [],
+      "counter_ids": [],
+      "excluded_ids": [
+        "t1"
+      ],
+      "dispositions": [
+        {
+          "evidence_id": "t1",
+          "reason": "未核本事类时间法，关键未知不能当日期支持。"
+        }
+      ],
+      "synthesis_reason": "当前受限与持续时长分别回答；没有结束应期法，且现实节点未知。"
+    }
+  ],
+  "imagery": [
+    {
+      "role_ids": [
+        "self",
+        "task"
+      ],
+      "interpretation": "文书整理中是否存在同一材料反复归类、核对或收尾难题，可作为后续核实方向。",
+      "status": "hypothesis",
+      "verification": "需要实际任务清单、返工次数和完成标准；本题模拟不确认该情节。"
+    },
+    {
+      "role_ids": [
+        "self"
+      ],
+      "interpretation": "任务堆着、睡前还惦记。",
+      "status": "verified_context",
+      "known_fact_id": "f2"
+    }
+  ],
+  "timing": [
+    {
+      "result_id": "state",
+      "state": "not_applicable",
+      "windows": [],
+      "reason": "只解释给定原盘时点的模拟状态。"
+    },
+    {
+      "result_id": "duration",
+      "state": "undetermined",
+      "windows": [],
+      "reason": "题目未给交付节点，所用现代工作压力入口没有已核持续时间或结束应期法。"
+    }
+  ]
+}

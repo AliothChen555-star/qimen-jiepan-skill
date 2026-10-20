@@ -1,0 +1,10 @@
+{
+  "id": 4,
+  "prompt": "读取 evals/fixtures/base.json，沿用原盘，分析未来三个月换工作的整体走势。我没有年命，你自行取用。详细说明依据，重点说盘势和取象。",
+  "files": [
+    "fixtures/base.json"
+  ],
+  "input_kind": "frozen_chart",
+  "simulation": true,
+  "no_actual_outcome": true
+}

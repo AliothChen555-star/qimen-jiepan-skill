@@ -1,0 +1,10 @@
+{
+  "id": 10,
+  "prompt": "读取 evals/fixtures/base.json，明确采用天地盘主客法。比较我去东南接洽与对方从东南来访，只解释双方角色与上下盘作用。",
+  "files": [
+    "fixtures/base.json"
+  ],
+  "input_kind": "frozen_chart",
+  "simulation": true,
+  "no_actual_outcome": true
+}

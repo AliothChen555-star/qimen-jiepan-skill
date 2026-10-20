@@ -1,16 +1,19 @@
 """Read an existing kun2 chart and derive pattern facts, without recasting or divination."""
 import argparse
-from collections import Counter
+import hashlib
 import json
 from pathlib import Path
 import sys
 
 from pattern_readings import pair_reading
+from chart_validation import validate_chart, validate_structure
+from file_outputs import ensure_distinct_output
+from rule_evaluator import local_rule_matches, registry, rule_by_id, evaluate_application
 
 from qimen.rules import (BRANCHES, BRANCH_PALACE, DOORS, GAN_SEQUENCE, PALACES,
                          RING, RULE_VERSION, SEXAGENARY, SPIRITS, STARS, STEMS)
 
-ANALYSIS_VERSION = "qimen_patterns_v1.1.1"
+ANALYSIS_VERSION = "qimen_patterns_v2.0.0"
 GENERATES = dict(zip("木火土金水", "火土金水木"))
 CONTROLS = dict(zip("木火土金水", "土金水木火"))
 STEM_ELEMENTS = dict(zip(STEMS, "木木火火土土金金水水"))
@@ -79,86 +82,6 @@ def plate_motion(movements):
     return {"state": state, "evidence": movements}
 
 
-def validate_chart(chart):
-    if chart.get("rule_version") != RULE_VERSION or chart["input"]["center_policy"] != "kun2":
-        raise ValueError("仅支持 chai_bu_v1.0.0 / kun2 的完整内置盘面")
-    for key in ("year_pillar", "month_pillar", "day_pillar", "hour_pillar"):
-        if chart["calendar"][key] not in SEXAGENARY:
-            raise ValueError(f"calendar.{key} 不是有效干支")
-    palaces = chart["palaces"]
-    if len(palaces) != 9 or {p["number"] for p in palaces} != set(range(1, 10)):
-        raise ValueError("盘面必须有不重复的九宫")
-    by_number = {p["number"]: p for p in palaces}
-    for p in palaces:
-        n = p["number"]
-        if (p["name"], p["direction"], p["element"]) != PALACES[n]:
-            raise ValueError(f"{n}宫的名称、方位或五行不符")
-        for field in ("earth_stems", "heaven_stems", "stars", "void_branches"):
-            if not isinstance(p[field], list):
-                raise ValueError(f"{n}宫 {field} 必须为列表")
-        for field in ("void", "horse", "zhi_fu", "zhi_shi"):
-            if type(p[field]) is not bool:
-                raise ValueError(f"{n}宫 {field} 必须为布尔值")
-        if any(s not in GAN_SEQUENCE for s in p["earth_stems"] + p["heaven_stems"]):
-            raise ValueError(f"{n}宫含无效奇仪")
-        if len(p["earth_stems"]) != (2 if n == 2 else 1):
-            raise ValueError(f"{n}宫地盘寄干数量不符 kun2")
-        if n == 5:
-            if p["stars"] or p["door"] or p["spirit"] or p["heaven_stems"] != p["earth_stems"]:
-                raise ValueError("中宫展示及留空字段不符 kun2")
-        else:
-            if p["door"] not in DOORS.values() or p["spirit"] not in SPIRITS:
-                raise ValueError(f"{n}宫门或神缺失/无效")
-            if not p["stars"] or p["stars"][0] == "天禽":
-                raise ValueError(f"{n}宫主星缺失/无效")
-            expected_stars = [p["stars"][0]] + (["天禽"] if p["stars"][0] == "天芮" else [])
-            if p["stars"] != expected_stars or len(p["heaven_stems"]) != len(expected_stars):
-                raise ValueError(f"{n}宫星及寄天干数量不符 kun2")
-    if by_number[2]["earth_stems"][1] != by_number[5]["earth_stems"][0]:
-        raise ValueError("坤二寄地干必须等于中五地干")
-    earth = [p["earth_stems"][0] for p in palaces]
-    heaven = [s for p in palaces if p["number"] != 5 for s in p["heaven_stems"]]
-    stars = [s for p in palaces if p["number"] != 5 for s in p["stars"]]
-    if Counter(earth) != Counter(GAN_SEQUENCE) or Counter(heaven) != Counter(GAN_SEQUENCE):
-        raise ValueError("九干在地盘原宫和天盘外宫必须各出现一次（寄干计一次）")
-    if Counter(stars) != Counter(STARS.values()):
-        raise ValueError("九星必须各出现一次")
-    if Counter(p["door"] for p in palaces if p["number"] != 5) != Counter(DOORS.values()):
-        raise ValueError("八门必须各出现一次")
-    if Counter(p["spirit"] for p in palaces if p["number"] != 5) != Counter(SPIRITS):
-        raise ValueError("八神必须各出现一次")
-    xun = chart["xun"]
-    hour_index = SEXAGENARY.index(chart["calendar"]["hour_pillar"])
-    head_index = hour_index // 10 * 10
-    expected_void = [BRANCHES[(BRANCHES.index(SEXAGENARY[head_index][1]) + i) % 12] for i in (10, 11)]
-    if (xun["head"] != SEXAGENARY[head_index] or xun["hidden_stem"] != GAN_SEQUENCE[hour_index // 10]
-            or xun["void_branches"] != expected_void):
-        raise ValueError("旬首、遁仪或旬空与时柱不符")
-    chief = chart["chief"]
-    for field in ("zhi_fu_palace", "zhi_shi_palace"):
-        if chief[field] not in RING:
-            raise ValueError(f"{field} 必须为实际外宫寄宫")
-    if (chief["zhi_fu"] not in by_number[chief["zhi_fu_palace"]]["stars"]
-            or chief["zhi_shi"] != by_number[chief["zhi_shi_palace"]]["door"]):
-        raise ValueError("值符星或值使门与宫内字段不符")
-    horse = chart["horse"]
-    if horse["basis"] not in ("hour", "day"):
-        raise ValueError("horse.basis 必须为 hour 或 day")
-    basis = chart["calendar"]["hour_pillar" if horse["basis"] == "hour" else "day_pillar"][1]
-    horse_branch = next(b for group, b in (("申子辰", "寅"), ("寅午戌", "申"),
-                                         ("巳酉丑", "亥"), ("亥卯未", "巳")) if basis in group)
-    if horse["basis_branch"] != basis or horse["branch"] != horse_branch or horse["palace"] != BRANCH_PALACE[horse_branch]:
-        raise ValueError("马星与所用日支/时支不符")
-    for p in palaces:
-        n = p["number"]
-        expected = [b for b in expected_void if BRANCH_PALACE[b] == n]
-        if (p["void_branches"] != expected or p["void"] != bool(expected)
-                or p["horse"] != (n == horse["palace"])
-                or p["zhi_fu"] != (n == chief["zhi_fu_palace"])
-                or p["zhi_shi"] != (n == chief["zhi_shi_palace"])):
-            raise ValueError(f"{n}宫空马或符使标记与盘面总字段不符")
-    return by_number
-
 
 def stem_detail(stem, index, number, month, hidden, *, heaven):
     tomb_palace, tomb_branch = TOMBS[stem]
@@ -166,7 +89,10 @@ def stem_detail(stem, index, number, month, hidden, *, heaven):
             "seasonal": seasonal(STEM_ELEMENTS[stem], month),
             "relation_A_to_palace": relation(STEM_ELEMENTS[stem], PALACES[number][2]),
             "tomb": {"matches": number == tomb_palace, "palace": tomb_palace,
-                     "branch": tomb_branch, "scope": "天盘干入墓" if heaven else "地盘墓位"}}
+                     "branch": tomb_branch, "scope": "天盘干入墓" if heaven else "地盘墓位",
+                     "source_id": "ZG-4" if stem in "乙丙丁" and heaven else "LEGACY-TOMB",
+                     "verification": "verified_subset" if stem in "乙丙丁" and heaven else "partial",
+                     "meaning_scope": "只核位置；实际影响和解除须本事类完整条件"}}
     if heaven:
         target, branch, hidden_jia = PUNISHMENTS.get(stem, (None, None, None))
         data["punishment"] = {"matches": number == target, "palace": target, "branch": branch,
@@ -260,41 +186,20 @@ def activation_conditions(p, heaven, earth, human):
             "tomb_triggers": tombs, "scope": "支级候选；不自动解除限制或判成事", "source_id": "SK-1"}
 
 
-def compound_patterns(p):
-    door, god, n = p["door"], p["spirit"], p["number"]
-    matches = []
-    for hi, h in enumerate(p["heaven_stems"]):
-        prefix = f"天{h}（{'主干' if hi == 0 else '寄干'}）"
-        for name, condition, text in (
-            ("人遁", door == "休门" and h == "丁" and god == "太阴", "休门+太阴"),
-            ("神遁", door == "生门" and h == "丙" and god == "九天", "生门+九天"),
-            ("鬼遁", door == "杜门" and h == "乙" and god == "九地", "杜门+九地"),
-            ("风遁", door in ("开门", "休门", "生门") and h == "乙" and n == 4, f"{door}+巽四"),
-            ("龙遁", door == "休门" and h == "乙" and n == 1, "休门+坎一")):
-            if condition:
-                matches.append({"name": name, "condition": prefix + "+" + text})
-        if door in ("开门", "休门", "生门") and h in "乙丙丁" and god in ("太阴", "六合", "九地"):
-            matches.append({"name": {"太阴": "真诈", "六合": "休诈", "九地": "重诈"}[god],
-                            "condition": prefix + f"+{door}+{god}"})
-        for ei, e in enumerate(p["earth_stems"]):
-            suffix = f"地{e}（{'主干' if ei == 0 else '寄干'}）"
-            for name, condition in (
-                ("天遁（演义丙丁法）", door == "生门" and h == "丙" and e == "丁"),
-                ("地遁", door == "开门" and h == "乙" and e == "己"),
-                ("云遁", door in ("开门", "休门", "生门") and h == "乙" and e == "辛"),
-                ("虎遁", door == "休门" and h == "乙" and e == "辛" and n == 8)):
-                if condition:
-                    matches.append({"name": name, "condition": prefix + f"+{door}+" + suffix})
-    if p["zhi_shi"] and "丁" in p["earth_stems"]:
-        ei = p["earth_stems"].index("丁")
-        matches.append({"name": "玉女守门", "condition": f"值使{door}+地丁（{'主干' if ei == 0 else '寄干'}）"})
+def compound_patterns(p, *, chart=None, context=None):
+    """Registry-backed geometry plus explicit applicability; no event verdict."""
+    matches = local_rule_matches(p, chart=chart, context=context, types=("compound",))
+    for match in matches:
+        if match["rule_id"] == "DUN_TIAN":
+            match["name"] = "天遁（演义丙丁法）"
+        match["condition"] = "同宫组合；实际主寄见 bindings，使用限制见 conditions/eligibility"
     return matches
-
-
-def inspect_chart(chart, *, star_season="tongzong"):
+def inspect_chart(chart, *, star_season="tongzong", validation="full", context=None):
     if star_season not in STAR_SEASONS:
         raise ValueError("未知九星月令口径")
-    by_number = validate_chart(chart)
+    if validation not in ('full', 'structure'):
+        raise ValueError('validation 必须为 full 或 structure；CLI 只接受完整冻结盘')
+    by_number = validate_chart(chart) if validation == 'full' else validate_structure(chart)
     hidden = chart["xun"]["hidden_stem"]
     month_branch = chart["calendar"]["month_pillar"][1]
     month = BRANCH_ELEMENTS[month_branch]
@@ -332,14 +237,27 @@ def inspect_chart(chart, *, star_season="tongzong"):
             "palace_seasonal": seasonal(p["element"], month),
             "heaven": heaven, "earth": earth, "human": human,
             "spirit": {"name": p["spirit"]}, "stem_pairs": pairs,
-            "compound_patterns": compound_patterns(p), "void_branches": p["void_branches"],
+            "compound_patterns": compound_patterns(p, chart=chart, context=context), "rule_matches": local_rule_matches(p, chart=chart, context=context), "void_branches": p["void_branches"],
             "star_to_door": [{"star": s, "door": p["door"],
                               "relation_A_to_B": relation(STAR_ELEMENTS[s], DOOR_ELEMENTS[p["door"]])} for s in p["stars"]],
             "activation": activation_conditions(p, heaven, earth, human),
             "horse": p["horse"], "zhi_fu": p["zhi_fu"], "zhi_shi": p["zhi_shi"]})
     day, hour = (chart["calendar"][k + "_pillar"][0] for k in ("day", "hour"))
     fu, shi = (chart["chief"][k + "_palace"] for k in ("zhi_fu", "zhi_shi"))
+    motions = {"star": plate_motion(star_moves), "door": plate_motion(door_moves),
+               "stem": plate_motion(stem_moves)}
+    five_not_meeting = (CONTROLS[STEM_ELEMENTS[hour]] == STEM_ELEMENTS[day]
+                        and STEMS.index(hour) % 2 == STEMS.index(day) % 2)
+    global_cards = [evaluate_application(rule_by_id("MOTION_" + layer.upper()), {}, chart=chart,
+                                        context=context, geometry=motion["state"] in ("反吟", "伏吟"))
+                    for layer, motion in motions.items()]
+    global_cards.append(evaluate_application(rule_by_id("FIVE_NOT_MEET"), {}, chart=chart,
+                                            context=context, geometry=five_not_meeting))
     return {"analysis_version": ANALYSIS_VERSION, "chart_rule_version": chart["rule_version"],
+        "validation_scope": validation,
+        "chart_sha256": hashlib.sha256(json.dumps(chart, ensure_ascii=False, sort_keys=True,
+                                                   separators=(",", ":")).encode("utf-8")).hexdigest(),
+        "registry_schema_version": registry()["schema_version"],
         "captured_at": chart["input"]["captured_at"],
         "methods": {"season": "月支五行；辰戌丑未土", "star_season": star_season,
                     "star_season_description": STAR_SEASONS[star_season][1],
@@ -351,14 +269,13 @@ def inspect_chart(chart, *, star_season="tongzong"):
                     "interpretation_scope": "关系字段只记方向，不自动构成吉凶、支持、缓冲或通关；另核星门神本义及干格原文",
                     "tomb_source_scope": "奇仪墓沿用声明表；未核原文的项目只作结构提示，不能据此作关键吉凶判断"},
         "global": {"month_branch": month_branch, "month_element": month,
-            "star_plate": plate_motion(star_moves), "door_plate": plate_motion(door_moves),
-            "stem_plate": plate_motion(stem_moves),
+            "star_plate": motions["star"], "door_plate": motions["door"],
+            "stem_plate": motions["stem"], "rule_matches": global_cards,
             "motion_dependency": "星与奇仪随同一次转动；分层记录但不独立计票",
             "pillar_stems": {k: {"pillar": chart["calendar"][k + "_pillar"],
                                   "resolved_stem": resolve_pillar_stem(chart["calendar"][k + "_pillar"])}
                              for k in ("year", "month", "day", "hour")},
-            "five_not_meeting": {"matches": CONTROLS[STEM_ELEMENTS[hour]] == STEM_ELEMENTS[day]
-                                     and STEMS.index(hour) % 2 == STEMS.index(day) % 2,
+            "five_not_meeting": {"matches": five_not_meeting,
                                  "day_stem": day, "hour_stem": hour,
                                  "condition": "原时干克原日干且阴阳同性"},
             "chief_relation": {"A_zhi_fu_palace": fu, "B_zhi_shi_palace": shi,
@@ -382,6 +299,7 @@ def main():
         result = inspect_chart(json.loads(args.chart.read_text(encoding="utf-8-sig")), star_season=args.star_season)
         rendered = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
         if args.output:
+            ensure_distinct_output(args.chart, args.output)
             args.output.parent.mkdir(parents=True, exist_ok=True)
             args.output.write_text(rendered, encoding="utf-8")
         else:

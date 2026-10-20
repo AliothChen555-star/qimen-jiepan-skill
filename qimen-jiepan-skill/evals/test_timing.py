@@ -9,6 +9,7 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from timing_candidates import candidates, period_boundaries
+from qimen.chart import cast_chart
 
 
 class TimingChecks(unittest.TestCase):
@@ -82,8 +83,7 @@ class TimingChecks(unittest.TestCase):
         for targets in ([], [5], [4, 4], [True]):
             with self.assertRaises(ValueError):
                 candidates(self.chart, targets, unit="day")
-        solar = deepcopy(self.chart)
-        solar["input"]["time_mode"] = "true_solar_time"
+        solar = cast_chart("2026-10-14T13:27:13+08:00", time_mode="true_solar_time", longitude=120)
         with self.assertRaisesRegex(ValueError, "标准时"):
             candidates(solar, [4], unit="day")
 

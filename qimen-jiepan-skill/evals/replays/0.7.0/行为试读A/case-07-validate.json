@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "C:\\Users\\Euell\\.codex\\skills\\qimen-jiepan\\.venv\\Scripts\\python.exe",
+    "-B",
+    "X:\\Daily\\奇门\\qimen-jiepan-rewrite-20261019\\qimen-jiepan-skill\\scripts\\reading_record.py",
+    "validate",
+    "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\行为试读A\\case-07-reading.json",
+    "--chart",
+    "X:\\Daily\\奇门\\skill重写验收_2026-10-19\\行为试读A\\case-07-chart.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"valid_final_record\",\n  \"schema_version\": \"qimen_reading_record_v1\",\n  \"chart_sha256\": \"b25a96a5fd562bbc276b09022093490645523e1b6501962ad5bbb9018b1711c6\",\n  \"role_count\": 6,\n  \"result_count\": 2,\n  \"scope\": \"仅校记录引用、层次、条件与范围一致性；不证明事实真实或预测有效\"\n}\n",
+  "stderr": ""
+}

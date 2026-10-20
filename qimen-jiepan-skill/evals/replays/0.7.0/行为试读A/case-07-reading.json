@@ -1,0 +1,403 @@
+{
+  "schema_version": "qimen_reading_record_v1",
+  "status": "final",
+  "chart_ref": {
+    "sha256": "b25a96a5fd562bbc276b09022093490645523e1b6501962ad5bbb9018b1711c6",
+    "instant_utc": "2026-01-13T15:30:00+00:00",
+    "rule_version": "chai_bu_v1.0.0"
+  },
+  "method_profile": {
+    "chart": {
+      "timezone": "Asia/Shanghai",
+      "longitude": 120.0,
+      "latitude": 30.0,
+      "time_mode": "standard_time",
+      "day_boundary": "midnight",
+      "horse_basis": "hour",
+      "yuan_strategy": "chai_bu_v1",
+      "center_policy": "kun2"
+    },
+    "star_season": "tongzong",
+    "method_id": "LOCAL_REPUTATION_LIMITED"
+  },
+  "question": "读取 evals/fixtures/hosted.json，沿用原盘解读近期整体风评。我年命丁，请交代日干、年命与景门的关系，保留整体、宫内、回归整体的实际分析，最后才细化取象。",
+  "known_facts": [
+    {
+      "id": "f_sim",
+      "text": "本题为模拟试读，无实际结局；盘为输入或前次成功冻结的原盘，未取事后事实。",
+      "basis": "provided_before_reading"
+    },
+    {
+      "id": "f_year",
+      "text": "用户年命丁，要求整体、宫内、回归整体，最后取象；盘已给定。",
+      "basis": "provided_before_reading"
+    }
+  ],
+  "external_sources": [],
+  "external_methods": [
+    {
+      "id": "LOCAL_REPUTATION_LIMITED",
+      "source_id": "SK-1",
+      "name": "风评有限现代入口",
+      "scope": "日干自问定位，年命辅助；景门作公开形象、惊门作争议的现代有限类比。",
+      "limitations": "日干丁与年命丁同一寄干，不形成两份独立落点或证据；无完整风评结果与期限法。"
+    }
+  ],
+  "external_rules": [
+    {
+      "id": "A2_PAIR_丁庚",
+      "source_id": "MJ-2",
+      "scope": "丁庚原义补查，年月日時格的文书与行人分事。",
+      "requirements": [
+        "实际天丁加地庚并注明寄干",
+        "文书阻隔与行人归来分事区分"
+      ],
+      "exceptions": [
+        "不凭该格认定现实文书受阻已发生",
+        "同一丁庚与飞干格不作独立票"
+      ]
+    },
+    {
+      "id": "A2_PAIR_丙壬",
+      "source_id": "MJ-2",
+      "scope": "火入天罗的为客不利、是非原义。",
+      "requirements": [
+        "实际天丙加地壬",
+        "利害所指的主客身份先按本事明确"
+      ],
+      "exceptions": [
+        "本题无天地盘主客取法，不擅定用户为客",
+        "是非原义不证明有人造谣"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "self",
+      "object": "本次自问本人",
+      "kind": "stem",
+      "value": "丁",
+      "layer": "heaven",
+      "palace": 1,
+      "position": "hosted",
+      "primary": true,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "year",
+      "object": "丁年命身份辅助，与本人同一寄丁",
+      "kind": "stem",
+      "value": "丁",
+      "layer": "heaven",
+      "palace": 1,
+      "position": "hosted",
+      "primary": false,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "image",
+      "object": "公开形象/表达现代类比",
+      "kind": "door",
+      "value": "景门",
+      "layer": "human",
+      "palace": 1,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "main",
+      "object": "本人景门宫实际主干，不是另一人",
+      "kind": "stem",
+      "value": "辛",
+      "layer": "heaven",
+      "palace": 1,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "dispute",
+      "object": "争议惊扰辅助",
+      "kind": "door",
+      "value": "惊门",
+      "layer": "human",
+      "palace": 3,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "dispute_stem",
+      "object": "争议宫实际天干",
+      "kind": "stem",
+      "value": "丙",
+      "layer": "heaven",
+      "palace": 3,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    }
+  ],
+  "results": [
+    {
+      "id": "current",
+      "target": "公开表达及评价定调的有限当前状态",
+      "stage": "原盘当前传统性质的现代对照",
+      "success_criteria": "公开表达顺畅、争议少且评价可稳定定调",
+      "horizon": {
+        "state": "current",
+        "at": "2026-01-13T15:30:00+00:00"
+      },
+      "state": "assessed"
+    },
+    {
+      "id": "near",
+      "target": "近期最终风评及转折",
+      "stage": "未来评价结果",
+      "success_criteria": "近期截止点评价稳定改善",
+      "horizon": {
+        "state": "unknown",
+        "reason": "近期未定截止点，且无完整风评期限与结果方法。"
+      },
+      "state": "undetermined",
+      "reason": "近期未定截止点，且无完整风评期限与结果方法。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e1",
+      "result_id": "current",
+      "role_ids": [
+        "self",
+        "year",
+        "image"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "DOOR_PRESSURE",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "本人、年命同为坎一天盘寄丁，景门同宫；坎水克景火为制。",
+      "inference": "同宫共核一次，公开表达功能有受限之义；不把三个角色计为三份独立证据。",
+      "dedup_key": "core-controlled"
+    },
+    {
+      "id": "e2",
+      "result_id": "current",
+      "role_ids": [
+        "main"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "PAIR_辛庚",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "坎一主辛加地庚，白虎出力。",
+      "inference": "保留相争和强进不利的原义；有限对照评价定调压力，不套兵占出行的现实后果。",
+      "dedup_key": "core-xingeng"
+    },
+    {
+      "id": "e3",
+      "result_id": "current",
+      "role_ids": [
+        "self",
+        "year"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "A2_PAIR_丁庚",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "坎一寄丁加地庚。",
+      "inference": "文书阻隔原义与表达主题可作有限类比，不能宣称现实阻隔或行人归来；同一寄丁只核一次。",
+      "dedup_key": "core-dinggeng"
+    },
+    {
+      "id": "e4",
+      "result_id": "current",
+      "role_ids": [
+        "dispute"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "DOOR_PRESSURE",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "震三惊门金克木宫，为迫；普通土月门相。",
+      "inference": "争议惊扰的辅助性质保留，不直接证明诽谤。",
+      "dedup_key": "dispute-pressure"
+    },
+    {
+      "id": "e5",
+      "result_id": "current",
+      "role_ids": [
+        "image",
+        "dispute"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "LOCAL_REPUTATION_LIMITED",
+      "applicability": "true",
+      "polarity": "supports",
+      "critical": false,
+      "fact": "坎一有天禽与神盘值符；震三有天心、太阴，其各自正面本义保留。",
+      "inference": "有谋事、吉助和保护性质，作为相反线索保留；没有规则说明它们已消去门制与门迫。",
+      "dedup_key": "positive-properties"
+    },
+    {
+      "id": "e6",
+      "result_id": "current",
+      "role_ids": [
+        "self",
+        "main"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "FLYING_PALACE",
+      "applicability": "unknown",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "本旬辛在坎一加地庚，同时飞宫几何存在。",
+      "inference": "原条战行结果与现代风评适用未知；又与e2同一辛庚结构，不重复计票。",
+      "dedup_key": "core-xingeng"
+    },
+    {
+      "id": "e7",
+      "result_id": "current",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "TZ-1",
+      "rule_id": "FLYING_DAY",
+      "applicability": "unknown",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "日干寄丁加地庚，飞干结构存在。",
+      "inference": "兵战出行断义不能自动化为风评事件；与e3同一丁庚结构。",
+      "dedup_key": "core-dinggeng"
+    },
+    {
+      "id": "e8",
+      "result_id": "current",
+      "role_ids": [
+        "dispute_stem"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "A2_PAIR_丙壬",
+      "applicability": "unknown",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "争议宫天丙加地壬。",
+      "inference": "原有是非义保留，但为客不利的身份和本事适用未给，未作独立结果证据。",
+      "dedup_key": "dispute-bingren"
+    },
+    {
+      "id": "e9",
+      "result_id": "near",
+      "role_ids": [
+        "self",
+        "image"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "LOCAL_REPUTATION_LIMITED",
+      "applicability": "unknown",
+      "polarity": "neutral",
+      "critical": true,
+      "fact": "问题没有近期截止点，也无已核完整风评结果与应期法。",
+      "inference": "不能将当前有限状态推成某段未来时间必有好坏结果。",
+      "dedup_key": "near-scope"
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "c1",
+      "result_id": "current",
+      "horizon": {
+        "state": "current",
+        "at": "2026-01-13T15:30:00+00:00"
+      },
+      "judgment": "adverse",
+      "claim": "就表达顺畅、评价稳定这一当前有限目标，公开表达受制，争议侧偏承压。",
+      "support_ids": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "counter_ids": [
+        "e5"
+      ],
+      "excluded_ids": [
+        "e6",
+        "e7",
+        "e8"
+      ],
+      "dispositions": [
+        {
+          "evidence_id": "e5",
+          "reason": "天禽值符和天心太阴正义保留，但不能由其存在宣布景制、惊迫解除。"
+        },
+        {
+          "evidence_id": "e6",
+          "reason": "事件适用未知，且同辛庚不重复计数。"
+        },
+        {
+          "evidence_id": "e7",
+          "reason": "战行用途不能套风评，与寄丁庚不重复计数。"
+        },
+        {
+          "evidence_id": "e8",
+          "reason": "主客未绑，保留原义但排除事件定论。"
+        }
+      ],
+      "synthesis_reason": "景门受制直接对应表达功能，惊门迫补充争议线；主寄干格保留原义。相反正面性质没有已核解除条件，因此主判仅限当前有限象义，不是现实名声已坏。"
+    },
+    {
+      "id": "c2",
+      "result_id": "near",
+      "horizon": {
+        "state": "unknown",
+        "reason": "近期未定截止点，且无完整风评期限与结果方法。"
+      },
+      "judgment": "undetermined",
+      "claim": "近期最终风评与何时转好未判。",
+      "support_ids": [],
+      "counter_ids": [],
+      "excluded_ids": [
+        "e9"
+      ],
+      "dispositions": [
+        {
+          "evidence_id": "e9",
+          "reason": "关键未知保留未判。"
+        }
+      ],
+      "synthesis_reason": "没有定义期限与完整事类支持，原盘现状不替代未来结果。",
+      "reason": "近期未定截止点，且无完整风评期限与结果方法。"
+    }
+  ],
+  "imagery": [
+    {
+      "role_ids": [
+        "image",
+        "dispute"
+      ],
+      "interpretation": "待核重要说明有无被截断、转述是否走样、私下支持是否尚未形成公开反馈。",
+      "status": "hypothesis",
+      "verification": "以原始文字、传播版本和实际评价核对，不能从盘面确认造谣或对手身份。"
+    }
+  ],
+  "timing": [
+    {
+      "result_id": "current",
+      "state": "not_applicable",
+      "windows": [],
+      "reason": "当前状态解释没有持续时间预测。"
+    },
+    {
+      "result_id": "near",
+      "state": "undetermined",
+      "windows": [],
+      "reason": "无完整风评应期法，不用反吟、空马或宫数给日期。"
+    }
+  ]
+}

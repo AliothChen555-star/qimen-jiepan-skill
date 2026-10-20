@@ -1,0 +1,412 @@
+{
+  "schema_version": "qimen_reading_record_v1",
+  "status": "final",
+  "chart_ref": {
+    "sha256": "8f89c66e5780c32684f533396ea88bbe9561a9bb4403233de5fb5db8e0d5354b",
+    "instant_utc": "2026-10-14T05:27:13+00:00",
+    "rule_version": "chai_bu_v1.0.0"
+  },
+  "method_profile": {
+    "chart": {
+      "timezone": "Asia/Shanghai",
+      "longitude": 120,
+      "latitude": 30,
+      "time_mode": "standard_time",
+      "day_boundary": "midnight",
+      "horse_basis": "hour",
+      "yuan_strategy": "chai_bu_v1",
+      "center_policy": "kun2"
+    },
+    "star_season": "tongzong",
+    "method_id": "LOCAL_CAREER_LIMITED"
+  },
+  "question": "读取 evals/fixtures/base.json，沿用原盘，分析未来三个月换工作的整体走势。我没有年命，你自行取用。详细说明依据，重点说盘势和取象。",
+  "known_facts": [
+    {
+      "id": "f_sim",
+      "text": "本题为模拟试读，无实际结局；盘为输入或前次成功冻结的原盘，未取事后事实。",
+      "basis": "provided_before_reading"
+    },
+    {
+      "id": "f_no_year",
+      "text": "用户未提供年命，要求沿用base.json看未来三个月换工作。",
+      "basis": "provided_before_reading"
+    }
+  ],
+  "external_sources": [],
+  "external_methods": [
+    {
+      "id": "LOCAL_CAREER_LIMITED",
+      "source_id": "SK-1",
+      "name": "换工作有限现代入口",
+      "scope": "日干代表本人，开门作职位/工作机会的现代身份转译，核结构与性质。",
+      "limitations": "非开店法的换皮；无已核完整换职结果、三个月期限或精确应期法，不用时干编造雇主。"
+    }
+  ],
+  "external_rules": [
+    {
+      "id": "A2_PAIR_丙辛",
+      "source_id": "MJ-2",
+      "scope": "实际丙辛原义补查，保留谋事成就，不直接外推换职。",
+      "requirements": [
+        "实际天丙加地辛，寄干方向核实",
+        "谋事和病占分事不能混用"
+      ],
+      "exceptions": [
+        "有正面原义仍须与本事适用分开",
+        "同一丙辛的跌穴、悖格不可重复计票"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "self",
+      "object": "本人",
+      "kind": "stem",
+      "value": "辛",
+      "layer": "heaven",
+      "palace": 4,
+      "position": "main",
+      "primary": true,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "job",
+      "object": "工作职位或机会的现代转译",
+      "kind": "door",
+      "value": "开门",
+      "layer": "human",
+      "palace": 9,
+      "position": "main",
+      "primary": true,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "job_main",
+      "object": "工作宫实际主干",
+      "kind": "stem",
+      "value": "己",
+      "layer": "heaven",
+      "palace": 9,
+      "position": "main",
+      "primary": false,
+      "source_id": "SK-1"
+    },
+    {
+      "id": "job_hosted",
+      "object": "工作宫实际寄干",
+      "kind": "stem",
+      "value": "丙",
+      "layer": "heaven",
+      "palace": 9,
+      "position": "hosted",
+      "primary": false,
+      "source_id": "SK-1"
+    }
+  ],
+  "results": [
+    {
+      "id": "current",
+      "target": "换职推进与机会的当前条件",
+      "stage": "原盘状态有限解释",
+      "success_criteria": "本人可顺畅推进且工作机会可用",
+      "horizon": {
+        "state": "current",
+        "at": "2026-10-14T05:27:13+00:00"
+      },
+      "state": "assessed"
+    },
+    {
+      "id": "three_months",
+      "target": "三个月完成换工作",
+      "stage": "落实约定并开始任职",
+      "success_criteria": "截至固定区间末，新工作约定落实且已开始任职",
+      "horizon": {
+        "state": "fixed",
+        "start": "2026-10-14T13:27:13+08:00",
+        "end": "2027-01-14T13:27:13+08:00"
+      },
+      "state": "undetermined",
+      "reason": "没有已核的换职完整结果与三个月期限方法。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e1",
+      "result_id": "current",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "DOOR_PRESSURE",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "辛本人在巽四，惊门金克木宫为迫。",
+      "inference": "在有限现代象义范围解释推进有惊扰压力，不声称现实雇主行为。",
+      "dedup_key": "self-pressure"
+    },
+    {
+      "id": "e2",
+      "result_id": "current",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "GEOM_辛乙",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "实际天辛加地乙，白虎猖狂几何成立。",
+      "inference": "保留已核不利谋动底色；未采用MJ-P客不害例外，不作换职失败的事件断语。",
+      "dedup_key": "self-xinyi"
+    },
+    {
+      "id": "e3",
+      "result_id": "current",
+      "role_ids": [
+        "job"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "DOOR_PRESSURE",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "开门在离九受宫火克，为制而非迫。",
+      "inference": "工作机会的开通功能受到限制，非已证明现实岗位关闭。",
+      "dedup_key": "job-controlled"
+    },
+    {
+      "id": "e4",
+      "result_id": "current",
+      "role_ids": [
+        "job"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "LOCAL_CAREER_LIMITED",
+      "applicability": "true",
+      "polarity": "supports",
+      "critical": false,
+      "fact": "开门普通土月为相，原有入官谋事吉用；同宫天禽相，保留上吉谋事性质。",
+      "inference": "有可用的正面条件，不能因凶象全部抹去，也不能因此消除受制。",
+      "dedup_key": "job-positive"
+    },
+    {
+      "id": "e5",
+      "result_id": "current",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "LOCAL_CAREER_LIMITED",
+      "applicability": "true",
+      "polarity": "supports",
+      "critical": false,
+      "fact": "本人同宫神盘值符与值符星天英分层可见。",
+      "inference": "保留神盘值符吉助性质；天英旺不是纯吉，值符不自动全消凶。",
+      "dedup_key": "self-chief"
+    },
+    {
+      "id": "e6",
+      "result_id": "current",
+      "role_ids": [
+        "job_main"
+      ],
+      "source_id": "ZG-5",
+      "rule_id": "PAIR_己辛",
+      "applicability": "true",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "工作宫主己加地辛。",
+      "inference": "只保留不宁、凶扰的传统性质，不把入墓格名当落宫墓或鬼神事实。",
+      "dedup_key": "job-jixin"
+    },
+    {
+      "id": "e7",
+      "result_id": "current",
+      "role_ids": [
+        "job_hosted"
+      ],
+      "source_id": "MJ-2",
+      "rule_id": "A2_PAIR_丙辛",
+      "applicability": "unknown",
+      "polarity": "supports",
+      "critical": false,
+      "fact": "工作宫寄丙加地辛，原有谋事成就正义。",
+      "inference": "正面原义报告，但换职事类与结果适用未齐，不据此认定已得职。",
+      "dedup_key": "job-bingxin"
+    },
+    {
+      "id": "e8",
+      "result_id": "current",
+      "role_ids": [
+        "job_hosted"
+      ],
+      "source_id": "YY-2",
+      "rule_id": "BIRD_CHIEF",
+      "applicability": "unknown",
+      "polarity": "supports",
+      "critical": false,
+      "fact": "甲午旬遁辛，寄丙加地辛；本旬遁仪非庚。",
+      "inference": "旬首跌穴几何成立且庚禁不触发；换职用途与完整事件适用未知。",
+      "dedup_key": "job-bingxin"
+    },
+    {
+      "id": "e9",
+      "result_id": "current",
+      "role_ids": [
+        "job_hosted"
+      ],
+      "source_id": "ZG-4",
+      "rule_id": "TIME_BING_DAY",
+      "applicability": "unknown",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "寄丙加日干辛同时为悖格结构。",
+      "inference": "主客和原用途未立，不将悖格当三个月必败。",
+      "dedup_key": "job-bingxin"
+    },
+    {
+      "id": "e10",
+      "result_id": "current",
+      "role_ids": [
+        "self"
+      ],
+      "source_id": "LEGACY-TOMB",
+      "rule_id": "STEM_TOMB_LEGACY",
+      "applicability": "unknown",
+      "polarity": "opposes",
+      "critical": false,
+      "fact": "辛在巽匹配旧全干墓表，但整表核读partial。",
+      "inference": "未核实的辛墓不作为关键吉凶或日期依据。",
+      "dedup_key": "self-legacy-tomb"
+    },
+    {
+      "id": "e11",
+      "result_id": "three_months",
+      "role_ids": [
+        "self",
+        "job"
+      ],
+      "source_id": "SK-1",
+      "rule_id": "LOCAL_CAREER_LIMITED",
+      "applicability": "unknown",
+      "polarity": "neutral",
+      "critical": true,
+      "fact": "固定三个月问题并无已核完整换职期限规则；没有现实录用背景。",
+      "inference": "一般状态不替代三个月是否开始任职的判断。",
+      "dedup_key": "three-month-scope"
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "c1",
+      "result_id": "current",
+      "horizon": {
+        "state": "current",
+        "at": "2026-10-14T05:27:13+00:00"
+      },
+      "judgment": "mixed",
+      "claim": "本人推进受扰，机会有开通之义与可用面，但也有受制；当前条件兼有正反。",
+      "support_ids": [
+        "e1",
+        "e2",
+        "e3",
+        "e6"
+      ],
+      "counter_ids": [
+        "e4",
+        "e5"
+      ],
+      "excluded_ids": [
+        "e7",
+        "e8",
+        "e9",
+        "e10"
+      ],
+      "dispositions": [
+        {
+          "evidence_id": "e4",
+          "reason": "保留工作机会正面性质，但没有解除离宫对开门的制。"
+        },
+        {
+          "evidence_id": "e5",
+          "reason": "值符吉助真实可见，不构成全消凶条件。"
+        },
+        {
+          "evidence_id": "e7",
+          "reason": "丙辛正义保留为原义，换职结果适用未知。"
+        },
+        {
+          "evidence_id": "e8",
+          "reason": "几何与非庚条件已核，现代换职用途仍未知；与e7同源不重复计数。"
+        },
+        {
+          "evidence_id": "e9",
+          "reason": "主客与用途未知，且与e7、e8同一丙辛结构，不用作独立败票。"
+        },
+        {
+          "evidence_id": "e10",
+          "reason": "全干墓表未完成来源核验，不入主判或应期。"
+        }
+      ],
+      "synthesis_reason": "本人和工作相关的直接限制均在，开门与天禽、值符有利性质保留。无统一权重和跨事类解救规则，分别报告。"
+    },
+    {
+      "id": "c2",
+      "result_id": "three_months",
+      "horizon": {
+        "state": "fixed",
+        "start": "2026-10-14T13:27:13+08:00",
+        "end": "2027-01-14T13:27:13+08:00"
+      },
+      "judgment": "undetermined",
+      "claim": "2026-10-14至2027-01-14三个月是否落实新工作并任职未判。",
+      "support_ids": [],
+      "counter_ids": [],
+      "excluded_ids": [
+        "e11"
+      ],
+      "dispositions": [
+        {
+          "evidence_id": "e11",
+          "reason": "关键方法适用未知，保留结果未判。"
+        }
+      ],
+      "synthesis_reason": "虽然期限可固定，但完整事件与期限适用不足；不是因为缺精确到日就禁止所有期限判断。",
+      "reason": "没有已核的换职完整结果与三个月期限方法。"
+    }
+  ],
+  "imagery": [
+    {
+      "role_ids": [
+        "self"
+      ],
+      "interpretation": "可能需要核查面试表述、材料口径或沟通争议。",
+      "status": "hypothesis",
+      "verification": "对照实际面试记录和往来材料，不能先认定领导打压。"
+    },
+    {
+      "role_ids": [
+        "job"
+      ],
+      "interpretation": "可检查职位开放、审批及入职条件。",
+      "status": "hypothesis",
+      "verification": "以职位说明、录用约定和入职要求核实，不能由星象认定岗位有病。"
+    }
+  ],
+  "timing": [
+    {
+      "result_id": "current",
+      "state": "not_applicable",
+      "windows": [],
+      "reason": "仅当前状态。"
+    },
+    {
+      "result_id": "three_months",
+      "state": "undetermined",
+      "windows": [],
+      "reason": "本题没有完整换职应期法，未运行日历候选；宫数和马星不换天数。"
+    }
+  ]
+}

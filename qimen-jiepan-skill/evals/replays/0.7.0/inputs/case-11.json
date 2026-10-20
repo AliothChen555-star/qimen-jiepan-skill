@@ -1,0 +1,10 @@
+{
+  "id": 11,
+  "prompt": "读取 evals/fixtures/geng.json，核验坤二的青龙返首，说明其可用条件。",
+  "files": [
+    "fixtures/geng.json"
+  ],
+  "input_kind": "frozen_chart",
+  "simulation": true,
+  "no_actual_outcome": true
+}

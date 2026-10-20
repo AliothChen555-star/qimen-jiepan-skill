@@ -1,0 +1,10 @@
+{
+  "id": 14,
+  "prompt": "读取 evals/fixtures/base.json，已选本人巽四为观察对象。按日级核验未来十天的填冲与冲墓候选，说明它们对应哪个阶段，是否足够直接断录用日。",
+  "files": [
+    "fixtures/base.json"
+  ],
+  "input_kind": "frozen_chart",
+  "simulation": true,
+  "no_actual_outcome": true
+}

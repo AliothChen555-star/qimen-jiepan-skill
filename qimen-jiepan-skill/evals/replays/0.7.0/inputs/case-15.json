@@ -1,0 +1,10 @@
+{
+  "id": 15,
+  "prompt": "读取 evals/fixtures/base.json，分别用 tongzong 与 yanyi_prose 核验天心星在戌月的状态。只比较九星口径，不改变门干宫月令。",
+  "files": [
+    "fixtures/base.json"
+  ],
+  "input_kind": "frozen_chart",
+  "simulation": true,
+  "no_actual_outcome": true
+}
