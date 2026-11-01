@@ -1,0 +1,33 @@
+{
+  "schema_version": "qimen_finance_profiles_v1",
+  "method_id": "FINANCE_FIXED_CHART_V1",
+  "version": "0.8.0",
+  "source_type": "versioned_modern_method",
+  "sector_mapping_version": "sector_symbols_v1",
+  "amplitude_version": "absolute_return_quantiles_v1",
+  "history_window": 60,
+  "minimum_history": 20,
+  "sectors": {
+    "finance": {"kind": "door", "value": "开门", "description": "银行、券商、金融服务"},
+    "healthcare": {"kind": "star", "value": "天心", "description": "医疗服务、医药研发"},
+    "transport": {"kind": "door", "value": "伤门", "description": "汽车、运输装备、交通运输"},
+    "information": {"kind": "door", "value": "景门", "description": "软件、传媒、显示、信息传播"},
+    "semiconductor": {"kind": "star", "value": "天英", "description": "半导体、电子硬件"},
+    "property": {"kind": "door", "value": "生门", "description": "房地产、建筑用地"},
+    "agriculture": {"kind": "star", "value": "天辅", "description": "农林、生物生长型产业"},
+    "manufacturing": {"kind": "star", "value": "天冲", "description": "金属、机械、工业制造"},
+    "water": {"kind": "door", "value": "休门", "description": "水务等已明确的水相关主题"}
+  },
+  "rules": [
+    {"id":"F01","name":"财利干格","source_ids":["MJ-2","FIN-1"],"condition":"主对象宫辛加丁且未悬置","effect":"原盘偏涨"},
+    {"id":"F02","name":"耗财干格","source_ids":["MJ-2","FIN-1"],"condition":"辛加戊，或戊加辛且为非身份凶门，角色未悬置","effect":"原盘偏跌"},
+    {"id":"F03","name":"门势","source_ids":["FIN-1"],"condition":"无优先干格；非身份门，无迫墓及角色空亡悬置","effect":"生开休偏涨、死惊偏跌、伤杜景震荡"},
+    {"id":"F04","name":"身份排重","source_ids":["FIN-1"],"condition":"门就是主对象的行业身份","effect":"不将身份门吉凶再作方向证据"},
+    {"id":"F05","name":"流日直接关系","source_ids":["FIN-1"],"condition":"流干原宫及日支本宫对主对象宫的有向关系","effect":"来生比和为扶，来克及对象生来方为压，反向相持"},
+    {"id":"F06","name":"填实启动","source_ids":["FIN-1"],"condition":"日支等于角色事前明确绑定的原空支","effect":"解除该支导致的悬置，其他条件保留"},
+    {"id":"F07","name":"冲合形态","source_ids":["FIN-1"],"condition":"具体支位六冲或六合","effect":"记录形态，不单独翻方向"},
+    {"id":"F08","name":"冲墓启动","source_ids":["FIN-1"],"condition":"实际已识别墓支被冲，无其他独立悬置","effect":"仅恢复被墓条件悬置的关系"},
+    {"id":"F09","name":"资金财利校验","source_ids":["ZG-8","FIN-1"],"condition":"已核戊、生门关系或已绑定关键关系与主判相反","effect":"强档降为普通档，不翻方向"},
+    {"id":"F10","name":"环境与动静","source_ids":["FIN-1"],"condition":"支持作用随节月转弱；原盘及日马动静另列","effect":"强档可降一级，单一马星不定涨跌"}
+  ]
+}

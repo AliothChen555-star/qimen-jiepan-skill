@@ -143,6 +143,19 @@
         "checked_scope": "方法兼容、三态、记录、现代工作压力入口",
         "notes": "设计已知出处；没有古代预测效验含义。"
       }
+    },
+    {
+      "id": "FIN-1",
+      "title": "固定盘金融方法 v1",
+      "edition": "本次现代方法设计 0.8.0",
+      "url": null,
+      "location": "references/金融解盘.md、固定盘逐日推演.md、金融数据与幅度.md；assets/finance_profiles.json",
+      "verification": {
+        "status": "declared_modern_method",
+        "checked_on": "2026-10-31",
+        "checked_scope": "行业绑定、F01—F10、流日裁决、历史幅度与复算",
+        "notes": "传统角色参考 ZG-8，有向干格参考 MJ-2；证券方向和百分比换算为本方法登记设计。"
+      }
     }
   ],
   "methods": [
@@ -373,6 +386,57 @@
         "checked_on": "2026-10-19",
         "checked_scope": "已知工作压力的传统象义对照和待核事实；不含已核压力持续天数模型",
         "notes": "文本核读与现实预测效验分开；期限不因题目给出而自动成立。"
+      }
+    },
+    {
+      "id": "FINANCE_FIXED_CHART_V1",
+      "name": "固定盘金融日周月预测",
+      "source_id": "FIN-1",
+      "source_url": null,
+      "status": "versioned_modern_method",
+      "scope": "指数、行业主题、股票、ETF及场外基金的方向、强弱和历史尺度幅度",
+      "roles": [
+        {
+          "object": "资产主对象",
+          "symbol": "登记行业符号或原时干",
+          "layer": "declared_by_product",
+          "primary": true
+        },
+        {
+          "object": "资金",
+          "symbol": "戊",
+          "layer": "heaven",
+          "primary": false
+        },
+        {
+          "object": "财利",
+          "symbol": "生门",
+          "layer": "human",
+          "primary": false
+        }
+      ],
+      "comparisons": [
+        "F01—F04 原盘基调",
+        "F05 每日日干原宫和支宫对主对象",
+        "F06—F10 条件启动、反证和减弱"
+      ],
+      "required_conditions": [
+        "冻结完整原盘",
+        "核市场、代码、份额、币种、收益口径、日期",
+        "取用独立于候选池",
+        "行情仅用发布时间前数据"
+      ],
+      "output_boundary": "使用 qimen_finance_record_v1 专用复算；没有历史尺度仍可给方向。",
+      "timing": {
+        "status": "dedicated_finance_record",
+        "exact_date_rule": "F05—F10",
+        "event_scope": "指定市场交易日或基金净值归属日"
+      },
+      "verification": {
+        "status": "declared_modern_method",
+        "checked_on": "2026-10-31",
+        "checked_scope": "登记方法与自动基线，见 FIN-1",
+        "notes": "真实结局独立累计。"
       }
     }
   ],
@@ -1364,7 +1428,7 @@
       "name": "三奇得使",
       "source_id": "YY-2",
       "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "stem_pairs",
         "pairs": [
@@ -1416,7 +1480,7 @@
       "name": "玉女守门",
       "source_id": "YY-2",
       "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "compound",
         "earth": "丁",
@@ -1449,7 +1513,7 @@
       "name": "真诈",
       "source_id": "YY-2",
       "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "compound",
         "heaven": [
@@ -1491,7 +1555,7 @@
       "name": "休诈",
       "source_id": "YY-2",
       "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "compound",
         "heaven": [
@@ -1533,7 +1597,7 @@
       "name": "重诈",
       "source_id": "YY-2",
       "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "compound",
         "heaven": [
@@ -1575,7 +1639,7 @@
       "name": "青龙返首（旬首法）",
       "source_id": "YY-2",
       "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "dynamic_pair",
         "heaven": "$current_hidden_jia",
@@ -1619,7 +1683,7 @@
       "name": "飞鸟跌穴（旬首法）",
       "source_id": "YY-2",
       "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "dynamic_pair",
         "heaven": "丙",
@@ -1663,7 +1727,7 @@
       "name": "青龙返首（戊丙简法）",
       "source_id": "MJ-2",
       "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "stem_pair",
         "heaven": "戊",
@@ -1732,7 +1796,7 @@
       "name": "飞鸟跌穴（丙戊简法）",
       "source_id": "MJ-2",
       "source_url": "https://www.shidianguji.com/zh/book/SDZJ0630/chapter/1lx9g1urkiyp2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "stem_pair",
         "heaven": "丙",
@@ -2146,7 +2210,7 @@
       "name": "伏宫格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "dynamic_pair",
         "heaven": "庚",
@@ -2179,7 +2243,7 @@
       "name": "飞宫格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "dynamic_pair",
         "heaven": "$current_hidden_jia",
@@ -2212,7 +2276,7 @@
       "name": "飞干格",
       "source_id": "TZ-1",
       "source_url": "https://zh.wikisource.org/zh-hans/奇門遁甲統宗",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "dynamic_pair",
         "heaven": "$resolved_day_stem",
@@ -2243,7 +2307,7 @@
       "name": "岁格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "time_pattern",
         "heaven": "庚",
@@ -2275,7 +2339,7 @@
       "name": "月格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "time_pattern",
         "heaven": "庚",
@@ -2309,7 +2373,7 @@
       "name": "日格/伏干格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "time_pattern",
         "heaven": "庚",
@@ -2341,7 +2405,7 @@
       "name": "时格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "time_pattern",
         "heaven": "庚",
@@ -2373,7 +2437,7 @@
       "name": "悖格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "time_pattern",
         "heaven": "丙",
@@ -2405,7 +2469,7 @@
       "name": "悖格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "time_pattern",
         "heaven": "丙",
@@ -2439,7 +2503,7 @@
       "name": "悖格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "time_pattern",
         "heaven": "丙",
@@ -2471,7 +2535,7 @@
       "name": "悖格",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "time_pattern",
         "heaven": "丙",
@@ -2503,7 +2567,7 @@
       "name": "星盘反伏吟",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "motion",
         "layer": "star"
@@ -2533,7 +2597,7 @@
       "name": "门盘反伏吟",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "motion",
         "layer": "door"
@@ -2563,7 +2627,7 @@
       "name": "干盘反伏吟",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "motion",
         "layer": "stem"
@@ -2593,7 +2657,7 @@
       "name": "五不遇时",
       "source_id": "YY-2",
       "source_url": "https://zh.wikisource.org/wiki/遁甲演義_(四庫全書本)/卷2",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "five_not_meet",
         "relation": "hour_stem_controls_day_stem",
@@ -2624,7 +2688,7 @@
       "name": "门迫/受制",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "door_palace_relation",
         "pressure": "door_controls_palace",
@@ -2657,7 +2721,7 @@
       "name": "六仪击刑",
       "source_id": "TZ-1",
       "source_url": "https://zh.wikisource.org/zh-hans/奇門遁甲統宗",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "punishment",
         "map": {
@@ -2697,7 +2761,7 @@
       "name": "三奇入墓（旨归）",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "stem_tomb",
         "map": {
@@ -2734,7 +2798,7 @@
       "name": "奇仪墓位（沿用表）",
       "source_id": "LEGACY-TOMB",
       "source_url": null,
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "stem_tomb",
         "map": {
@@ -2776,7 +2840,7 @@
       "name": "星门入墓",
       "source_id": "ZG-4",
       "source_url": "https://www.shidianguji.com/zh/book/CADAL02031557/chapter/1l6y1gl6jszza",
-      "scope": "传统结构与所列具体用途；未证明现实结果",
+      "scope": "传统结构与所列具体用途；实际应用核对应事类条件",
       "geometry": {
         "type": "element_tomb",
         "map": {
