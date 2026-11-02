@@ -11,6 +11,9 @@ from finance_forecast import build_forecast
 
 
 def validate_record(record, chart=None):
+    if record.get('schema_version') == 'qimen_finance_synthesis_v2':
+        from finance_synthesis import validate_record as validate_synthesis
+        return validate_synthesis(record, chart)
     need(record.get('schema_version') == SCHEMA, '金融记录模式错误')
     body = deepcopy(record)
     signature = body.pop('record_sha256', None)
@@ -29,6 +32,10 @@ def sign(value):
 
 
 def evaluate(records, outcomes):
+    if any(r.get('schema_version') == 'qimen_finance_synthesis_v2' for r in records):
+        need(all(r.get('schema_version') == 'qimen_finance_synthesis_v2' for r in records), '不同方法须分别评价')
+        from finance_synthesis import evaluate as evaluate_synthesis
+        return evaluate_synthesis(records,outcomes)
     need(isinstance(outcomes, list), '结局文件须为数组')
     indexed, observed, eligible, excluded = {}, {}, [], defaultdict(int)
     for record in records:
@@ -135,14 +142,30 @@ def main(argv=None):
     score.add_argument('--records', nargs='+', required=True)
     score.add_argument('--outcomes', required=True)
     score.add_argument('--output', required=True)
+    draft = commands.add_parser('init')
+    draft.add_argument('--context',required=True)
+    draft.add_argument('--output',required=True)
+    publish = commands.add_parser('publish')
+    publish.add_argument('--draft',required=True)
+    publish.add_argument('--output',required=True)
+    publish.add_argument('--markdown')
     args = parser.parse_args(argv)
     try:
         if args.command == 'validate':
             result = validate_record(read_json(args.record), read_json(args.chart) if args.chart else None)
             print(f"金融记录复算通过，{result['assets']} 个标的")
-        else:
+        elif args.command == 'evaluate':
             result = evaluate([read_json(p) for p in args.records], read_json(args.outcomes))
             write_new(args.output, result, args.records+[args.outcomes])
+        elif args.command == 'init':
+            from finance_synthesis import init_record
+            write_new(args.output,init_record(read_json(args.context)),[args.context])
+        else:
+            from finance_synthesis import publish_record, markdown as synthesis_markdown
+            result = publish_record(read_json(args.draft))
+            write_new(args.output,result,[args.draft])
+            if args.markdown:
+                write_new(args.markdown,synthesis_markdown(result),[args.draft,args.output])
     except (ValueError, OSError, KeyError, TypeError) as exc:
         print(f'金融记录处理失败：{exc}', file=sys.stderr)
         return 1

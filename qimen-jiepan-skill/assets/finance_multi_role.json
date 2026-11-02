@@ -1,0 +1,39 @@
+{
+  "schema_version": "qimen_finance_multi_role_profile_v1",
+  "method_id": "FINANCE_MULTI_ROLE_V2_CANDIDATE",
+  "version": "0.1.0",
+  "status": "uncalibrated",
+  "source_type": "declared_modern_financial_mapping",
+  "source_id": "FIN-MR2",
+  "market_roles": {
+    "market.index": {"kind": "door", "value": "景门", "purpose": "指数行情主观察；不是已知价格"},
+    "market.trend": {"kind": "chief_star", "purpose": "值符星的整体背景；不确认政策托底或主力行为"},
+    "market.capital": {"kind": "stem", "value": "戊", "purpose": "资本条件与限制"},
+    "market.profit": {"kind": "door", "value": "生门", "purpose": "收益机会及落实条件；不等于持仓已获利"},
+    "market.participation": {"kind": "door", "value": "开门", "purpose": "交易参与和通道的辅助观察"},
+    "market.process": {"kind": "chief_door", "purpose": "值使门的推进、阻滞与反复背景"},
+    "market.issue": {"kind": "hour_stem", "purpose": "原问题状态与风险辅助；不每天换时干"}
+  },
+  "themes": {
+    "index": {"label": "指数行情", "primary": {"kind": "door", "value": "景门"}, "secondary": []},
+    "ai": {"label": "人工智能复合主题", "primary": {"kind": "door", "value": "景门"}, "secondary": [{"kind": "star", "value": "天英"}, {"kind": "star", "value": "天辅"}, {"kind": "stem", "value": "丁"}], "limit": "硬件、光通信和软件敞口分别保留，不以制造业总占比替代AI主题，不给未知权重编数字"},
+    "software": {"label": "信息软件与应用", "primary": {"kind": "door", "value": "景门"}, "secondary": [{"kind": "star", "value": "天辅"}]},
+    "semiconductor": {"label": "半导体与电子硬件", "primary": {"kind": "star", "value": "天英"}, "secondary": [{"kind": "door", "value": "景门"}, {"kind": "stem", "value": "丁"}]},
+    "nonferrous_metals": {"label": "有色金属", "primary": {"kind": "palace", "value": 7}, "secondary": [{"kind": "star", "value": "天任"}], "limit": "兑金与天任矿产是本版现代候选映射，采矿和冶炼、金属品种按产品资料另核"},
+    "power_generation": {"label": "发电与电力公用事业", "primary": {"kind": "palace", "value": 9}, "secondary": [], "limit": "离火是现代候选行业象，不等同电力设备；不自动按宽基指数方向输出"},
+    "power_equipment": {"label": "电力设备", "primary": {"kind": "star", "value": "天冲"}, "secondary": [{"kind": "palace", "value": 9}]},
+    "dividend_low_volatility": {"label": "红利低波策略", "primary": {"kind": "star", "value": "天任"}, "secondary": [], "limit": "稳健风格是现代候选象，真实行业权重另核，不能将红利基金等同银行或承诺低风险"},
+    "healthcare": {"label": "医药与创新药", "primary": {"kind": "star", "value": "天心"}, "secondary": [{"kind": "stem", "value": "乙"}], "limit": "疾病之象不自动等于医药利好；药物、医疗服务和器械敞口另核"},
+    "finance": {"label": "金融与证券", "primary": {"kind": "door", "value": "开门"}, "secondary": [], "limit": "身份门本性不是额外独立上涨证据"},
+    "manufacturing": {"label": "明确的工业制造", "primary": {"kind": "star", "value": "天冲"}, "secondary": [], "limit": "只用于明确工业制造主题，不吞并所有统计制造业中的电子和AI"}
+  },
+  "policy": {
+    "decision": "assistant_authored_with_support_counterevidence_and_conditions",
+    "automatic_price_direction": false,
+    "automatic_weighted_return": false,
+    "same_palace_roles_are_independent": false,
+    "original_void_replaced_by_daily_void": false,
+    "neutral_means_narrow_range": false,
+    "short_redemption_fee_means_lockup": false
+  }
+}

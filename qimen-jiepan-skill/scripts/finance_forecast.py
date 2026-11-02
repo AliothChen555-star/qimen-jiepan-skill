@@ -326,12 +326,25 @@ def main(argv=None):
     parser.add_argument('--request', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--markdown')
+    parser.add_argument('--mode', choices=('legacy','multi_role'), default='legacy',
+                        help='CLI兼容默认legacy；新综合流程用multi_role生成证据与待填草稿')
+    parser.add_argument('--draft', help='multi_role模式的综合判断草稿输出')
     args = parser.parse_args(argv)
     try:
-        record = build_forecast(read_json(args.chart), read_json(args.request))
+        if args.mode == 'multi_role':
+            from finance_context import build_context, markdown as context_markdown
+            from finance_synthesis import init_record
+            record = build_context(read_json(args.chart), read_json(args.request))
+            render = context_markdown
+        else:
+            need(not args.draft, '--draft仅用于multi_role模式')
+            record = build_forecast(read_json(args.chart), read_json(args.request))
+            render = markdown
         write_new(args.output, record, [args.chart, args.request])
+        if args.draft:
+            write_new(args.draft, init_record(record), [args.chart,args.request,args.output])
         if args.markdown:
-            write_new(args.markdown, markdown(record), [args.chart, args.request, args.output])
+            write_new(args.markdown, render(record), [args.chart, args.request, args.output])
     except (ValueError, OSError, KeyError, TypeError) as exc:
         print(f'金融推演失败：{exc}', file=sys.stderr)
         return 1

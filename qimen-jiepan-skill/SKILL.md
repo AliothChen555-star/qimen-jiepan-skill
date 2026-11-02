@@ -3,7 +3,7 @@ name: qimen-jiepan
 description: 奇门遁甲起盘、给盘解读、规则查询与金融预测，自带拆补法时家转盘及固定盘日周月推演。用户明确要求奇门测事、取用、格局、应期，或以奇门预测指数、板块、股票及基金涨跌时使用；一般工作、情绪或投资咨询不自动转成占测。
 metadata:
   short-description: 固定取用、完整解盘，支持跨市场金融日周月预测与复核
-  version: "0.9.0"
+  version: "0.10.0"
   source: https://github.com/AliothChen555-star/qimen-jiepan-skill
 ---
 
@@ -40,20 +40,21 @@ metadata:
 - 细节取象读[取象规范](references/取象规范.md)；主客例外读[主客取法](references/主客取法.md)；涉及持续多久或日期读[空墓与应期](references/空墓与应期.md)。一般状态、期限结果、精确应期分别回答。
 - 年命和方位依具体取法选用，不自动升为第一用神；九星专表、一般月令、十二长生不混表。日时宫生克须回到事类，吉格核足条件，庚格与宫数不作通用日期换算。
 - 将判断转成可执行的时间、方向、沟通或行动方案时读[运筹与建议](references/运筹与建议.md)，注明所对应的依据和条件；另做行动择时不替换原问事盘。
-- 证券等问题使用已登记的金融方法取方向；行业绑定、原盘与流日、历史幅度分别核，见[金融解盘](references/金融解盘.md)。
+- 证券等问题进入独立金融流程；综合判断、旧算法基线、原盘与流日、真实行情分别核，见[金融解盘](references/金融解盘.md)。
 
 ## 金融预测入口
 
-先核市场／代码／份额／币种／投向与期限。行业指数及相应基金按固定行业符号取主对象；宽基、股票及未登记行业按原时干。主用神不随候选池或吉凶更换。
+先核市场／代码／份额／币种／投向与期限。新分析默认使用[金融综合解盘](references/金融综合解盘.md)的 `FINANCE_MULTI_ROLE_V2_CANDIDATE`：全盘主线、逐日作用、基金实际主题、条件式决策逐层综合，明确支持、反证及冲突裁决。它是尚未校准的现代金融映射，不把程序检查通过称为价格预测更准。
 
-读取[固定盘逐日推演](references/固定盘逐日推演.md)与[金融数据与幅度](references/金融数据与幅度.md)。保留同一原盘，按每天实际干支、交易或估值日历推演；日给方向强弱，周逐日列依据，月给总势、三段及转折窗口。必要行情与日历先查直接来源，资料不全时保留能算的方向。
+保留原盘，甲日逐柱遁仪，具体空支逐支填冲；同宫证据不重复计票。基金不按泛制造业自动归类，也不自动继承宽基方向。缺少资料只限定对应判断，继续完成其余部分。旧 `FINANCE_FIXED_CHART_V1` 及[固定盘逐日推演](references/固定盘逐日推演.md)用于原样复算和独立对照；[金融数据与幅度](references/金融数据与幅度.md)保留其输入与历史波动尺度。
 
 ```text
-<私有Python> scripts/finance_forecast.py --chart chart.json --request request.json --output forecast.json --markdown answer.md
-<私有Python> scripts/finance_record.py validate forecast.json --chart chart.json
+<私有Python> scripts/finance_forecast.py --mode multi_role --chart chart.json --request request.json --output context.json --draft draft.json --markdown evidence.md
+<私有Python> scripts/finance_record.py publish --draft draft.json --output forecast-v2.json --markdown answer.md
+<私有Python> scripts/finance_record.py validate forecast-v2.json --chart chart.json
 ```
 
-工具实现 F01—F10 登记基线和历史幅度换算；读其实际证据并完成核心宫解释。幅度是产品历史波动尺度，原预测与后来结局分别留档；具体输入及复核命令见上述数据文档。
+生成证据后须完成草稿中的逐日综合判断再发布；空草稿不构成预测。CLI 不带 `--mode` 时仍保留旧版兼容行为。行情采集、基金费用、订单状态及14:30纠偏见金融综合文档；ETF价格、基金正式净值、个人账户收益分别留档，原预测不被事后事实覆盖。
 
 ## 工具和交付
 
